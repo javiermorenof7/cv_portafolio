@@ -13,153 +13,313 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/javier.png" />
     <meta name="author" content="">
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<style>
-		.intro h1:before {
-			/* Edit this with your name or anything else */
-			content: 'DRACO';
-		}
-	</style>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        .intro h1:before {
+            /* Edit this with your name or anything else */
+            content: 'DRACO';
+        }
+
+        /* Contact Section */
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact .btn:hover {
+            background-color: #555;
+        }
+
+        /* Projects Section */
+        .projects .unit-33 {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .projects .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .projects .btn:hover {
+            background-color: #555;
+        }
+
+        /* Back to Top Button */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-	<div class="main-nav">
-		<div class="container">
-			<header class="group top-nav">
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-				    <span class="logo">Francisco Javier</span>
-				</div>
-			    <nav id="navbar-1" class="navbar item-nav">
-				    <ul>
-				        <li class="active"><a href="#about">About</a></li>
-				        <li><a href="#experiences">Experiences</a></li>
-				        <li><a href="#achievements">Achievements</a></li>
-				        <li><a href="#skills">Skills</a></li>
-				    </ul>
-				</nav>
-			</header>
-		</div>
-	</div>
+    <div class="main-nav">
+        <div class="container">
+            <header class="group top-nav">
+                <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+                    <span class="logo">Francisco Javier</span>
+                </div>
+                <nav id="navbar-1" class="navbar item-nav">
+                    <ul>
+                        <li class="active"><a href="#about">About</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
 
-	<!-- Introduction -->
-	<div class="intro section" id="about">
-		<div class="container">
-			<p>Hi, I’m Francisco Javier</p>
-			<div class="units-row units-split wrap">
-				<div class="unit-20">
-					<img src="img/javier.png" alt="Avatar">
-				</div>
-				<div class="unit-80">
-					<h1>I live in<br><span id="typed"></span></h1>
-				</div>
-				<p>
-					Draco is a constellation in the far northern sky. Its name is Latin for dragon. Draco is circumpolar (that is, never setting) for many observers in the northern hemisphere. It was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.
-				</p>
-			</div>
-		</div>
-	</div>
+    <!-- Introduction -->
+    <div class="intro section" id="about">
+        <div class="container">
+            <p>Hi, I’m Francisco Javier</p>
+            <div class="units-row units-split wrap">
+                <div class="unit-20">
+                    <img src="img/javier.png" alt="Avatar">
+                </div>
+                <div class="unit-80">
+                    <h1>I live in<br><span id="typed"></span></h1>
+                </div>
+                <p>
+                    Draco is a constellation in the far northern sky. Its name is Latin for dragon. Draco is circumpolar (that is, never setting) for many observers in the northern hemisphere. It was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.
+                </p>
+            </div>
+        </div>
+    </div>
 
-	<!-- Work Experience -->
-	<div class="work section second" id="experiences">
-		<div class="container">
-			<h1>Work<br>Experiences</h1>
-			<ul class="work-list">
-				<li>2014-2015</li>
-				<li><a href="#">PT Traveloka Indonesia</a></li>
-				<li>Web Designer</li>
-			</ul>
-			<ul class="work-list">
-				<li>2014-2015</li>
-				<li><a href="#">Wego</a></li>
-				<li>UI/UX Designer</li>
-			</ul>
-			<ul class="work-list">
-				<li>2014-2015</li>
-				<li><a href="#">Garuda Indonesia</a></li>
-				<li>System Designer</li>
-			</ul>
-		</div>
-	</div>
+    <!-- Work Experience -->
+    <div class="work section second" id="experiences">
+        <div class="container">
+            <h1>Work<br>Experiences</h1>
+            <ul class="work-list">
+                <li>2014-2015</li>
+                <li><a href="#">PT Traveloka Indonesia</a></li>
+                <li>Web Designer</li>
+            </ul>
+            <ul class="work-list">
+                <li>2014-2015</li>
+                <li><a href="#">Wego</a></li>
+                <li>UI/UX Designer</li>
+            </ul>
+            <ul class="work-list">
+                <li>2014-2015</li>
+                <li><a href="#">Garuda Indonesia</a></li>
+                <li>System Designer</li>
+            </ul>
+        </div>
+    </div>
 
-	<!-- Award & Achievements -->
-	<div class="award section second" id="achievements">
-		<div class="container">
-			<h1>Award &amp;<br>Achievements</h1>
-			<ul class="award-list list-flat">
-				<li>January 2014</li>
-				<li>Attained PHP5 certification</li>
-				<li>Hold world/Olympic record</li>
-			</ul>
-			<ul class="award-list list-flat">
-				<li>December 2014</li>
-				<li>Audited X number of clients in only Y amount of time</li>
-				<li>Held a perfect attendance record</li>
-				<li>Were promoted after only X months in the role</li>
-			</ul>
-			<ul class="award-list list-flat">
-				<li>March 2014</li>
-				<li>Placed employees at X companies</li>
-				<li>United multiple teams post-merger</li>
-			</ul>
-		</div>
-	</div>
+    <!-- Award & Achievements -->
+    <div class="award section second" id="achievements">
+        <div class="container">
+            <h1>Award &amp;<br>Achievements</h1>
+            <ul class="award-list list-flat">
+                <li>January 2014</li>
+                <li>Attained PHP5 certification</li>
+                <li>Hold world/Olympic record</li>
+            </ul>
+            <ul class="award-list list-flat">
+                <li>December 2014</li>
+                <li>Audited X number of clients in only Y amount of time</li>
+                <li>Held a perfect attendance record</li>
+                <li>Were promoted after only X months in the role</li>
+            </ul>
+            <ul class="award-list list-flat">
+                <li>March 2014</li>
+                <li>Placed employees at X companies</li>
+                <li>United multiple teams post-merger</li>
+            </ul>
+        </div>
+    </div>
 
-	<!-- Technical Skills -->
-	<div class="skills section second" id="skills">
-		<div class="container">
-			<h1>Technical<br>Skills</h1>
-			<ul class="skill-list list-flat">
-				<li>Web Technology</li>
-				<li>HTML / CSS / SASS / PHP / Javascript</li>
-			</ul>
-			<ul class="skill-list list-flat">
-				<li>Database</li>
-				<li>MySQL / MongoDB / Oracle / Access</li>
-			</ul>
-			<ul class="skill-list list-flat">
-				<li>Framework</li>
-				<li>Laravel / CodeIgniter / Zend / Ruby On Rails</li>
-			</ul>
-		</div>
-	</div>
+    <!-- Technical Skills -->
+    <div class="skills section second" id="skills">
+        <div class="container">
+            <h1>Technical<br>Skills</h1>
+            <ul class="skill-list list-flat">
+                <li>Web Technology</li>
+                <li>HTML / CSS / SASS / PHP / Javascript</li>
+            </ul>
+            <ul class="skill-list list-flat">
+                <li>Database</li>
+                <li>MySQL / MongoDB / Oracle / Access</li>
+            </ul>
+            <ul class="skill-list list-flat">
+                <li>Framework</li>
+                <li>Laravel / CodeIgniter / Zend / Ruby On Rails</li>
+            </ul>
+        </div>
+    </div>
 
-	<!-- Quote -->
-	<div class="quote">
-		<div class="container text-centered">
-			<h1>fight against the ugliness.</h1>
-		</div>
-	</div>
+    <!-- Projects Section -->
+    <div class="projects section" id="projects">
+        <div class="container">
+            <h1>My<br>Projects</h1>
+            <div class="units-row">
+                <div class="unit-33">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1. This project involved creating a responsive website for a client.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="unit-33">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2. This project was a mobile app development for a startup.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="unit-33">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3. This project involved building a custom CMS for a blog.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<footer>
-		<div class="container">
-			<div class="units-row">
-			    <div class="unit-50">
-			    	<p>Handcrafted by Afnizar Nur Ghifari</p>
-			    </div>
-			    <div class="unit-50">
-					<ul class="social list-flat right">
-						<li><a href="mailto:afnizarhilmi@gmail.com"><i class="fa fa-send"></i></a></li>
-						<li><a href="http://twitter.com/afnizarnur"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://dribbble.com/afnizarnur"><i class="fa fa-dribbble"></i></a></li>
-						<li><a href="http://behance.com/afnizarnur"><i class="fa fa-behance"></i></a></li>
-					</ul>
-			    </div>
-			</div>
-		</div>
-	</footer>
+    <!-- Contact Section -->
+    <div class="contact section" id="contact">
+        <div class="container">
+            <h1>Contact<br>Me</h1>
+            <form action="mailto:tuemail@example.com" method="post" enctype="text/plain">
+                <div class="units-row">
+                    <div class="unit-50">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="unit-50">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="units-row">
+                    <div class="unit-100">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="units-row">
+                    <div class="unit-100">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
-	<!-- Javascript -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/typed.min.js"></script>
+    <!-- Quote -->
+    <div class="quote">
+        <div class="container text-centered">
+            <h1>fight against the ugliness.</h1>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="units-row">
+                <div class="unit-50">
+                    <p>Handcrafted by Afnizar Nur Ghifari</p>
+                </div>
+                <div class="unit-50">
+                    <ul class="social list-flat right">
+                        <li><a href="mailto:afnizarhilmi@gmail.com"><i class="fa fa-send"></i></a></li>
+                        <li><a href="http://twitter.com/afnizarnur"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="http://dribbble.com/afnizarnur"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="http://behance.com/afnizarnur"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/typed.min.js"></script>
     <script src="js/kube.min.js"></script>
     <script src="js/site.js"></script>
     <script>
-		function newTyped(){}$(function(){$("#typed").typed({
-		// Change to edit type effect
-		strings: ["far northern sky", "your galaxy", "everywhere"],
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+        // Typed.js effect
+        function newTyped(){}
+        $(function(){
+            $("#typed").typed({
+                strings: ["far northern sky", "your galaxy", "everywhere"],
+                typeSpeed: 90,
+                backDelay: 700,
+                contentType: "html",
+                loop: true,
+                resetCallback: function() { newTyped() }
+            });
+            $(".reset").click(function(){
+                $("#typed").typed("reset");
+            });
+        });
+
+        // Back to top button
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 </body>
 </html>
