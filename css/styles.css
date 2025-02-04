@@ -20,7 +20,7 @@ h1, h2, h3 {
 
 /* Navigation */
 .main-nav {
-  background: #222;
+  background: #1e3a8a;
   padding: 15px 0;
   position: fixed;
   width: 100%;
@@ -56,7 +56,7 @@ h1, h2, h3 {
 }
 
 .navbar ul li a:hover {
-  color: #f39c12;
+  color: #3b82f6;
 }
 
 /* Sections */
@@ -76,7 +76,7 @@ h1, h2, h3 {
   display: block;
   width: 60px;
   height: 3px;
-  background: #f39c12;
+  background: #3b82f6;
   margin: 10px auto;
 }
 
@@ -101,13 +101,13 @@ h1, h2, h3 {
 }
 
 .unit-33 h3 {
-  color: #f39c12;
+  color: #1e3a8a;
 }
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #f39c12;
+  background: #1e3a8a;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -115,12 +115,12 @@ h1, h2, h3 {
 }
 
 .btn:hover {
-  background: #e67e22;
+  background: #3b82f6;
 }
 
 /* Footer */
 footer {
-  background: #222;
+  background: #1e3a8a;
   color: #f8f9fa;
   padding: 20px 0;
   text-align: center;
@@ -132,12 +132,12 @@ footer {
 }
 
 .social a {
-  color: #f39c12;
+  color: #3b82f6;
   transition: 0.3s;
 }
 
 .social a:hover {
-  color: #e67e22;
+  color: #1e3a8a;
 }
 
 /* Back to Top Button */
@@ -145,7 +145,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #f39c12;
+  background: #1e3a8a;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -155,5 +155,5 @@ footer {
 }
 
 #myBtn:hover {
-  background: #e67e22;
+  background: #3b82f6;
 }
