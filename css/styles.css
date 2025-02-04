@@ -1,23 +1,25 @@
-/* Paleta de colores */
+/* 🎨 Paleta de colores */
 :root {
-  --primary-color: #1E3A8A;  /* Azul oscuro */
-  --secondary-color: #3B82F6;  /* Azul brillante */
-  --background-color: #F8FAFC;  /* Fondo claro */
-  --text-color: #1E293B;  /* Azul grisáceo oscuro */
-  --button-color: #2563EB;  /* Azul medio */
-  --button-hover: #1E40AF;  /* Azul más oscuro */
+  --primary-color: #1C3D5A;  /* Azul oscuro profesional */
+  --secondary-color: #4B5563;  /* Gris elegante */
+  --background-color: #F9FAFB;  /* Fondo claro */
+  --text-color: #333;  /* Negro suave para texto */
+  --button-color: #2563EB;  /* Azul medio para botones */
+  --button-hover: #1E40AF;  /* Azul más oscuro al pasar el mouse */
+  --border-color: #D1D5DB;  /* Gris claro para bordes */
 }
 
-/* Estilos generales */
+/* 🔹 Estilos Generales */
 body {
   font-family: 'Lato', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-/* Navegación */
+/* 🟦 Navegación */
 .main-nav {
   background-color: var(--primary-color);
   padding: 15px 0;
@@ -25,6 +27,12 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-nav .logo {
@@ -36,11 +44,10 @@ body {
 .main-nav ul {
   list-style: none;
   padding: 0;
-  text-align: right;
+  display: flex;
 }
 
 .main-nav ul li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -52,24 +59,28 @@ body {
 }
 
 .main-nav ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--button-color);
 }
 
-/* Secciones */
+/* 🔹 Secciones Generales */
 .section {
   padding: 80px 20px;
   text-align: center;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Introducción */
+/* 🏆 Introducción */
 .intro {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   padding: 100px 20px;
+  text-align: center;
 }
 
 .intro h1 {
-  font-size: 40px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .intro img {
@@ -78,36 +89,58 @@ body {
   border: 4px solid white;
 }
 
-/* Botones */
+/* 📌 Experiencia, Habilidades y Logros */
+.section h1 {
+  font-size: 28px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.list-flat {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.list-flat li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 🔹 Botones */
 .btn {
   display: inline-block;
   background-color: var(--button-color);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 .btn:hover {
   background-color: var(--button-hover);
 }
 
-/* Formulario de contacto */
+/* 📬 Formulario de Contacto */
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
+  font-size: 16px;
 }
 
 button {
   background-color: var(--button-color);
   color: white;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: none;
   cursor: pointer;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
@@ -115,11 +148,12 @@ button:hover {
   background-color: var(--button-hover);
 }
 
-/* Footer */
+/* 🔹 Footer */
 footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+  font-size: 14px;
 }
