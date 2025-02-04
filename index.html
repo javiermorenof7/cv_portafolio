@@ -4,88 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio CV By Francisco Javier</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Javier is code pasion &amp; HTML template by Javier">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/kube.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
     <link rel="shortcut icon" href="img/javier.png" />
-    <meta name="author" content="">
+    <link rel="stylesheet" href="css/styles.css" />
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <style>
-        .intro h1:before {
-            /* Edit this with your name or anything else */
-            content: 'Francisco Javier Garcia Morenogit a';
-        }
-
-        /* Contact Section */
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact .btn {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact .btn:hover {
-            background-color: #555;
-        }
-
-        /* Projects Section */
-        .projects .unit-33 {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .projects .btn {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .projects .btn:hover {
-            background-color: #555;
-        }
-
-        /* Back to Top Button */
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #333;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 50%;
-        }
-
-        #myBtn:hover {
-            background-color: #555;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -118,10 +41,10 @@
                     <img src="img/javier.png" alt="Avatar">
                 </div>
                 <div class="unit-80">
-                    <h1>I live in<br><span id="typed"></span></h1>
+                    <h1>I am a<br><span id="typed"></span></h1>
                 </div>
                 <p>
-                 a constellation in the far northern sky. Its name is Latin for dragon. Draco is circumpolar (that is, never setting) for many observers in the northern hemisphere. It was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.
+                    Passionate about technology and web development. I enjoy creating innovative solutions and learning new things every day.
                 </p>
             </div>
         </div>
@@ -254,14 +177,14 @@
         <div class="container">
             <div class="units-row">
                 <div class="unit-50">
-                    <p>Handcrafted by Afnizar Nur Ghifari</p>
+                    <p>Handcrafted by Francisco Javier</p>
                 </div>
                 <div class="unit-50">
                     <ul class="social list-flat right">
-                        <li><a href="mailto:afnizarhilmi@gmail.com"><i class="fa fa-send"></i></a></li>
-                        <li><a href="http://twitter.com/afnizarnur"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="http://dribbble.com/afnizarnur"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="http://behance.com/afnizarnur"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="mailto:javier@example.com"><i class="fa fa-send"></i></a></li>
+                        <li><a href="http://twitter.com/javier"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="http://dribbble.com/javier"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="http://behance.com/javier"><i class="fa fa-behance"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -272,54 +195,6 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
 
     <!-- Javascript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/typed.min.js"></script>
-    <script src="js/kube.min.js"></script>
-    <script src="js/site.js"></script>
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Typed.js effect
-        function newTyped(){}
-        $(function(){
-            $("#typed").typed({
-                strings: ["far northern sky", "your galaxy", "everywhere"],
-                typeSpeed: 90,
-                backDelay: 700,
-                contentType: "html",
-                loop: true,
-                resetCallback: function() { newTyped() }
-            });
-            $(".reset").click(function(){
-                $("#typed").typed("reset");
-            });
-        });
-
-        // Back to top button
-        let mybutton = document.getElementById("myBtn");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
