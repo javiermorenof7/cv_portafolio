@@ -1,114 +1,15 @@
-/* Paleta de colores */
-:root {
-  --primary-color: #1C3D5A;  /* Azul oscuro serio */
-  --secondary-color: #4B5563;  /* Gris elegante */
-  --background-color: #F9FAFB;  /* Fondo claro */
-  --text-color: #333;  /* Negro suave */
-  --highlight-color: #2563EB;  /* Azul resaltado */
+p {
+  color: rgb(0, 201, 151);
+  font-family: sans-serif;
+  font-size: 34px;
+  font-weight: bolder;
+  font-weight: 100;
 }
 
-/* Estilos globales */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+li {
+  color: red;
 }
 
-/* Navegación */
-.main-header {
-  background-color: var(--primary-color);
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-}
-
-.main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-}
-
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: var(--highlight-color);
-}
-
-/* Secciones */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-h2 {
-  color: var(--primary-color);
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-/* Experiencia */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.experience-card {
-  background: white;
-  border-left: 5px solid var(--highlight-color);
-  padding: 15px;
-  margin: 10px 0;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Proyectos */
-.projects-grid {
-  display: flex;
-  justify-content: space-around;
-}
-
-.project-card {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Botón */
-.btn {
-  background-color: var(--highlight-color);
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
+.faltante {
+  color: blue;
 }
