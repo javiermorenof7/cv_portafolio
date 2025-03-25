@@ -1,5 +1,6 @@
 body {
   background: black;
+  text-align: center;
 }
 
 .bloque {
@@ -9,9 +10,10 @@ body {
   /* padding: 50px;
   margin: 10px; */
   font-family: Montserrat;
-  font-size: 30px;
+  font-size: 200%;
   color: rgb(255, 255, 255);
   text-align: center;
+  margin: auto;
   /* padding: 20% 30% 40% 30%; */
   /* padding: 10%; */
 }
