@@ -4,17 +4,17 @@ body {
 
 .bloque {
   background: linear-gradient(to left, transparent 30%,#000a);
-  width: 50%;
+  width: 500px;
   /* height: 1100px; */
   padding: 20px 30px;
   margin: auto; 
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
-  position: relative;
+  float: left;
 
-  top: 40px;
-  left: 10px;
+  top: 2em;
+  left: 0em;
   
   /* padding: 20% 30% 40% 30%; */
   /* padding: 10%; */
@@ -42,7 +42,7 @@ body {
 }
 
 .imagen_cv {
-  width: 20%;
+  width: 10em;
   box-sizing: border-box;
   border-radius: 100%;
 }
