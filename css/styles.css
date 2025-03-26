@@ -1,32 +1,36 @@
 body {
   background: url("https://wallpapers.com/images/hd/dark-blue-plain-i9qpxppg33tuxltq.jpg") top / cover fixed rgba(0, 0, 0,5);
+  font-family: Moncerrat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 .bloque {
   background: linear-gradient(to left, transparent 30%,#000a);
-  width: 500px;
-  /* height: 1100px; */
-  padding: 20px 30px;
-  margin: auto; 
-  text-align: center;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  float: left;
-
-  top: 2em;
-  left: 0em;
-  
-  /* padding: 20% 30% 40% 30%; */
-  /* padding: 10%; */
-  /* border-style: solid ;
-  border-color: rgb(116, 0, 0);
-  border-width: 10px; */
+  width: 20%;
+  padding: 2%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
   border-top: 10px solid rgb(205, 243, 255);  /*https://htmlcolorcodes.com/    https://coolors.co/*/ 
   border-radius: 2%;
-  box-sizing: border-box;
-  box-shadow: 0 0 40px 0 #0007;
+  text-align: center;
+  box-shadow: 0 0 40px 0 #0007; 
+}
+
+.bloque_2 {
+  background: linear-gradient(to left, transparent 30%,#000a);
+  width: 60%;
+  padding: 2%;
+  position: absolute;
+  top: 2%;
+  left: 30%;
+  text-align: center;
   
 }
+
 .tittle {
   font-family: Montserrat;
   text-align: center;
