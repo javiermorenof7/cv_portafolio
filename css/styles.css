@@ -12,10 +12,11 @@ body {
   height: 20vh;
   width: 100vw;
   background-image: url("/img/fondo.jpg");
-  background-position:center;
+  background-position: center;
   box-sizing: border-box;
   background-size: cover;
   display: flex;
+  /* background-attachment: fixed; */
 }
 .header__overlay {
   height: 20vh;
@@ -48,8 +49,13 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 30px;
+  font-size: 40px;
   text-wrap: balance;
+}
+
+.header__item-perfil {
+  font-size: 20px;
+  margin: 30px;
 }
 
 /* nvar section */
@@ -58,7 +64,8 @@ h1 {
   background-color: #ffff;
   color: #001c37cc;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 0 40px;
 }
 
 .nav__ul {
@@ -75,4 +82,8 @@ h1 {
   text-decoration: none;
   display: inline-block;
   padding: 10px;
+}
+.nav__img {
+  width: 60px;
+  margin: 1vh;
 }
