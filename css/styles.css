@@ -1,77 +1,78 @@
 body {
-  background: url("https://wallpapers.com/images/hd/dark-blue-plain-i9qpxppg33tuxltq.jpg") top / cover fixed rgba(0, 0, 0,5);
+  background-color: #f5e4e4;
   font-family: Moncerrat;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
+/* header */
 
-.bloque {
-  background: linear-gradient(to left, transparent 30%,#000a);
-  width: 20%;
-  padding: 2%;
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  border-top: 10px solid rgb(205, 243, 255);  /*https://htmlcolorcodes.com/    https://coolors.co/*/ 
-  border-radius: 2%;
-  text-align: center;
-  box-shadow: 0 0 40px 0 #0007; 
-}
-
-.bloque_2 {
-  background: linear-gradient(to left, transparent 30%,#000a);
-  width: 60%;
-  padding: 2%;
-  position: absolute;
-  top: 2%;
-  left: 30%;
-  text-align: center;
-  
-}
-
-.tittle {
-  font-family: Montserrat;
-  text-align: center;
-  background: rgba(255, 160, 83, 0.671);
-  /* text-align: justify; */
-  padding: 2%; 
-}
-
-.tittle_2 {
-  background: rgba(255, 160, 83, 0.671);
-  text-align: justify;
-  padding: 2%;
-}
-
-.imagen_cv {
-  width: 10em;
+.header {
+  height: 20vh;
+  width: 100vw;
+  background-image: url("/img/fondo.jpg");
+  background-position:center;
   box-sizing: border-box;
+  background-size: cover;
+  display: flex;
+}
+.header__overlay {
+  height: 20vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #001c37cc;
+  position: absolute;
+}
+
+.header__item-container {
+  text-align: center;
+  position: relative;
+  margin:auto;
+  z-index: 2;
+}
+
+.header__item-container  {
+  text-wrap: pretty;
+}
+
+.header__img {
+  text-align: center;
   border-radius: 100%;
+  border: 6px solid rgb(255, 255, 255);
+  margin: 30px;
+  position: relative;
+  top: 0vh;
+  z-index: 1;
 }
 
-.contenido {
-  background: rgba(255, 160, 83, 0.671);
-  text-align: justify;
-  padding: 2%;
+h1 {
+  margin: 0;
+  font-size: 30px;
+  text-wrap: balance;
 }
 
+/* nvar section */
 
-
-/* p {
-  color: black;
-  font-family: Montserrat; /*esta se obtiene de la pagina de google fonts https://fonts.google.com/ */
-  /* font-size: 20px; 
-  font-weight: bolder;
-  width: 100%;
-  height: 50%; */
-  /* padding: 20% 30% 40% 30%; */
-  /* padding: 10%; */
-  /* font-weight: 100; 
+.nav {
+  background-color: #ffff;
+  color: #001c37cc;
+  display: flex;
+  justify-content: space-around;
 }
 
-li {
-  color: red;
+.nav__ul {
+  margin: 0;
+  display: flex;
 }
- */
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  color: #001c37cc;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
