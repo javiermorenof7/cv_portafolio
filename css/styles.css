@@ -13,7 +13,6 @@ body {
 .header {
   width: 100%;
   min-height: 20vh; 
-  background-image: url("/img/fondo.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed; /* Fondo fijo */
@@ -72,7 +71,7 @@ h1 {
 .nav {
   background-color: #ffff;
   color: #001c37cc;
-  padding: 15px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -101,7 +100,7 @@ h1 {
   text-decoration: none;
   display: inline-block;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .nav__img {
