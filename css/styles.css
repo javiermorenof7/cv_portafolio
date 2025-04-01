@@ -9,13 +9,13 @@ body {
   line-height: 1.6;
 }
 
-/* Header con imagen de fondo fija */
+/* Header */
 .header {
-  width: 100%;
+  min-width: 100%;
   min-height: 20vh; 
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; /* Fondo fijo */
+  background-attachment: fixed; 
   position: relative;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   background-color: #001c37cc;
   z-index: 1;
@@ -39,7 +39,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 5px 0; /* Más espacio para móviles */
+  padding: 5px 0; 
 }
 
 .header__img {
@@ -68,27 +68,24 @@ h1 {
 }
 
 /* Nav section */
+
 .nav {
   background-color: #ffff;
-  color: #001c37cc;
-  padding: 10px 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nav__links {
-  width: 100%;
-  margin-bottom: 15px;
+  justify-content: center;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 15px #0009;
 }
 
 .nav__ul {
   margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
+  padding: 0;
 }
 
 .nav__item {
@@ -99,19 +96,40 @@ h1 {
   color: #001c37cc;
   text-decoration: none;
   display: inline-block;
-  padding: 8px 12px;
-  font-size: 20px;
+  padding: 5px;
+  border-radius: 0;
+  transition: background-color 0.3s, border-radius 0.2s;
+  margin: 2px;
+  outline: 0;
+  outline-offset: 0;
 }
 
+.nav__link:hover{
+  background-color: #014788cc;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.nav__links-container {
+  flex-grow: 0.5;
+  text-align: center;
+}
+.nav__flexitem-container {
+  flex-grow: 0;
+  text-align: center;
+}
 .nav__img {
-  height: 50px;
-  margin: 15px;
+  width: 70px;
 }
 
 /* Main content */
 .main-content {
-  margin: 30px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
   text-align: justify;
+  font-size: 20px;
+
 }
 
 /* Media queries para tablets y desktop */
