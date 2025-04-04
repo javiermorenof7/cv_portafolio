@@ -16,7 +16,7 @@
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
         <div class="header__logo-container">
-            <img class="header__logo" src="\img\data-engineer.jpg">
+            <img class="header__logo" src="img/data-engineer.jpg">
         </div>
         <nav class='header__nav'>
             <ul class="header__nav-list">
@@ -30,7 +30,7 @@
     <main class="profile">
         <div class="profile__wrapper">
             <div class="profile__img-container">
-                <img src="\img\javier.jpg" class="profile__img" alt="">
+                <img src="img/javier.jpg" class="profile__img" alt="">
             </div>
             <div class="porfile__data-container">
                 <div class="profile__data">
@@ -106,9 +106,17 @@
             </div>
         </div>
     </section>
-    <section>
-        <form action="">
-            <h2>CONTAC</h2>
+    <section class="form">
+        <h2 class="form__title">CONTAC</h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label for="">E-MAIL
+                    <input type="email" placeholder="Johon Doe">
+                </label>
+                <label for="">Mensaje
+                    <textarea type="text" placeholder="Johon Doe">
+                </label>
+            </div>
         </form>
     </section>
 </body>
