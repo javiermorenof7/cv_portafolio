@@ -1,43 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Portafolio</title>
-    <link rel="icon" href="img/javier.jpg" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/javier.jpg" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="header" style="background-image: url('img/fondo.jpg');">
-        <div class="header__overlay"></div>
-        <div class="header__content">
-            <img src="img/javier.jpg" class="header__img">
-            <h1>Curriculum Javier</h1>
-            <p class="header__item-perfil">
-                <strong>Ingeniero de Datos | Magíster en Ingeniería de Datos</strong> con experiencia en manejo de datos a gran escala (Big Data), análisis estadístico y automatización de procesos. Especializado en SQL, Python y Scala, con manejo de bases de datos como PostgreSQL, MySQL y Microsoft SQL Server. Experto en desarrollo de flujos ETL en entornos como Python, GCP, AWS y Azure, utilizando herramientas como ODI, Pentaho y NIFI. Amplia experiencia en modelos de Inteligencia Artificial (IA) con Python, GCP, AWS y Azure para predicción de patrones y comportamientos. Destacado en estrategias de Business Intelligence (BI) y visualización de datos con Python, Power BI y Tableau. Habilidades adicionales incluyen control de versiones (GitHub, GitLab) e integración/despliegue continuo (CI/CD). Enfoque proactivo y orientado a resultados, con capacidad para trabajar en entornos competitivos y cumplir objetivos a corto y largo plazo.
-            </p>
+<body> 
+    <!-- style="background-image: URL('/img/fondo.jpg');" -->
+    <header class="header">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="\img\data-engineer.jpg">
         </div>
-    </header>
-    <nav class="nav">
-        <div class="nav__links-container">
-            <ul class="nav__ul">
-                <li class="nav__item"><a href="#" class="nav__link">Experiencia</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Estudios</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Software</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Proyectos</a></li>
+        <nav class='header__nav'>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Experiencia</a></li>
+                <li class="header__nav-item"><a href="#">Estudios</a></li>
+                <li class="header__nav-item"><a href="#">Portafolio</a></li>
+                <li class="header__nav-item"><a href="#">Software</a></li>
             </ul>
+        </nav>
+    </header>
+    <main class="profile">
+        <div class="profile__wrapper">
+            <div class="profile__img-container">
+                <img src="\img\javier.jpg" class="profile__img" alt="">
+            </div>
+            <div class="porfile__data-container">
+                <div class="profile__data">
+                    <div class="profile__description">
+                        <h1>Francisco Javier Garcia Moreno</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti blanditiis necessitatibus saepe provident, quod sapiente consequuntur. Delectus quasi ipsa aperiam minus, labore nihil molestiae veritatis mollitia, expedita nisi quas atque?
+                        </p>
+                    </div>
+                    <div class="profile__skills-container">
+                        <h2>SKILLS</h2>
+                        <ul>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--30">30%</div>
+                                </div>
+                                <span class="profile__skill-name">HTML</span>
+                            </li>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--30">30%</div>
+                                </div>
+                                <span class="profile__skill-name">CSS</span>
+                            </li>  
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--100">100%</div>
+                                </div>
+                                <span class="profile__skill-name">SQL</span>
+                            </li>  
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--50">50%</div>
+                                </div>
+                                <span class="profile__skill-name">PYTHON</span>
+                            </li> 
+                            
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--20">20%</div>
+                                </div>
+                                <span class="profile__skill-name">JS</span>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nav__flexitem-container">
-            <img src="img/data-engineer.jpg" class="nav__img">
-        </div>         
-    </nav>
-    <main class="main-content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur distinctio blanditiis natus eius ex enim, numquam nobis suscipit eligendi ab quaerat et nesciunt officia doloribus qui, facere, obcaecati exercitationem.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illo libero tempore ratione quod voluptate molestiae cum. Ipsam sunt praesentium est nesciunt culpa facilis, deserunt animi ullam maiores aliquam rerum?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur molestiae quos quaerat, eaque dolore consectetur culpa cupiditate perspiciatis nihil, saepe alias, obcaecati quibusdam. Iste corporis voluptatem eius voluptatum nam!
     </main>
+
 </body>
 </html>
