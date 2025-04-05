@@ -9,21 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/darkmode.js" defer></script>
 </head>
 <body> 
     <!-- style="background-image: URL('/img/fondo.jpg');" -->
-    <header class="header">
+    <header class='header' id="header">
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
         <div class="header__logo-container">
             <img class="header__logo" src="img/data-engineer.jpg">
         </div>
-        <nav class='header__nav'>
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#profile">Perfil</a></li>
-                <li class="header__nav-item"><a href="#">Estudios</a></li>
-                <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
-                <li class="header__nav-item"><a href="#">Software</a></li>
+        <button class = 'darckmode_buttom' id="dark_mode_menu">
+            <img class="material-icons" src="img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png" alt="my icon"/>
+        </button>
+        <nav class='header__nav' id="header__nav-darckmode">
+            <ul class="header__nav-list" >
+                <li class="header__nav-item" id="header__nav-darckmode"><a href="#profile">Perfil</a></li>
+                <li class="header__nav-item" id="header__nav-darckmode"><a href="#">Experiencia</a></li>
+                <li class="header__nav-item" id="header__nav-darckmode"><a href="#portfolio">Portafolio</a></li>
+                <li class="header__nav-item" id="header__nav-darckmode"><a href="#">Software</a></li>
             </ul>
         </nav>
     </header>
@@ -68,23 +72,23 @@
                         <ul>
                             <li class="profile__skill">
                                 <div class="load-bar">
-                                    <div class="load-bar__bar bar--60">60%</div>
+                                    <div class="load-bar__bar bar--100">100%</div>
                                 </div>
-                                <span class="profile__skill-name">HTML</span>
+                                <span class="profile__skill-name">SQL - BASES DE DATOS</span>
                             </li>
 
                             <li class="profile__skill">
                                 <div class="load-bar">
                                     <div class="load-bar__bar bar--60">60%</div>
                                 </div>
-                                <span class="profile__skill-name">CSS</span>
+                                <span class="profile__skill-name">HTML Y CSS</span>
                             </li>  
 
                             <li class="profile__skill">
                                 <div class="load-bar">
-                                    <div class="load-bar__bar bar--100">100%</div>
+                                    <div class="load-bar__bar bar--80">80%</div>
                                 </div>
-                                <span class="profile__skill-name">SQL</span>
+                                <span class="profile__skill-name">NUBE GCP</span>
                             </li>  
 
                             <li class="profile__skill">
@@ -101,6 +105,10 @@
                                 <span class="profile__skill-name">JS</span>
                             </li> 
                         </ul>
+                    </div>
+                    <div class="github__container">
+                        <img src="img/png-transparent-github-logo.png" class="github_img" alt="">
+                        <a class="github__link" href="https://github.com/javiermorenof7">https://github.com/javiermorenof7</a>
                     </div>
                 </div>
             </div>
