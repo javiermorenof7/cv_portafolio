@@ -213,23 +213,31 @@ p {
 }
 
 .github__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(auto,auto));
+  text-align: center;
+  text-wrap: balance;
+  justify-items: center;
+
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .github__link{
   margin: 0px;
 }
 
-.github_img{
-  margin: 30px;
-  max-width: 100%;
-  width: 70px;
+.github_img, .likedin_img{
+  margin: 20px;
+  max-width: 50%;
+  width: 50px;
   filter: brightness(1.1);
   mix-blend-mode: multiply;
+  align-items: center;
 }
+
 
 .h3__study {
   margin: 5px;
@@ -308,16 +316,16 @@ h1 {
   .porfile__data-container {
     background-color: #fff;
     display: flex;
-    align-items: center;
+    align-items: safe center;
     border-radius: 0px 25px 25px 0;
-    box-shadow: 0px 0px 9px #0002;
+    box-shadow: 0px 0px 9px #0005;
     overflow-y: scroll;
-    
   }
+  
   .porfile__data-container::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
-}
+  }
 
   .profile__study-container {
     grid-template-columns: repeat(4,minmax(auto,auto));
@@ -359,7 +367,7 @@ h1 {
 
 /* -----------------Portfolio Section-------------------- */
 
-.portfolio {
+.portfolio, .experiencia {
   background-color: #18233f;
   color: #fff;
   min-height: 100vh;
@@ -371,7 +379,7 @@ h1 {
   justify-content: space-evenly;
 }
 
-.portfolio__project-container {
+.portfolio__project-container, .experiencia__container {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1300px;
@@ -382,7 +390,7 @@ h1 {
   min-height: 80vh;
 }
 
-.portfolio__project {
+.portfolio__project, .experiencia__container-item {
   background-position: center;
   background-size: cover;
   display: grid;
@@ -391,7 +399,7 @@ h1 {
   border-radius: 12px;
 }
 
-.h2_portfolio {
+.h2_portfolio,.h2_experiencia {
   font-size: 3rem;
   margin-bottom: 0;
   padding: 30px;
