@@ -9,8 +9,16 @@ body {
 }
 
 body, div, ul, nav, header, footer, a, li, label {
-  margin: 0;
+  margin: 0px;
   padding: 0;
+}
+
+p, h2, h3 {
+  margin: 5px;
+}
+
+p {
+  text-align: justify;
 }
 
 /* -----------------Header Section-------------------- */
@@ -126,6 +134,10 @@ body, div, ul, nav, header, footer, a, li, label {
   container-name: profile;   /* llama a la funcion de query con container querys */
 }
 
+.profile__data {
+  padding: 20px;
+}
+
 .profile__wrapper {
   display: flex;
   flex-direction: column;
@@ -134,14 +146,22 @@ body, div, ul, nav, header, footer, a, li, label {
   max-width: 1400px;
 }
 
-.profile__data-container {
+.profile__data-container, .profile__study-container {
   max-width: 600px;
   padding: 12px;
+}
+
+.profile__study-container {
+  display: grid;
+  text-align: center;
+  text-wrap: balance;
+  list-style: none;
 }
 
 .profile__img-container {
   max-height: 500px;
   overflow: hidden;
+  border-radius: 100px 100px 100px 100px;
 }
 
 .profile__img {
@@ -149,8 +169,17 @@ body, div, ul, nav, header, footer, a, li, label {
   width: 720px;
 }
 
+.h3__study {
+  margin: 5px;
+}
+
 h1 {
   color: #26e;
+  text-align: center;
+}
+
+.h2_skills {
+  text-align: center;
 }
 
 .profile__sikills-container,.h2_skills{
@@ -160,11 +189,12 @@ h1 {
 .profile__skill {
   display: flex;
   list-style: none;
-  padding: 4px;
-  margin: 10px;
+  padding: 2px;
+  margin-left: 50px;
   max-width: 600px;
-  margin-left: 0;
+  margin-left: 30px;
   align-items: center;
+  text-align: center;
 }
 
 .load-bar {
@@ -173,7 +203,7 @@ h1 {
   color: #fff;
   padding: 2px;
   font-size: 12px;
-  width: 80%;
+  width: 85%;
   margin: 4px;
   margin-left: 0;
 }
@@ -207,7 +237,8 @@ h1 {
     flex-direction: row;
     padding: 20px;
     background-color: transparent;
-    height: 90vh;
+    /* height: 90vh; */
+    height: 95vh;
     margin: auto;
   }
 
@@ -217,8 +248,19 @@ h1 {
     align-items: center;
     border-radius: 0px 25px 25px 0;
     box-shadow: 0px 0px 9px #0002;
+    overflow-y: scroll;
+    
   }
+  .porfile__data-container::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
+  .profile__study-container {
+    grid-template-columns: repeat(4,minmax(auto,auto));
+    align-self: center;
+  }
+  
   h1 {
     margin-top: 0;
     font-size: 4rem;
@@ -230,12 +272,19 @@ h1 {
   }
 
   .profile__img-container {
+    /* display: flex;
+    background-color: #d5d7da; */
     max-height: initial;
     border-radius: 25px 0px 0px 25px;
   }
   
 
   .profile__img {
+    /* height: 50%;
+    object-fit: cover;  
+    width: 620px;
+    margin: auto;
+    border-radius: 100px 100px 100px 100px; */
     height: 100%;
     object-fit: cover;  
     width: 620px;
@@ -282,6 +331,7 @@ h1 {
 .h2_portfolio {
   font-size: 3rem;
   margin-bottom: 0;
+  padding: 30px;
 }
 
 .portfolio__project:hover {
