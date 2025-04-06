@@ -42,7 +42,7 @@ p {
   justify-content: space-between;
   align-items: center;
   container-type: inline-size;
-  container-name: header;   /* llama a la funcion de query con container querys */
+  container-name: header; 
   position: relative;
   z-index: 10;
   text-align: center;
@@ -59,18 +59,6 @@ p {
 
 .header__checkbox {
   display: none;
-}
-
-.darckmode_buttom {
-  height: 30px;
-  width: 30px;
-  max-height: 30px;
-  display: flex;
-  position: relative;
-  right: 10%;
-  background-color: #18233f;
-  border-radius: 100%;
-  padding: 0;
 }
 
 .header__nav {
@@ -101,15 +89,25 @@ p {
   z-index: 2;
 }
 
-.header__checkbox:checked ~ .header__logo-container {
+.header__checkbox:checked ~ .header__buttoms-container {
   position: relative;
   z-index: 3;
 }
 
+.header__buttoms-container{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 5px 20px;
+}
+
 .header__logo {
-  max-width: 100%;
-  width: 64px;
-  margin: 10px 20px;
+  height: 50px;
+} 
+
+.darckmode_buttom {
+  height: 50px;
+  margin-left: 10px;
 }
 
 .header__nav-item {
@@ -130,18 +128,6 @@ p {
 
 /* Adaptamos a escritorio */
 @container header (min-width: 600px) {
-  .darckmode_buttom {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    position: absolute;
-    top: 20px;
-    left: 100px;
-    background-color: #18233f;
-    border-radius: 100%;
-    padding: 0;
-    color: #fff;
-  }
 
   .header__nav-darckmode {
     background-color: #18233f;
