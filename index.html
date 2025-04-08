@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,26 @@
     <link rel="icon" href="img/javier.jpg" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script type="text/javascript" src="js/darkmode.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script type="text/javascript" src="js/pryectos.js" defer" defer></script>
+    
 </head>
-<body> 
+
+<body>
     <!-- style="background-image: URL('/img/fondo.jpg');" -->
     <header class='header' id="header">
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
         <div class="header__buttoms-container">
             <img class="header__logo" src="img/data-engineer.jpg">
-            <input type="image" class = 'darckmode_buttom' id="dark_mode_menu" src='img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png'>
+            <input type="image" class='darckmode_buttom' id="dark_mode_menu"
+                src='img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png'>
         </div>
         <nav class='header__nav' id="header__nav-darckmode">
-            <ul class="header__nav-list" >
+            <ul class="header__nav-list">
                 <li class="header__nav-item" id="header__nav-darckmode"><a href="#profile">Perfil</a></li>
                 <li class="header__nav-item" id="header__nav-darckmode"><a href="#">Experiencia</a></li>
                 <li class="header__nav-item" id="header__nav-darckmode"><a href="#portfolio">Portafolio</a></li>
@@ -40,33 +47,50 @@
                         <h1>Francisco Javier Garcia Moreno</h1>
                         <h2>Perfil Profesional</h2>
                         <p>
-                            <p>
-                                <strong>Ingeniero de Datos</strong> con <strong>5 años de experiencia</strong> cuento con maestría en Sistemas Integrados de Gestión (Enfoque en Ingeniería de Datos), especializado en <strong>Big Data</strong>, diseño de pipelines <strong>ETL</strong> (<strong>Python</strong>, <strong>GCP</strong>, <strong>AWS</strong>, <strong>Azure</strong>) e implementación de modelos de <strong>Machine Learning</strong> (Scikit-learn, TensorFlow). Dominio avanzado de <strong>SQL</strong>, <strong>Scala</strong> y gestión de bases de datos (<strong>PostgreSQL</strong>, <strong>MySQL</strong>, <strong>NoSQL</strong>). Durante mi trayectoria he desarrollado dashboards en <strong>Power BI</strong> y <strong>Tableau</strong>, así como aplicaciones web data-centric usando <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> con <strong>Flask</strong>/<strong>Django</strong>. Automatización de procesos con <strong>Apache NIFI</strong>, <strong>Airflow</strong> y despliegues <strong>CI/CD</strong> (<strong>GitHub</strong>, <strong>Docker</strong>). <strong>Experiencia comprobada</strong> en soluciones <strong>end-to-end</strong> para el sector financiero, integrando <strong>análisis avanzado</strong>, <strong>IA</strong> e <strong>interfaces web interactivas</strong>. Profesional orientado a resultados con amplia capacidad de colaboración en equipos multidisciplinarios.
-                            </p>
+                        <p>
+                            <strong>Ingeniero de Datos</strong> con <strong>5 años de experiencia</strong> cuento con
+                            maestría en Sistemas Integrados de Gestión (Enfoque en Ingeniería de Datos), especializado
+                            en <strong>Big Data</strong>, diseño de pipelines <strong>ETL</strong>
+                            (<strong>Python</strong>, <strong>GCP</strong>, <strong>AWS</strong>,
+                            <strong>Azure</strong>) e implementación de modelos de <strong>Machine Learning</strong>
+                            (Scikit-learn, TensorFlow). Dominio avanzado de <strong>SQL</strong>, <strong>Scala</strong>
+                            y gestión de bases de datos (<strong>PostgreSQL</strong>, <strong>MySQL</strong>,
+                            <strong>NoSQL</strong>). Durante mi trayectoria he desarrollado dashboards en <strong>Power
+                                BI</strong> y <strong>Tableau</strong>, así como aplicaciones web data-centric usando
+                            <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> con
+                            <strong>Flask</strong>/<strong>Django</strong>. Automatización de procesos con
+                            <strong>Apache NIFI</strong>, <strong>Airflow</strong> y despliegues <strong>CI/CD</strong>
+                            (<strong>GitHub</strong>, <strong>Docker</strong>). <strong>Experiencia comprobada</strong>
+                            en soluciones <strong>end-to-end</strong> para el sector financiero, integrando
+                            <strong>análisis avanzado</strong>, <strong>IA</strong> e <strong>interfaces web
+                                interactivas</strong>. Profesional orientado a resultados con amplia capacidad de
+                            colaboración en equipos multidisciplinarios.
+                        </p>
                         </p>
                     </div>
-                <div class="profile__study">
-                    <h2>Estudios Realizados</h2>
-                    <ul class="profile__study-container">
-                        <li class="profile__study-container-li">
-                            <h3 class="h3__study" >Pregrado</h3>
-                            <span class="profile__study-container-span">
-                                <strong>Titulo:</strong> ingeniero Industrial <br>
-                                <strong>Universidad:</strong> Jorge tadeo lozano <br>
-                                <strong>Enero 2014 - Agosto 2018</strong>
-                            </span>
-                        </li>
-                        <li class="profile__study-container-li">
-                            <h3 class="h3__study" >Postgrado</h3>
-                            <span class="profile__study-container-span">
-                                <strong>Titulo:</strong> Máster Universitario en Sistemas Integrados de Gestión (Enfoque en Ingeniería de Datos) <br>
-                                <strong>Universidad:</strong> Universidad Internacional de La Rioja (UNIR) <br>
-                                <strong>Noviembre 2018 - 2020</strong>
-                            </span>
-                        </li>
-                        
-                    </ul>
-                </div>
+                    <div class="profile__study">
+                        <h2>Estudios Realizados</h2>
+                        <ul class="profile__study-container">
+                            <li class="profile__study-container-li">
+                                <h3 class="h3__study">Pregrado</h3>
+                                <span class="profile__study-container-span">
+                                    <strong>Titulo:</strong> ingeniero Industrial <br>
+                                    <strong>Universidad:</strong> Jorge tadeo lozano <br>
+                                    <strong>Enero 2014 - Agosto 2018</strong>
+                                </span>
+                            </li>
+                            <li class="profile__study-container-li">
+                                <h3 class="h3__study">Postgrado</h3>
+                                <span class="profile__study-container-span">
+                                    <strong>Titulo:</strong> Máster Universitario en Sistemas Integrados de Gestión
+                                    (Enfoque en Ingeniería de Datos) <br>
+                                    <strong>Universidad:</strong> Universidad Internacional de La Rioja (UNIR) <br>
+                                    <strong>Noviembre 2018 - 2020</strong>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
                     <div class="profile__skills-container">
                         <h2 class="h2_skills">SKILLS</h2>
                         <ul>
@@ -82,70 +106,223 @@
                                     <div class="load-bar__bar bar--60">60%</div>
                                 </div>
                                 <span class="profile__skill-name">HTML Y CSS</span>
-                            </li>  
+                            </li>
 
                             <li class="profile__skill">
                                 <div class="load-bar">
                                     <div class="load-bar__bar bar--80">80%</div>
                                 </div>
                                 <span class="profile__skill-name">NUBE GCP</span>
-                            </li>  
+                            </li>
 
                             <li class="profile__skill">
                                 <div class="load-bar">
                                     <div class="load-bar__bar bar--80">80%</div>
                                 </div>
                                 <span class="profile__skill-name">PYTHON</span>
-                            </li> 
-                            
+                            </li>
+
                             <li class="profile__skill">
                                 <div class="load-bar">
                                     <div class="load-bar__bar bar--60">60%</div>
                                 </div>
                                 <span class="profile__skill-name">JS</span>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
                     <div class="github__container">
                         <img src="img/png-transparent-github-logo.png" class="github_img" alt="">
-                        <a class="github__link" href="https://github.com/javiermorenof7" target="_blank">https://github.com/javiermorenof7</a>
+                        <a class="github__link" href="https://github.com/javiermorenof7"
+                            target="_blank">https://github.com/javiermorenof7</a>
                         <img src="img/174857.png" class="likedin_img" alt="">
-                        <a class="github__link" href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/" target="_blank">https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/</a>
+                        <a class="github__link"
+                            href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
+                            target="_blank">https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <section class = "experiencia">
+    <section class="experiencia">
         <h2 class="h2_experiencia">Experiencia</h2>
         <div class="experiencia__container">
-            <div class="experiencia__container-item" style="background-image: linear-gradient(#0009,#0009), URL('img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+            <div class="experiencia__container-item"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
+                <h2 class="portfolio__proyect-name">Banco Falabella – Falabella Financiero | <strong>Data
+                        Engineer</strong> | Enero 2023 – Actual</h2>
+                <ul class="experiencia__falabella">
+                    <p><strong>Tareas y Logros Clave:</strong></p>
+                    <li><strong>Liderazgo en Migración Cloud</strong>: Dirigí la migración de procesos
+                        <strong>On-Premise a GCP</strong>, diseñando arquitecturas escalables para <strong>ETL</strong>
+                        con <strong>Python</strong> y <strong>Scala</strong>, incluyendo encriptación de datos sensibles
+                        (PII).
+                    </li>
+
+                    <li><strong>Integración Multiplataforma</strong>: Consolidé datos de 15+ fuentes
+                        (<strong>Oracle</strong>, <strong>MySQL</strong>, <strong>SQL Server</strong>,
+                        <strong>MongoDB</strong>, <strong>PostgreSQL</strong>, <strong>Cassandra</strong>, APIs REST) en
+                        <strong>BigQuery</strong>, optimizando costos en un 25% mediante particionamiento y clustering.
+                    </li>
+
+                    <li><strong>Transformación de Datos</strong>: Parseé complejos datasets JSON/XML a esquemas
+                        relacionales en <strong>BigQuery</strong>, mejorando la eficiencia de consultas en un 40% para
+                        productos bancarios (<strong>tarjetas</strong>, <strong>créditos</strong>, <strong>cuentas
+                            corrientes</strong>).</li>
+
+                    <li><strong>Automatización</strong>: Implementé pipelines con <strong>Airflow</strong> y
+                        <strong>Argo Workflows</strong> en <strong>Kubernetes</strong>, reduciendo tiempos de
+                        procesamiento de 8h a 45 minutos para reportes regionales (Colombia, Perú, Chile).
+                    </li>
+
+                    <li><strong>Gobernanza</strong>: Establecí monitoreo de <strong>Data Quality</strong> con métricas
+                        de consistencia (dQaaS) y alertas proactivas usando <strong>DataOps</strong> principles.</li>
+
+                    <li><strong>Visualización</strong>: Desarrollé 20+ dashboards en <strong>Looker</strong> y
+                        <strong>Tableau</strong> para áreas de riesgo, marketing y operaciones, con actualización en
+                        tiempo real vía <strong>streaming</strong> (Pub/Sub + Dataflow).
+                    </li>
+                    <p><strong>Aptitudes Técnicas:</strong></p>
+                    <ul>
+                        <li><strong>Cloud:</strong> GCP (BigQuery, Dataflow, Composer), Azure Synapse</li>
+                        <li><strong>Lenguajes:</strong> Python (Pandas, PySpark), Scala, SQL (Spark SQL)</li>
+                        <li><strong>Orquestación:</strong> Kubernetes, Argo Workflows, Airflow</li>
+                        <li><strong>DataOps:</strong> CI/CD (GitLab/GitHub), Testing (Great Expectations)</li>
+                        <li><strong>IA/ML:</strong> Modelos de scoring crediticio (Python + BigQuery ML)</li>
+                    </ul>
+
+                </ul>
             </div>
-            <div class="experiencia__container-item" style="background-image: linear-gradient(#0009,#0009), URL('img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
+            <div class="experiencia__container-item"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
         </div>
     </section>
     <section class="portfolio" id="portfolio">
         <h2 class="h2_portfolio">PORTFOLIO SECTION</h2>
-        <div class = "portfolio__project-container">
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+        <div class="portfolio__project-container">
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+                <h2 class="">Sesiones de Onboarding: Proceso de Captura y Seguimiento</h2>
+                <div class="content">
+                    <div class="process-summary">
+                        <h2>Resumen del Proceso</h2>
+                        <p>El proceso de <span class="highlight">Sesiones de Onboarding</span> (también conocido como
+                            Recupero NRT) está diseñado para contactar a clientes que realizan simulaciones para la
+                            apertura de nuevos productos financieros como Tarjetas de Crédito CMR, Cuentas Corrientes y
+                            Cuentas de Ahorro. Este proceso sigue un flujo de datos estructurado que permite la
+                            captación eficiente de leads y su posterior seguimiento.</p>
+
+                        <ul class="process-steps">
+                            <li><strong>Origen de datos:</strong> Los usuarios realizan simulaciones en el sitio web o
+                                aplicación del banco desde diferentes dispositivos.</li>
+                            <li><strong>Almacenamiento inicial:</strong> Los datos se almacenan en una Cola Rabbit
+                                específica para cada país.</li>
+                            <li><strong>Procesamiento:</strong> La Data Factory procesa estos datos enviándolos desde
+                                Rabbit hacia Pub/Sub.</li>
+                            <li><strong>Transformación:</strong> Google Cloud Dataflow realiza el procesamiento y
+                                transformación de los datos.</li>
+                            <li><strong>Almacenamiento final:</strong> Los datos procesados se envían a Cloud Storage y
+                                BigQuery.</li>
+                            <li><strong>Integración con CRM:</strong> Simultáneamente, los datos se envían a un Data
+                                Extension en Salesforce.</li>
+                            <li><strong>Seguimiento:</strong> Un Journey en Salesforce evalúa condiciones específicas
+                                para enviar notificaciones personalizadas al cliente.</li>
+                        </ul>
+                    </div>
+
+                    <div class="architecture-diagram">
+                        <h2>Arquitectura de la Solución</h2>
+                        <img src="img/proyecto_onboarding.png" alt="Diagrama de Arquitectura de Onboarding" />
+                    </div>
+
+                    <div class="data-visualization">
+                        <div class="chart-container">
+                            <h3 class="title_graf">Distribución de Simulaciones por Producto</h3>
+                            <canvas id="productChart"></canvas>
+                        </div>
+
+                        <div class="chart-container">
+                            <h3>Tasa de Conversión Mensual</h3>
+                            <canvas id="conversionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <h3>Datos de Simulados (Últimos 7 días)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>País</th>
+                                <th>Producto</th>
+                                <th>Dispositivo</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ONB-2025-4281</td>
+                                <td>05/04/2025</td>
+                                <td>Chile</td>
+                                <td>Tarjeta CMR</td>
+                                <td>Mobile</td>
+                                <td>Contactado</td>
+                            </tr>
+                            <tr>
+                                <td>ONB-2025-4282</td>
+                                <td>05/04/2025</td>
+                                <td>Perú</td>
+                                <td>Cuenta Corriente</td>
+                                <td>Desktop</td>
+                                <td>Pendiente</td>
+                            </tr>
+                            <tr>
+                                <td>ONB-2025-4283</td>
+                                <td>06/04/2025</td>
+                                <td>Colombia</td>
+                                <td>Cuenta de Ahorro</td>
+                                <td>Tablet</td>
+                                <td>Convertido</td>
+                            </tr>
+                            <tr>
+                                <td>ONB-2025-4284</td>
+                                <td>06/04/2025</td>
+                                <td>Chile</td>
+                                <td>Tarjeta CMR</td>
+                                <td>Desktop</td>
+                                <td>Contactado</td>
+                            </tr>
+                            <tr>
+                                <td>ONB-2025-4285</td>
+                                <td>07/04/2025</td>
+                                <td>Perú</td>
+                                <td>Cuenta de Ahorro</td>
+                                <td>Mobile</td>
+                                <td>Pendiente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
-            </div>
-            <div class="portfolio__project" style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
+            <div class="portfolio__project"
+                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
                 <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
             </div>
         </div>
@@ -169,4 +346,5 @@
         <strong>Francisco Javier Garcia Moreno</strong> - Copyright
     </footer>
 </body>
+
 </html>
