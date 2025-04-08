@@ -351,7 +351,7 @@ h1 {
 
 /* -----------------Profile END-------------------- */
 
-/* -----------------Portfolio Section-------------------- */
+/* -----------------Portfolio and Experiens Section-------------------- */
 
 .portfolio, .experiencia {
   background-color: #18233f;
@@ -380,6 +380,7 @@ h1 {
   min-height: 0; 
   min-width: 0;
   background-position: center;
+  place-content: center;
   /* background-position: center;
   background-size: cover;
   display: grid;
@@ -399,6 +400,16 @@ h1 {
 .portfolio__project:hover {
   opacity: 0.90;
   outline: 2px solid #fff ;
+}
+
+.experiencia__falabella {
+  text-align: left;
+  padding: 10px 20px 30px 30px;
+}
+
+.experiencia__falabella__apt {
+  padding-left: 30px;
+  padding-top: 20px;
 }
 
 /* -----------------Portfolio Proyects-------------------- */
