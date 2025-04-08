@@ -368,7 +368,7 @@ h1 {
 .portfolio__project-container, .experiencia__container {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 1300px;
+  max-width: auto;
   margin: auto;
   width: 100%;
   gap: 12px;
@@ -377,12 +377,17 @@ h1 {
 }
 
 .portfolio__project, .experiencia__container-item {
+  min-height: 0; 
+  min-width: 0;
   background-position: center;
+  /* background-position: center;
   background-size: cover;
   display: grid;
   place-content: center;
   margin: 10px;
   border-radius: 12px;
+  min-height: 0; 
+  min-width: 0;    */
 }
 
 .h2_portfolio,.h2_experiencia {
@@ -392,14 +397,84 @@ h1 {
 }
 
 .portfolio__project:hover {
-  opacity: 0.74;
+  opacity: 0.90;
   outline: 2px solid #fff ;
+}
+
+/* -----------------Portfolio Proyects-------------------- */
+.content {
+  padding: 25px;
+}
+
+.process-summary {
+  margin-bottom: 25px;
+  padding: 20px;
+}
+.data-visualization {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+.chart-container {
+  flex: 1;
+  min-width: 300px;
+  background: linear-gradient(90deg,rgb(19, 15, 15),#18233f);
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.data-table {
+  table-layout: fixed;
+  width: 95%;
+  overflow: scroll;
+  /* border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: scroll; */
+}
+.data-table th {
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background-color: #18233f;
+}
+
+.architecture-diagram {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.architecture-diagram img {
+  max-width: 100%;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,2);
+}
+
+ul.process-steps {
+  padding-top: 20px;
+  /* list-style: none; */
+  text-align: left;
+}
+
+ul.process-steps li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.highlight {
+  color: #0066b2;
+  font-weight: 600;
 }
 
 /* -----------------Portfolio Queryes-------------------- */
 
 @container portfolio (min-width:900px) {
-  .portfolio__project-container {
+  .portfolio__project-container, .experiencia__container{
     grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
   }
 
@@ -413,8 +488,8 @@ h1 {
 }
 
 @container portfolio (min-width:1300px) {
-  .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  .portfolio__project-container, .experiencia__container {
+    grid-template-columns: repeat(4,minmax(300px,1fr));
   }
 
   .portfolio__project:nth-child(1){
