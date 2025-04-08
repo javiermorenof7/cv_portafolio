@@ -381,6 +381,7 @@ h1 {
   min-width: 0;
   background-position: center;
   place-content: center;
+  border-radius: 12px;
   /* background-position: center;
   background-size: cover;
   display: grid;
