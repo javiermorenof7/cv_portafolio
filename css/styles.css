@@ -36,6 +36,7 @@ p {
   font-size: 20px;
 }
 
+
 .header_drackmode {
   background-color: #18233f;
   display: flex;
@@ -108,6 +109,8 @@ p {
 .darckmode_buttom {
   height: 50px;
   margin-left: 10px;
+  background-color: #00223b;
+  border-radius: 50%
 }
 
 .header__nav-item {
@@ -121,6 +124,40 @@ p {
 
 .header__nav-item :is(:hover,:active) {
   text-decoration: underline;
+}
+
+.download-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin: 0 10px;
+}
+.darckmode_buttom:hover {
+  transform: rotate(30deg);
+}
+
+.language-toggle {
+  background-color: #26e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 35px;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -213,6 +250,7 @@ p {
 
 .github__link{
   margin: 0px;
+  color: #26e;
 }
 
 .github_img, .likedin_img{
@@ -598,3 +636,4 @@ footer {
   color: #fff;
   font-size: 22px;
 }
+
