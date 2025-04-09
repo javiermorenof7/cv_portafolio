@@ -335,9 +335,9 @@ h2::after,.h2_skills::after{content:'';position:absolute;bottom:0;left:50%;trans
 .portfolio__project-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
-  padding: 12px;
-  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .portfolio__project {
@@ -727,7 +727,8 @@ h2::after,.h2_skills::after{content:'';position:absolute;bottom:0;left:50%;trans
 
 @container portfolio (min-width:1300px) {
   .portfolio__project-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
   }
 
   .portfolio__project:nth-child(1) {
