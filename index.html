@@ -490,136 +490,242 @@
         </div>
     </section>
     <section class="portfolio" id="portfolio">
-        <h2 class="h2_portfolio">PORTFOLIO SECTION</h2>
+        <h2 class="h2_portfolio">MI PORTAFOLIO</h2>
         <div class="portfolio__project-container">
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="">Sesiones de Onboarding: Proceso de Captura y Seguimiento</h2>
+            <!-- Proyecto 1: Migración de Onboarding a Google Cloud -->
+            <div class="portfolio__project">
+                <div class="project-badge">Proyecto Destacado</div>
+                <h2 class="portfolio__proyect-name">Migración Cloud: Onboarding Analytics</h2>
                 <div class="content">
-                    <div class="process-summary">
-                        <h2>Resumen del Proceso</h2>
-                        <p>El proceso de <span class="highlight">Sesiones de Onboarding</span> (también conocido como
-                            Recupero NRT) está diseñado para contactar a clientes que realizan simulaciones para la
-                            apertura de nuevos productos financieros como Tarjetas de Crédito CMR, Cuentas Corrientes y
-                            Cuentas de Ahorro. Este proceso sigue un flujo de datos estructurado que permite la
-                            captación eficiente de leads y su posterior seguimiento.</p>
-
-                        <ul class="process-steps">
-                            <li><strong>Origen de datos:</strong> Los usuarios realizan simulaciones en el sitio web o
-                                aplicación del banco desde diferentes dispositivos.</li>
-                            <li><strong>Almacenamiento inicial:</strong> Los datos se almacenan en una Cola Rabbit
-                                específica para cada país.</li>
-                            <li><strong>Procesamiento:</strong> La Data Factory procesa estos datos enviándolos desde
-                                Rabbit hacia Pub/Sub.</li>
-                            <li><strong>Transformación:</strong> Google Cloud Dataflow realiza el procesamiento y
-                                transformación de los datos.</li>
-                            <li><strong>Almacenamiento final:</strong> Los datos procesados se envían a Cloud Storage y
-                                BigQuery.</li>
-                            <li><strong>Integración con CRM:</strong> Simultáneamente, los datos se envían a un Data
-                                Extension en Salesforce.</li>
-                            <li><strong>Seguimiento:</strong> Un Journey en Salesforce evalúa condiciones específicas
-                                para enviar notificaciones personalizadas al cliente.</li>
-                        </ul>
+                    <div class="project-tags">
+                        <span class="tag">Google Cloud</span>
+                        <span class="tag">Dataflow</span>
+                        <span class="tag">BigQuery</span>
+                        <span class="tag">SQL</span>
                     </div>
-
-                    <div class="architecture-diagram">
-                        <h2>Arquitectura de la Solución</h2>
-                        <img src="img/proyecto_onboarding.png" alt="Diagrama de Arquitectura de Onboarding" />
+                    
+                    <div class="project-description">
+                        <p>Migración desde Metabase hacia Google Cloud Platform, reduciendo el tiempo de procesamiento de <span class="highlight">3 horas a menos de 1 minuto</span> y mejorando significativamente la escalabilidad.</p>
                     </div>
-
-                    <div class="data-visualization">
-                        <div class="chart-container">
-                            <h3 class="title_graf">Distribución de Simulaciones por Producto</h3>
-                            <canvas id="productChart"></canvas>
+    
+                    <div class="architecture-flow">
+                        <div class="arch-node">Metabase</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">Dataflow</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">Kubernetes</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">BigQuery</div>
+                    </div>
+    
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <h4>Diseño de arquitectura cloud</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 95%"></div></div>
                         </div>
-
-                        <div class="chart-container">
-                            <h3>Tasa de Conversión Mensual</h3>
-                            <canvas id="conversionChart"></canvas>
+                        <div class="skill">
+                            <h4>Desarrollo SQL</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <h4>Integración de sistemas</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 92%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <h4>Optimización de rendimiento</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 88%"></div></div>
                         </div>
                     </div>
-
-                    <h3>Datos de Simulados (Últimos 7 días)</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Fecha</th>
-                                <th>País</th>
-                                <th>Producto</th>
-                                <th>Dispositivo</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ONB-2025-4281</td>
-                                <td>05/04/2025</td>
-                                <td>Chile</td>
-                                <td>Tarjeta CMR</td>
-                                <td>Mobile</td>
-                                <td>Contactado</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4282</td>
-                                <td>05/04/2025</td>
-                                <td>Perú</td>
-                                <td>Cuenta Corriente</td>
-                                <td>Desktop</td>
-                                <td>Pendiente</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4283</td>
-                                <td>06/04/2025</td>
-                                <td>Colombia</td>
-                                <td>Cuenta de Ahorro</td>
-                                <td>Tablet</td>
-                                <td>Convertido</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4284</td>
-                                <td>06/04/2025</td>
-                                <td>Chile</td>
-                                <td>Tarjeta CMR</td>
-                                <td>Desktop</td>
-                                <td>Contactado</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4285</td>
-                                <td>07/04/2025</td>
-                                <td>Perú</td>
-                                <td>Cuenta de Ahorro</td>
-                                <td>Mobile</td>
-                                <td>Pendiente</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    
+                    <div class="impact-box">
+                        <h3>Impacto en el negocio</h3>
+                        <p>Acceso a datos en tiempo real, acelerando la toma de decisiones y mejorando la respuesta a cambios del mercado.</p>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Proyecto 2: Visualización de Datos con Google Data Studio -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">Visualización y Automatización de Datos</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Google Data Studio</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Transformación del análisis en Excel hacia un sistema automatizado y en tiempo real con <span class="highlight">Google Data Studio</span>, eliminando la gestión manual y proporcionando visualizaciones dinámicas.</p>
+                    </div>
+    
+                    <div class="workflow-diagram">
+                        <div class="workflow-step">
+                            <div class="step-icon">📊</div>
+                            <div class="step-name">Excel</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">🐍</div>
+                            <div class="step-name">Python</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">☁️</div>
+                            <div class="step-name">Google Drive</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">📈</div>
+                            <div class="step-name">Data Studio</div>
+                        </div>
+                    </div>
+    
+                    <div class="key-achievements">
+                        <div class="achievement">
+                            <div class="achievement-title">Incentivación BBVA Seguros</div>
+                            <div class="achievement-desc">Datos no estructurados transformados en dashboards dinámicos</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Feedback positivo</div>
+                            <div class="achievement-desc">Mayor comprensión y adopción de los informes</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Versionado</div>
+                            <div class="achievement-desc">Control histórico de cambios en datos</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Informes periódicos</div>
+                            <div class="achievement-desc">Visualización diaria, semanal y mensual</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Proyecto 3: Análisis Exploratorio de Datos -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">Análisis Exploratorio Predictivo</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NLTK</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Implementación de análisis exhaustivo de datos para convertir suposiciones en conocimiento basado en evidencia científica, aplicando técnicas estadísticas avanzadas.</p>
+                    </div>
+    
+                    <div class="analysis-types">
+                        <div class="analysis-type">Descriptivo</div>
+                        <div class="analysis-type">Diagnóstico</div>
+                        <div class="analysis-type">Predictivo</div>
+                        <div class="analysis-type">Prescriptivo</div>
+                    </div>
+    
+                    <div class="chart-preview">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 85%"></div>
+                            <div class="bar" style="height: 35%"></div>
+                            <div class="bar" style="height: 75%"></div>
+                            <div class="bar" style="height: 50%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+            
+            <!-- Proyecto 4: DataWarehouse -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">DataWarehouse Unificado</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Diseño e implementación de una bodega de datos que integra información operativa y financiera de 3 organizaciones, permitiendo análisis avanzados y generación de insights.</p>
+                    </div>
+    
+                    <div class="warehouse-diagram">
+                        <div class="main-table">Repositorio Central</div>
+                        <div class="sub-tables">
+                            <div class="sub-table">Empresa 1</div>
+                            <div class="sub-table">Empresa 2</div>
+                            <div class="sub-table">Empresa 3</div>
+                        </div>
+                    </div>
+    
+                    <div class="benefit-grid">
+                        <div class="benefit">Análisis de Pareto</div>
+                        <div class="benefit">Costeo de Operaciones</div>
+                        <div class="benefit">Segmentación de Clientes</div>
+                        <div class="benefit">Informes Financieros</div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Proyecto 5: Análisis Probabilístico Tiendas (Proyecto Personal) -->
+            <div class="portfolio__project">
+                <div class="project-badge personal">Proyecto Personal</div>
+                <h2 class="portfolio__proyect-name">Análisis Probabilístico de Recomendaciones</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Probabilidad</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                    <div class="github-link">
+                        <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb" target="_blank">
+                            <i class="fab fa-github"></i> Ver en GitHub
+                        </a>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Modelo probabilístico para determinar si un producto A es buena recomendación para un producto B, mejorando la experiencia de compra con análisis de patrones de comportamiento.</p>
+                    </div>
+    
+                    <div class="key-findings">
+                        <div class="finding">
+                            <div class="finding-value">89%</div>
+                            <div class="finding-label">Tasa de aceptación</div>
+                        </div>
+                        <div class="finding">
+                            <div class="finding-value">36K+</div>
+                            <div class="finding-label">Productos analizados</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-container">
+                        <div class="pie-chart"></div>
+                        <div class="pie-legend">
+                            <div class="legend-item">
+                                <span class="legend-color accept"></span>
+                                <span>Aprobadas (89%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color reject"></span>
+                                <span>No aprobadas (11%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Proyecto placeholder -->
+            <div class="portfolio__project placeholder">
+                <h2 class="portfolio__proyect-name">Próximo Proyecto</h2>
+                <div class="placeholder-content">+</div>
             </div>
         </div>
     </section>
-    <section class="form">
-        <h2 class="form__title">CONTAC</h2>
+    <section class="form" id="contact">
+        <h2 class="form__title">CONTACTO</h2>
         <form class="form__form">
             <div class="form__input-container">
                 <label for="">E-MAIL
