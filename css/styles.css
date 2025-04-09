@@ -311,7 +311,7 @@ h2::after,.h2_skills::after{content:'';position:absolute;bottom:0;left:50%;trans
   h1{margin-top:0;font-size:3rem}
   .profile__data{max-width:620px}
   .profile__img-container{max-height:initial;border-radius:25px 0 0 25px}
-  .profile__img{height:100%;object-fit:cover;width:620px}
+  .profile__img{height:100%;object-fit:cover;max-width:450px}
   .tech-categories,.competencies-container{grid-template-columns:repeat(auto-fill,1fr); align-items: safe center; margin: 0px;}
   .profile__technologies{display:flex;align-items:safe center;flex-direction: column}
 }
@@ -728,7 +728,6 @@ h2::after,.h2_skills::after{content:'';position:absolute;bottom:0;left:50%;trans
 @container portfolio (min-width:1300px) {
   .portfolio__project-container {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    align-items: center;
   }
 
   .portfolio__project:nth-child(1) {
