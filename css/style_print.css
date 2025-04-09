@@ -1,0 +1,389 @@
+        /* Estilos generales y reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #18233f;
+            color: #e2e8f0;
+            line-height: 1.5;
+            font-size: 11pt;
+        }
+        
+        /* Configuración para contenedor principal */
+        .page {
+            width: 100%;
+            max-width: 210mm; /* Ancho A4 */
+            margin: 0 auto;
+            background: #18233f;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        /* Encabezado con foto */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #3b82f6;
+        }
+        
+        .header-content {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .person-name {
+            font-size: 22pt;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+        }
+        
+        .job-title {
+            font-size: 14pt;
+            color: #60a5fa;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 8px;
+            font-size: 10pt;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            fill: #60a5fa;
+        }
+        
+        .contact-text {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        
+        .contact-text:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+        
+        /* Resumen profesional */
+        .summary-box {
+            background: rgba(30, 41, 59, 0.6);
+            border-left: 3px solid #60a5fa;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 11pt;
+        }
+        
+        .summary-box strong {
+            color: #60a5fa;
+        }
+        
+        /* Secciones */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        /* Columnas responsivas */
+        @media (max-width: 768px) {
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+        }
+        
+        .section-title {
+            color: #60a5fa;
+            font-size: 14pt;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 4px;
+        }
+        
+        /* Impacto métricas */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            gap: 10px
+        }
+        
+        /* Métricas responsivas */
+        @media (max-width: 480px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .metric-card {
+            background-color: rgba(15, 23, 42, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Corregido: Mejora en la visualización de los números de métricas */
+        .metric-number {
+            font-size: 20pt;
+            font-weight: 700;
+            color: #f97316;
+            width: 60px; /* Ancho fijo para alinear todos los números */
+            text-align: center;
+            flex-shrink: 0; /* No permitir que se encoja */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .metric-label {
+            font-size: 10pt;
+            color: #cbd5e1;
+            line-height: 1.2;
+            flex: 1; /* Tomar el espacio restante */
+            padding-left: 8px; /* Espacio consistente entre número y texto */
+        }
+        
+        /* Experiencia */
+        .experience-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .experience-item:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #f97316;
+        }
+        
+        .company-name {
+            font-weight: 700;
+            font-size: 12pt;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .position {
+            color: #60a5fa;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        
+        .period {
+            color: #94a3b8;
+            font-size: 9pt;
+            font-style: italic;
+        }
+        
+        .exp-summary {
+            font-size: 10pt;
+            color: #cbd5e1;
+            margin-top: 3px;
+        }
+        
+        /* Proyectos */
+        .project-item {
+            margin-bottom: 12px;
+            background-color: rgba(15, 23, 42, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 12pt;
+            color: #fff;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 5px 0;
+        }
+        
+        .tech-tag {
+            background-color: #1e3a8a;
+            color: #60a5fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 9pt;
+        }
+        
+        .project-desc {
+            font-size: 10pt;
+            color: #cbd5e1;
+            margin-top: 3px;
+        }
+        
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .skill-badge {
+            background-color: rgba(15, 23, 42, 0.6);
+            color: #60a5fa;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 10pt;
+        }
+        
+        /* Educación */
+        .education-item {
+            margin-bottom: 10px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            font-size: 11pt;
+            color: #fff;
+        }
+        
+        .university {
+            font-style: italic;
+            font-size: 10pt;
+            color: #cbd5e1;
+        }
+        
+        .edu-year {
+            color: #94a3b8;
+            font-size: 9pt;
+        }
+        
+        /* CTA */
+        .portfolio-cta {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #f97316;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 11pt;
+        }
+        
+        .cta-button:hover {
+            background-color: #ea580c;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 9pt;
+            color: #94a3b8;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #334155;
+        }
+        
+        /* Ajustes específicos para impresión */
+        @media print {
+            body {
+                background-color: #18233f !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .page {
+                width: 210mm;
+                height: 297mm;
+                max-width: none;
+                padding: 15mm;
+                margin: 0;
+                border: none;
+                overflow: hidden;
+            }
+            
+            .sections-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 15px !important;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                margin-bottom: 8px;
+            }
+            
+            .experience-item, .project-item {
+                margin-bottom: 10px;
+            }
+            
+            /* Ajustes específicos para métricas en impresión */
+            .metric-card {
+                padding: 8px;
+            }
+            
+            .metric-number {
+                font-size: 18pt;
+                width: 50px;
+            }
+            
+            .metric-label {
+                font-size: 9pt;
+            }
+            
+            .contact-row {
+                font-size: 9pt;
+            }
+        }
