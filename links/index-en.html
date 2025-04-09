@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Resume</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style_exp.css">
     <link rel="icon" href="../img/javier.jpg" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +14,10 @@
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script type="text/javascript" src="../js/darkmode.js" defer></script>
-    <script type="text/javascript" src="../js/pryectos.js" defer></script>
 </head>
 
 <body>
-    <!-- style="background-image: URL('/img/fondo.jpg');" -->
+    <!-- style="background-image: URL('/../img/fondo.jpg');" -->
     <header class='header' id="header">
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
@@ -25,8 +25,8 @@
             <img class="header__logo" src="../img/data-engineer.jpg">
             <input type="image" class='darckmode_buttom' id="dark_mode_menu"
                 src='../img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png'>
-            <a href="../index.html" class="language-toggle">ES</a>
-            <a href="../files/resume.pdf" download class="download-button">Download CV</a>
+            <a href="../index.html" class="language-toggle">EN</a>
+            <a href="files/resume.pdf" download class="download-button">CV Dwolad</a>
         </div>
         <nav class='header__nav' id="header__nav">
             <ul class="header__nav-list">
@@ -40,303 +40,683 @@
     <main class="profile" id="profile">
         <div class="profile__wrapper">
             <div class="profile__img-container">
-                <img src="../img/javier-m.jpg" class="profile__img" alt="">
+                <img src="../img/javier-m.jpg" class="profile__img" alt="Francisco Javier Garcia Moreno">
+                <div class="profile__overlay">
+                    <div class="profile__badges">
+                        <span class="profile__badge">5 years of experience</span>
+                        <span class="profile__badge">Big Data</span>
+                        <span class="profile__badge">Data Engineer</span>
+                    </div>
+                </div>
             </div>
             <div class="porfile__data-container">
                 <div class="profile__data">
                     <div class="profile__description">
-                        <h1>Francisco Javier Garcia Moreno</h1>
-                        <h2>Professional Profile</h2>
-                        <p>
-                        <p>
-                            <strong>Data Engineer</strong> with <strong>5 years of experience</strong> I hold a
-                            master's degree in Integrated Management Systems (Data Engineering Focus), specialized
-                            in <strong>Big Data</strong>, <strong>ETL</strong> pipeline design
-                            (<strong>Python</strong>, <strong>GCP</strong>, <strong>AWS</strong>,
-                            <strong>Azure</strong>) and implementation of <strong>Machine Learning</strong>
-                            models (Scikit-learn, TensorFlow). Advanced knowledge of <strong>SQL</strong>, <strong>Scala</strong>
-                            and database management (<strong>PostgreSQL</strong>, <strong>MySQL</strong>,
-                            <strong>NoSQL</strong>). Throughout my career, I have developed dashboards in <strong>Power
-                                BI</strong> and <strong>Tableau</strong>, as well as data-centric web applications using
-                            <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> with
-                            <strong>Flask</strong>/<strong>Django</strong>. Process automation with
-                            <strong>Apache NIFI</strong>, <strong>Airflow</strong> and <strong>CI/CD</strong> deployments
-                            (<strong>GitHub</strong>, <strong>Docker</strong>). <strong>Proven experience</strong>
-                            in <strong>end-to-end</strong> solutions for the financial sector, integrating
-                            <strong>advanced analytics</strong>, <strong>AI</strong> and <strong>interactive web
-                                interfaces</strong>. Results-oriented professional with extensive ability to
-                            collaborate in multidisciplinary teams.
-                        </p>
-                        </p>
+                        <div class="profile__header">
+                            <h1>Francisco Javier Garcia Moreno</h1>
+                            <div class="profile__job-title">
+                                <h2>Data Engineer</h2>
+                                <div class="profile__indicators">
+                                    <div class="indicator">
+                                        <div class="indicator__number">5+</div>
+                                        <div class="indicator__label">Years of experience</div>
+                                    </div>
+                                    <div class="indicator">
+                                        <div class="indicator__number">8+</div>
+                                        <div class="indicator__label">Technologies mastered</div>
+                                    </div>
+                                    <div class="indicator">
+                                        <div class="indicator__number">3+</div>
+                                        <div class="indicator__label">Cloud platforms</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="profile__summary">
+                                <strong>Data Engineer</strong> with <strong>5 years of experience</strong> and
+                                a master's degree in Integrated Management Systems (Focus on Data Engineering).
+                                Specialized in <strong>Big Data</strong>, design of <strong>ETL</strong> pipelines
+                                (<strong>Python</strong>, <strong>GCP</strong>, <strong>AWS</strong>,
+                                <strong>Azure</strong>) and implementation of <strong>Machine Learning</strong> models
+                                (Scikit-learn, TensorFlow). Advanced knowledge of <strong>SQL</strong>,
+                                <strong>Scala</strong> and database management (<strong>PostgreSQL</strong>,
+                                <strong>MySQL</strong>, <strong>NoSQL</strong>). <strong>Proven experience</strong>
+                                in <strong>end-to-end</strong> solutions for the financial sector.
+                            </p>
+                        </div>
                     </div>
-                    <div class="profile__study">
-                        <h2>Education</h2>
-                        <ul class="profile__study-container">
-                            <li class="profile__study-container-li">
-                                <h3 class="h3__study">Undergraduate</h3>
-                                <span class="profile__study-container-span">
-                                    <strong>Degree:</strong> Industrial Engineer <br>
-                                    <strong>University:</strong> Jorge Tadeo Lozano <br>
-                                    <strong>January 2014 - August 2018</strong>
-                                </span>
-                            </li>
-                            <li class="profile__study-container-li">
-                                <h3 class="h3__study">Postgraduate</h3>
-                                <span class="profile__study-container-span">
-                                    <strong>Degree:</strong> Master's Degree in Integrated Management Systems
-                                    (Data Engineering Focus) <br>
-                                    <strong>University:</strong> Universidad Internacional de La Rioja (UNIR) <br>
-                                    <strong>November 2018 - 2020</strong>
-                                </span>
-                            </li>
 
-                        </ul>
+                    <div class="profile__sections">
+                        <div class="profile__technologies">
+                            <h2 class="h2_skills">KEY TECHNOLOGIES</h2>
+                            <div class="tech-categories">
+                                <div class="tech-category">
+                                    <h3 class="tech-category__title">Databases</h3>
+                                    <ul>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--100">100%</div>
+                                            </div>
+                                            <span class="profile__skill-name">SQL - DATABASES</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--90">90%</div>
+                                            </div>
+                                            <span class="profile__skill-name">PostgreSQL / MySQL</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--85">85%</div>
+                                            </div>
+                                            <span class="profile__skill-name">NoSQL / BigQuery</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tech-category">
+                                    <h3 class="tech-category__title">Cloud & DevOps</h3>
+                                    <ul>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--80">80%</div>
+                                            </div>
+                                            <span class="profile__skill-name">GCP CLOUD</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--75">75%</div>
+                                            </div>
+                                            <span class="profile__skill-name">AWS / Azure</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--80">80%</div>
+                                            </div>
+                                            <span class="profile__skill-name">CI/CD / Docker</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tech-category">
+                                    <h3 class="tech-category__title">Programming Languages</h3>
+                                    <ul>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--80">80%</div>
+                                            </div>
+                                            <span class="profile__skill-name">PYTHON</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--75">75%</div>
+                                            </div>
+                                            <span class="profile__skill-name">SCALA</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--60">60%</div>
+                                            </div>
+                                            <span class="profile__skill-name">JS / HTML / CSS</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tech-category">
+                                    <h3 class="tech-category__title">Analytics & BI</h3>
+                                    <ul>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--90">90%</div>
+                                            </div>
+                                            <span class="profile__skill-name">Power BI / Tableau</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--80">80%</div>
+                                            </div>
+                                            <span class="profile__skill-name">Airflow / Apache NIFI</span>
+                                        </li>
+                                        <li class="profile__skill">
+                                            <div class="load-bar">
+                                                <div class="load-bar__bar bar--70">70%</div>
+                                            </div>
+                                            <span class="profile__skill-name">ML (TensorFlow, Scikit-learn)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile__competencies">
+                            <h2>Technical Competencies</h2>
+                            <div class="competencies-container">
+                                <div class="competency">
+                                    <div class="competency__icon etl-icon"></div>
+                                    <div class="competency__content">
+                                        <h3>ETL Pipelines</h3>
+                                        <p>Design and implementation of scalable and robust data flows in cloud environments</p>
+                                    </div>
+                                </div>
+                                <div class="competency">
+                                    <div class="competency__icon db-icon"></div>
+                                    <div class="competency__content">
+                                        <h3>Data Architecture</h3>
+                                        <p>Design of multi-region architectures optimized for high performance and security</p>
+                                    </div>
+                                </div>
+                                <div class="competency">
+                                    <div class="competency__icon ml-icon"></div>
+                                    <div class="competency__content">
+                                        <h3>Machine Learning</h3>
+                                        <p>Implementation of predictive models for advanced analysis of financial data</p>
+                                    </div>
+                                </div>
+                                <div class="competency">
+                                    <div class="competency__icon viz-icon"></div>
+                                    <div class="competency__content">
+                                        <h3>Data Visualization</h3>
+                                        <p>Creation of interactive dashboards for data-driven decision making</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile__study">
+                            <h2>Education</h2>
+                            <ul class="profile__study-container">
+                                <li class="profile__study-container-li">
+                                    <div class="study-year">2018 - 2020</div>
+                                    <div class="study-content">
+                                        <h3 class="h3__study">Postgraduate</h3>
+                                        <span class="profile__study-container-span">
+                                            <strong>Degree:</strong> Master's Degree in Integrated Management Systems
+                                            (Focus on Data Engineering) <br>
+                                            <strong>University:</strong> International University of La Rioja (UNIR)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="profile__study-container-li">
+                                    <div class="study-year">2014 - 2018</div>
+                                    <div class="study-content">
+                                        <h3 class="h3__study">Undergraduate</h3>
+                                        <span class="profile__study-container-span">
+                                            <strong>Degree:</strong> Industrial Engineer <br>
+                                            <strong>University:</strong> Jorge Tadeo Lozano
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="profile__additional">
+                            <h2>Tools and Frameworks</h2>
+                            <div class="tools-container">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">SQL</span>
+                                <span class="tool-tag">Scala</span>
+                                <span class="tool-tag">GCP</span>
+                                <span class="tool-tag">AWS</span>
+                                <span class="tool-tag">Azure</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                                <span class="tool-tag">MySQL</span>
+                                <span class="tool-tag">NoSQL</span>
+                                <span class="tool-tag">BigQuery</span>
+                                <span class="tool-tag">Docker</span>
+                                <span class="tool-tag">Kubernetes</span>
+                                <span class="tool-tag">GitHub</span>
+                                <span class="tool-tag">Power BI</span>
+                                <span class="tool-tag">Tableau</span>
+                                <span class="tool-tag">Apache NIFI</span>
+                                <span class="tool-tag">Airflow</span>
+                                <span class="tool-tag">ETL</span>
+                                <span class="tool-tag">ML</span>
+                                <span class="tool-tag">TensorFlow</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="profile__skills-container">
-                        <h2 class="h2_skills">SKILLS</h2>
-                        <ul>
-                            <li class="profile__skill">
-                                <div class="load-bar">
-                                    <div class="load-bar__bar bar--100">100%</div>
-                                </div>
-                                <span class="profile__skill-name">SQL - DATABASES</span>
-                            </li>
 
-                            <li class="profile__skill">
-                                <div class="load-bar">
-                                    <div class="load-bar__bar bar--60">60%</div>
-                                </div>
-                                <span class="profile__skill-name">HTML AND CSS</span>
-                            </li>
-
-                            <li class="profile__skill">
-                                <div class="load-bar">
-                                    <div class="load-bar__bar bar--80">80%</div>
-                                </div>
-                                <span class="profile__skill-name">GCP CLOUD</span>
-                            </li>
-
-                            <li class="profile__skill">
-                                <div class="load-bar">
-                                    <div class="load-bar__bar bar--80">80%</div>
-                                </div>
-                                <span class="profile__skill-name">PYTHON</span>
-                            </li>
-
-                            <li class="profile__skill">
-                                <div class="load-bar">
-                                    <div class="load-bar__bar bar--60">60%</div>
-                                </div>
-                                <span class="profile__skill-name">JS</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="github__container">
-                        <img src="../img/png-transparent-github-logo.png" class="github_img" alt="">
-                        <a class="github__link" href="https://github.com/javiermorenof7"
-                            target="_blank">https://github.com/javiermorenof7</a>
-                        <img src="../img/174857.png" class="likedin_img" alt="">
-                        <a class="github__link"
-                            href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
-                            target="_blank">https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/</a>
+                    <div class="profile__contact">
+                        <div class="github__container">
+                            <img src="../img/png-transparent-github-logo.png" class="github_img" alt="GitHub">
+                            <a class="github__link" href="https://github.com/javiermorenof7"
+                                target="_blank">github.com/javiermorenof7</a>
+                        </div>
+                        <div class="github__container">
+                            <img src="../img/174857.png" class="likedin_img" alt="LinkedIn">
+                            <a class="github__link"
+                                href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
+                                target="_blank">LinkedIn: Francisco Javier Garcia Moreno</a>
+                        </div>
+                        <div class="github__container">
+                            <img src="../img/ww_logo.png" class="github_img" alt="Portafolio">
+                            <a class="github__link" href="https://javiermorenof7.github.io/cv_portafolio/"
+                                target="_blank">View Complete Portfolio</a>
+                        </div>
+                        <a href="#contact" class="contact-button">Contact</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <section class="experiencia" id="experiencia">
-        <h2 class="h2_experiencia">Experience</h2>
+        <h2 class="h2_experiencia">Professional Experience</h2>
         <div class="experiencia__container">
-            <div class="experiencia__container-item"
-                style="background-image: linear-gradient(#0009,#0009), URL('../img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
-                <h2 class="portfolio__proyect-name">Banco Falabella – Falabella Financial | <strong>Data
-                        Engineer</strong> | January 2023 – Present</h2> <br>
-                <p><strong>Key Tasks and Achievements:</strong></p>
-                <ul class="experiencia__falabella">
-                    <li><strong>Cloud Migration Leadership</strong>: Led the migration of
-                        <strong>On-Premise to GCP</strong> processes, designing scalable architectures for <strong>ETL</strong>
-                        with <strong>Python</strong> and <strong>Scala</strong>, including encryption of sensitive data
-                        (PII).
-                    </li><br>
+            <!-- BANCO FALABELLA -->
+            <div class="experience-container">
+                <div class="experience-header">
+                    <div class="job-title-wrapper">
+                        <h2 class="experience-title">BANCO FALABELLA <span class="position">Data Engineer</span></h2>
+                        <div class="experience-period">January 2023 – Present</div>
+                    </div>
+                    <div class="tag-container">
+                        <span class="exp-tag">GCP</span>
+                        <span class="exp-tag">Python</span>
+                        <span class="exp-tag">Scala</span>
+                        <span class="exp-tag">BigQuery</span>
+                    </div>
+                </div>
 
-                    <li><strong>Multiplatform Integration</strong>: Consolidated data from 15+ sources
-                        (<strong>Oracle</strong>, <strong>MySQL</strong>, <strong>SQL Server</strong>,
-                        <strong>MongoDB</strong>, <strong>PostgreSQL</strong>, <strong>Cassandra</strong>, REST APIs) in
-                        <strong>BigQuery</strong>, optimizing costs by 25% through partitioning and clustering.
-                    </li> <br>
+                <div class="core-achievements">
+                    <div class="core-metric">
+                        <div class="metric-number">91%</div>
+                        <div class="metric-description">Reduction in processing time</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">3+</div>
+                        <div class="metric-description">Countries with standardized architecture</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">25%</div>
+                        <div class="metric-description">Cloud cost savings</div>
+                    </div>
+                </div>
 
-                    <li><strong>Data Transformation</strong>: Parsed complex JSON/XML datasets into relational schemes in
-                        <strong>BigQuery</strong>, improving query efficiency by 40% for banking products
-                        (<strong>cards</strong>, <strong>credits</strong>, <strong>checking accounts</strong>).
-                    </li><br>
-
-                    <li><strong>Automation</strong>: Implemented pipelines with <strong>Airflow</strong> and
-                        <strong>Argo Workflows</strong> in <strong>Kubernetes</strong>, reducing processing times from 8h
-                        to 45 minutes for regional reports (Colombia, Peru, Chile).
-                    </li><br>
-
-                    <li><strong>Governance</strong>: Established <strong>Data Quality</strong> monitoring with
-                        consistency metrics (dQaaS) and proactive alerts using <strong>DataOps</strong> principles.
-                    </li> <br>
-
-                    <li><strong>Visualization</strong>: Developed 20+ dashboards in <strong>Looker</strong> and
-                        <strong>Tableau</strong> for risk, marketing and operations areas, with real-time updates via
-                        <strong>streaming</strong> (Pub/Sub + Dataflow).
-                    </li><br>
-                    <p><strong>Technical Skills:</strong></p>
-                    <ul class="experiencia__falabella__apt">
-                        <li><strong>Cloud:</strong> GCP (BigQuery, Dataflow, Composer), Azure Synapse</li>
-                        <li><strong>Languages:</strong> Python (Pandas, PySpark), Scala, SQL (Spark SQL)</li>
-                        <li><strong>Orchestration:</strong> Kubernetes, Argo Workflows, Airflow</li>
-                        <li><strong>DataOps:</strong> CI/CD (GitLab/GitHub), Testing (Great Expectations)</li>
-                        <li><strong>AI/ML:</strong> Credit scoring models (Python + BigQuery ML)</li>
+                <div class="highlights-container">
+                    <h3>Key Contributions</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Led the multi-country migration</strong> from On-Premise systems to Google Cloud,
+                            implementing scalable and secure architectures</li>
+                        <li><strong>Redesigned the Onboarding pipeline</strong> from MySQL to BigQuery, achieving 85%
+                            greater processing efficiency</li>
+                        <li><strong>Optimized complex JSON schemas</strong> accelerating queries by 40% and improving
+                            analysis for business decisions</li>
+                        <li><strong>Standardized data processes</strong> between Colombia, Peru, and Chile, reducing
+                            report generation from 8h to 45min</li>
                     </ul>
-                </ul>
+                </div>
             </div>
-            <div class="experiencia__container-item"
-                style="background-image: linear-gradient(#0009,#0009), URL('../img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
-                <h2 class="portfolio__proyect-name">EXPERIENCE</h2>
+
+            <!-- FACTOR IT -->
+            <div class="experience-container">
+                <div class="experience-header">
+                    <div class="job-title-wrapper">
+                        <h2 class="experience-title">FACTOR IT <span class="position">Data Engineer</span></h2>
+                        <div class="experience-period">April 2022 – January 2023</div>
+                    </div>
+                    <div class="tag-container">
+                        <span class="exp-tag">Python</span>
+                        <span class="exp-tag">SQL</span>
+                        <span class="exp-tag">ML/AI</span>
+                        <span class="exp-tag">ETL</span>
+                    </div>
+                </div>
+
+                <div class="core-achievements">
+                    <div class="core-metric">
+                        <div class="metric-number">40%</div>
+                        <div class="metric-description">Reduction in processing time</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">15TB</div>
+                        <div class="metric-description">Unstructured data analyzed</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">$1.2M</div>
+                        <div class="metric-description">Savings generated with predictive model</div>
+                    </div>
+                </div>
+
+                <div class="highlights-container">
+                    <h3>Key Contributions</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Developed advanced models</strong> of natural language processing with 92%
+                            accuracy for predictive analysis</li>
+                        <li><strong>Implemented sentiment analysis solutions</strong> that improved customer
+                            satisfaction by 23%</li>
+                        <li><strong>Transformed unstructured data</strong> into actionable insights for strategic
+                            decision making</li>
+                        <li><strong>Redesigned ETL systems</strong> reducing operational costs by 35% and improving
+                            processing speed</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experiencia__container-item"
-                style="background-image: linear-gradient(#0009,#0009), URL('../img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
-                <h2 class="portfolio__proyect-name">EXPERIENCE</h2>
+
+            <!-- BBVA -->
+            <div class="experience-container">
+                <div class="experience-header">
+                    <div class="job-title-wrapper">
+                        <h2 class="experience-title">BBVA <span class="position">Data Engineer</span></h2>
+                        <div class="experience-period">November 2021 – April 2022</div>
+                    </div>
+                    <div class="tag-container">
+                        <span class="exp-tag">Python</span>
+                        <span class="exp-tag">SQL Server</span>
+                        <span class="exp-tag">Data Studio</span>
+                        <span class="exp-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="core-achievements">
+                    <div class="core-metric">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-description">Adoption of new reporting system</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">65%</div>
+                        <div class="metric-description">Reduction in analysis time</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">0</div>
+                        <div class="metric-description">Information losses with versioning</div>
+                    </div>
+                </div>
+
+                <div class="highlights-container">
+                    <h3>Key Contributions</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Transformed the reporting system</strong> from Excel to Google Data Studio,
+                            enabling real-time visualizations</li>
+                        <li><strong>Developed automated ETL processes</strong> to extract and process
+                            critical banking data</li>
+                        <li><strong>Implemented version control</strong> that eliminated information losses and
+                            allowed immediate recovery</li>
+                        <li><strong>Created automation scripts</strong> that reduced report preparation time by 65%</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experiencia__container-item"
-                style="background-image: linear-gradient(#0009,#0009), URL('../img/aurora-pictures-42qef0qrqpkno7tt.jpg');">
-                <h2 class="portfolio__proyect-name">EXPERIENCE</h2>
+
+            <!-- AVIOMAR -->
+            <div class="experience-container">
+                <div class="experience-header">
+                    <div class="job-title-wrapper">
+                        <h2 class="experience-title">AVIOMAR GRUPO EMPRESARIAL <span class="position">Data Process Engineer</span></h2>
+                        <div class="experience-period">February 2020 – October 2021</div>
+                    </div>
+                    <div class="tag-container">
+                        <span class="exp-tag">PostgreSQL</span>
+                        <span class="exp-tag">Python</span>
+                        <span class="exp-tag">ETL</span>
+                        <span class="exp-tag">Power BI/Tableau</span>
+                    </div>
+                </div>
+
+                <div class="core-achievements">
+                    <div class="core-metric">
+                        <div class="metric-number">200%</div>
+                        <div class="metric-description">Improvement in process accuracy</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">3</div>
+                        <div class="metric-description">Companies integrated into a single DB</div>
+                    </div>
+                    <div class="core-metric">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-description">Automation of critical reports</div>
+                    </div>
+                </div>
+
+                <div class="highlights-container">
+                    <h3>Key Contributions</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Designed and implemented corporate</strong> data architecture from scratch for three
+                            companies in the group</li>
+                        <li><strong>Developed automated costing system</strong> for customs operations
+                            improving accuracy by 200%</li>
+                        <li><strong>Created corporate ETL pipeline</strong> reducing monthly data processing from
+                            days to hours</li>
+                        <li><strong>Implemented profitability analysis</strong> and customer segmentation for
+                            SARLAFT compliance</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
     <section class="portfolio" id="portfolio">
-        <h2 class="h2_portfolio">PORTFOLIO SECTION</h2>
+        <h2 class="h2_portfolio">MY PORTFOLIO</h2>
         <div class="portfolio__project-container">
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('../img/fondo.jpg');">
-                <h2 class="">Onboarding Sessions: Capture and Tracking Process</h2>
+            <!-- Project 1: Cloud Migration: Onboarding Analytics -->
+            <div class="portfolio__project">
+                <div class="project-badge">Featured Project</div>
+                <h2 class="portfolio__proyect-name">Cloud Migration: Onboarding Analytics</h2>
                 <div class="content">
-                    <div class="process-summary">
-                        <h2>Process Summary</h2>
-                        <p>The <span class="highlight">Onboarding Sessions</span> process (also known as
-                            Recupero NRT) is designed to contact customers who perform simulations for
-                            opening new financial products such as CMR Credit Cards, Checking Accounts and
-                            Savings Accounts. This process follows a structured data flow that allows for
-                            efficient lead capture and subsequent follow-up.</p>
-
-                        <ul class="process-steps">
-                            <li><strong>Data origin:</strong> Users perform simulations on the bank's website or
-                                application from different devices.</li>
-                            <li><strong>Initial storage:</strong> The data is stored in a specific Rabbit Queue
-                                for each country.</li>
-                            <li><strong>Processing:</strong> The Data Factory processes this data by sending it from
-                                Rabbit to Pub/Sub.</li>
-                            <li><strong>Transformation:</strong> Google Cloud Dataflow performs the processing and
-                                transformation of the data.</li>
-                            <li><strong>Final storage:</strong> The processed data is sent to Cloud Storage and
-                                BigQuery.</li>
-                            <li><strong>CRM Integration:</strong> Simultaneously, the data is sent to a Data
-                                Extension in Salesforce.</li>
-                            <li><strong>Follow-up:</strong> A Journey in Salesforce evaluates specific conditions
-                                to send personalized notifications to the customer.</li>
-                        </ul>
+                    <div class="project-tags">
+                        <span class="tag">Google Cloud</span>
+                        <span class="tag">Dataflow</span>
+                        <span class="tag">BigQuery</span>
+                        <span class="tag">SQL</span>
                     </div>
-
-                    <div class="architecture-diagram">
-                        <h2>Solution Architecture</h2>
-                        <img src="../img/proyecto_onboarding.png" alt="Onboarding Architecture Diagram" />
+                    
+                    <div class="project-description">
+                        <p>Migration from Metabase to Google Cloud Platform, reducing processing time from <span class="highlight">3 hours to less than 1 minute</span> and significantly improving scalability.</p>
                     </div>
-
-                    <div class="data-visualization">
-                        <div class="chart-container">
-                            <h3 class="title_graf">Distribution of Simulations by Product</h3>
-                            <canvas id="productChart"></canvas>
+    
+                    <div class="architecture-flow">
+                        <div class="arch-node">Metabase</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">Dataflow</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">Kubernetes</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-node">BigQuery</div>
+                    </div>
+    
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <h4>Cloud architecture design</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 95%"></div></div>
                         </div>
-
-                        <div class="chart-container">
-                            <h3>Monthly Conversion Rate</h3>
-                            <canvas id="conversionChart"></canvas>
+                        <div class="skill">
+                            <h4>SQL Development</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <h4>Systems integration</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 92%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <h4>Performance optimization</h4>
+                            <div class="skill-level"><div class="skill-bar" style="width: 88%"></div></div>
                         </div>
                     </div>
-
-                    <h3>Simulation Data (Last 7 days)</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Date</th>
-                                <th>Country</th>
-                                <th>Product</th>
-                                <th>Device</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ONB-2025-4281</td>
-                                <td>05/04/2025</td>
-                                <td>Chile</td>
-                                <td>CMR Card</td>
-                                <td>Mobile</td>
-                                <td>Contacted</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4282</td>
-                                <td>05/04/2025</td>
-                                <td>Peru</td>
-                                <td>Checking Account</td>
-                                <td>Desktop</td>
-                                <td>Pending</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4283</td>
-                                <td>06/04/2025</td>
-                                <td>Colombia</td>
-                                <td>Savings Account</td>
-                                <td>Tablet</td>
-                                <td>Converted</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4284</td>
-                                <td>06/04/2025</td>
-                                <td>Chile</td>
-                                <td>CMR Card</td>
-                                <td>Desktop</td>
-                                <td>Contacted</td>
-                            </tr>
-                            <tr>
-                                <td>ONB-2025-4285</td>
-                                <td>07/04/2025</td>
-                                <td>Peru</td>
-                                <td>Savings Account</td>
-                                <td>Mobile</td>
-                                <td>Pending</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    
+                    <div class="impact-box">
+                        <h3>Business Impact</h3>
+                        <p>Real-time data access, accelerating decision-making and improving response to market changes.</p>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Project 2: Data Visualization and Automation -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">Data Visualization and Automation</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Google Data Studio</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Transformation from Excel analysis to an automated and real-time system with <span class="highlight">Google Data Studio</span>, eliminating manual management and providing dynamic visualizations.</p>
+                    </div>
+    
+                    <div class="workflow-diagram">
+                        <div class="workflow-step">
+                            <div class="step-icon">📊</div>
+                            <div class="step-name">Excel</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">🐍</div>
+                            <div class="step-name">Python</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">☁️</div>
+                            <div class="step-name">Google Drive</div>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-icon">📈</div>
+                            <div class="step-name">Data Studio</div>
+                        </div>
+                    </div>
+    
+                    <div class="key-achievements">
+                        <div class="achievement">
+                            <div class="achievement-title">BBVA Insurance Incentives</div>
+                            <div class="achievement-desc">Unstructured data transformed into dynamic dashboards</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Positive feedback</div>
+                            <div class="achievement-desc">Better understanding and adoption of reports</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Versioning</div>
+                            <div class="achievement-desc">Historical control of data changes</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-title">Periodic reports</div>
+                            <div class="achievement-desc">Daily, weekly, and monthly visualization</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Project 3: Predictive Exploratory Analysis -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">Predictive Exploratory Analysis</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NLTK</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Implementation of comprehensive data analysis to convert assumptions into knowledge based on scientific evidence, applying advanced statistical techniques.</p>
+                    </div>
+    
+                    <div class="analysis-types">
+                        <div class="analysis-type">Descriptive</div>
+                        <div class="analysis-type">Diagnostic</div>
+                        <div class="analysis-type">Predictive</div>
+                        <div class="analysis-type">Prescriptive</div>
+                    </div>
+    
+                    <div class="chart-preview">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 85%"></div>
+                            <div class="bar" style="height: 35%"></div>
+                            <div class="bar" style="height: 75%"></div>
+                            <div class="bar" style="height: 50%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+            
+            <!-- Project 4: Unified DataWarehouse -->
+            <div class="portfolio__project">
+                <h2 class="portfolio__proyect-name">Unified DataWarehouse</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Design and implementation of a data warehouse that integrates operational and financial information from 3 organizations, enabling advanced analysis and insight generation.</p>
+                    </div>
+    
+                    <div class="warehouse-diagram">
+                        <div class="main-table">Central Repository</div>
+                        <div class="sub-tables">
+                            <div class="sub-table">Company 1</div>
+                            <div class="sub-table">Company 2</div>
+                            <div class="sub-table">Company 3</div>
+                        </div>
+                    </div>
+    
+                    <div class="benefit-grid">
+                        <div class="benefit">Pareto Analysis</div>
+                        <div class="benefit">Operations Costing</div>
+                        <div class="benefit">Customer Segmentation</div>
+                        <div class="benefit">Financial Reports</div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Project 5: Probabilistic Analysis of Recommendations (Personal Project) -->
+            <div class="portfolio__project">
+                <div class="project-badge personal">Personal Project</div>
+                <h2 class="portfolio__proyect-name">Probabilistic Analysis of Recommendations</h2>
+                <div class="content">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Probability</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                    <div class="github-link">
+                        <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+    
+                    <div class="project-description">
+                        <p>Probabilistic model to determine if product A is a good recommendation for product B, improving the shopping experience with behavior pattern analysis.</p>
+                    </div>
+    
+                    <div class="key-findings">
+                        <div class="finding">
+                            <div class="finding-value">89%</div>
+                            <div class="finding-label">Acceptance rate</div>
+                        </div>
+                        <div class="finding">
+                            <div class="finding-value">36K+</div>
+                            <div class="finding-label">Products analyzed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-container">
+                        <div class="pie-chart"></div>
+                        <div class="pie-legend">
+                            <div class="legend-item">
+                                <span class="legend-color accept"></span>
+                                <span>Approved (89%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color reject"></span>
+                                <span>Not approved (11%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio__project"
-                style="background-image: linear-gradient(#0009,#0009), URL('img/fondo.jpg');">
-                <h2 class="portfolio__proyect-name">PROJECT NAME</h2>
+    
+            <!-- Project placeholder -->
+            <div class="portfolio__project placeholder">
+                <h2 class="portfolio__proyect-name">Next Project</h2>
+                <div class="placeholder-content">+</div>
             </div>
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="contact">
         <h2 class="form__title">CONTACT</h2>
         <form class="form__form">
             <div class="form__input-container">
