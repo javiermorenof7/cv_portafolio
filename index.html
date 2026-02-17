@@ -14,28 +14,33 @@
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script type="text/javascript" src="js/darkmode.js" defer></script>
+    <script type="text/javascript" src="js/menuclose.js" defer></script>
 </head>
 
 <body>
     <!-- style="background-image: URL('/img/fondo.jpg');" -->
     <header class='header' id="header">
-        <input type="checkbox" class="header__checkbox" id="open-menu">
-        <label for="open-menu" class="header__open-nav-buttom" role="button">=</label>
-        <div class="header__buttoms-container">
-            <img class="header__logo" src="img/data-engineer.jpg">
-            <input type="image" class='darckmode_buttom' id="dark_mode_menu"
-                src='img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png'>
-            <a href="links/index-en.html" class="language-toggle">EN</a>
-            <a href="pdf/Curriculum_ES.pdf" download="Curriculum_ES.pdf" class="download-button">CV PDF</a>
+        <div class="header__content-wrapper layout-wrapper">
+            <input type="checkbox" class="header__checkbox" id="open-menu">
+            <label for="open-menu" class="header__open-nav-button" role="button" aria-label="Open Menu">=</label>
+            <div class="header__logo-container">
+                <img class="header__logo" src="img/data-engineer-logo.svg" alt="Data Engineer Logo">
+            </div>
+            <nav class='header__nav' id="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#profile">Perfil</a></li>
+                    <li class="header__nav-item"><a href="#experiencia">Experiencia</a></li>
+                    <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
+                    <li class="header__nav-item"><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header__buttons-container">
+                <a href="links/index-en.html" class="language-toggle">EN</a>
+                <input type="image" class='darkmode_button' id="dark_mode_menu"
+                    src='img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png' alt="Toggle Dark Mode">
+                <a href="pdf/Curriculum_ES.pdf" download="Curriculum_ES.pdf" class="download-button">CV PDF</a>
+            </div>
         </div>
-        <nav class='header__nav' id="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#profile">Perfil</a></li>
-                <li class="header__nav-item"><a href="#experiencia">Experiencia</a></li>
-                <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
-                <li class="header__nav-item"><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
     <main class="profile" id="profile">
         <div class="profile__wrapper">
@@ -49,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="porfile__data-container">
+            <div class="profile__data-container">
                 <div class="profile__data">
                     <div class="profile__description">
                         <div class="profile__header">
@@ -72,12 +77,23 @@
                                 </div>
                             </div>
                             <p class="profile__summary">
-                                Profesional con <strong>Maestría en Sistemas Integrados de Gestión</strong>, <strong>5 años</strong> transformando datos masivos en decisiones estratégicas medibles. Especialista en <strong>
-                                arquitecturas Big Data</strong>, <strong>flujos ETL automatizados</strong>, <strong>gestión avanzada de bases de datos</strong> relacionales/NoSQL, implementación de <strong>modelos predictivos</strong>, 
-                                <strong>visualización de datos</strong>. Experiencia desarrollando <strong>soluciones end-to-end</strong> con resultados cuantificables: reducción de costos operativos (<strong>30%</strong>), 
-                                aumento en velocidad de procesamiento (<strong>40%</strong>), incremento en conversión (<strong>25%</strong>), optimización de rendimientos financieros (<strong>12%</strong> sobre benchmark). 
-                                Enfoque versátil aplicado en múltiples industrias, destacando implementaciones exitosas en el <strong>sector financiero</strong>. Orientación estratégica para convertir datos complejos en 
-                                <strong>insights accionables</strong> que generan <strong>ventajas competitivas</strong> sostenibles.
+                                Profesional con <strong>Maestría en Sistemas Integrados de Gestión</strong>, <strong>5
+                                    años</strong> transformando datos masivos en decisiones estratégicas medibles.
+                                Especialista en <strong>
+                                    arquitecturas Big Data</strong>, <strong>flujos ETL automatizados</strong>,
+                                <strong>gestión avanzada de bases de datos</strong> relacionales/NoSQL, implementación
+                                de <strong>modelos predictivos</strong>,
+                                <strong>visualización de datos</strong>. Experiencia desarrollando <strong>soluciones
+                                    end-to-end</strong> con resultados cuantificables: reducción de costos operativos
+                                (<strong>30%</strong>),
+                                aumento en velocidad de procesamiento (<strong>40%</strong>), incremento en conversión
+                                (<strong>25%</strong>), optimización de rendimientos financieros (<strong>12%</strong>
+                                sobre benchmark).
+                                Enfoque versátil aplicado en múltiples industrias, destacando implementaciones exitosas
+                                en el <strong>sector financiero</strong>. Orientación estratégica para convertir datos
+                                complejos en
+                                <strong>insights accionables</strong> que generan <strong>ventajas competitivas</strong>
+                                sostenibles.
                             </p>
                         </div>
                     </div>
@@ -499,11 +515,13 @@
                         <span class="tag">BigQuery</span>
                         <span class="tag">SQL</span>
                     </div>
-                    
+
                     <div class="project-description">
-                        <p>Migración desde Metabase hacia Google Cloud Platform, reduciendo el tiempo de procesamiento de <span class="highlight">3 horas a menos de 1 minuto</span> y mejorando significativamente la escalabilidad.</p>
+                        <p>Migración desde Metabase hacia Google Cloud Platform, reduciendo el tiempo de procesamiento
+                            de <span class="highlight">3 horas a menos de 1 minuto</span> y mejorando significativamente
+                            la escalabilidad.</p>
                     </div>
-    
+
                     <div class="architecture-flow">
                         <div class="arch-node">Metabase</div>
                         <div class="arch-arrow">→</div>
@@ -513,33 +531,42 @@
                         <div class="arch-arrow">→</div>
                         <div class="arch-node">BigQuery</div>
                     </div>
-    
+
                     <div class="skills-grid">
                         <div class="skill">
                             <h4>Diseño de arquitectura cloud</h4>
-                            <div class="skill-level"><div class="skill-bar" style="width: 95%"></div></div>
+                            <div class="skill-level">
+                                <div class="skill-bar" style="width: 95%"></div>
+                            </div>
                         </div>
                         <div class="skill">
                             <h4>Desarrollo SQL</h4>
-                            <div class="skill-level"><div class="skill-bar" style="width: 90%"></div></div>
+                            <div class="skill-level">
+                                <div class="skill-bar" style="width: 90%"></div>
+                            </div>
                         </div>
                         <div class="skill">
                             <h4>Integración de sistemas</h4>
-                            <div class="skill-level"><div class="skill-bar" style="width: 92%"></div></div>
+                            <div class="skill-level">
+                                <div class="skill-bar" style="width: 92%"></div>
+                            </div>
                         </div>
                         <div class="skill">
                             <h4>Optimización de rendimiento</h4>
-                            <div class="skill-level"><div class="skill-bar" style="width: 88%"></div></div>
+                            <div class="skill-level">
+                                <div class="skill-bar" style="width: 88%"></div>
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="impact-box">
                         <h3>Impacto en el negocio</h3>
-                        <p>Acceso a datos en tiempo real, acelerando la toma de decisiones y mejorando la respuesta a cambios del mercado.</p>
+                        <p>Acceso a datos en tiempo real, acelerando la toma de decisiones y mejorando la respuesta a
+                            cambios del mercado.</p>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Proyecto 2: Visualización de Datos con Google Data Studio -->
             <div class="portfolio__project">
                 <h2 class="portfolio__proyect-name">Visualización y Automatización de Datos</h2>
@@ -550,11 +577,13 @@
                         <span class="tag">Google Data Studio</span>
                         <span class="tag">Pandas</span>
                     </div>
-    
+
                     <div class="project-description">
-                        <p>Transformación del análisis en Excel hacia un sistema automatizado y en tiempo real con <span class="highlight">Google Data Studio</span>, eliminando la gestión manual y proporcionando visualizaciones dinámicas.</p>
+                        <p>Transformación del análisis en Excel hacia un sistema automatizado y en tiempo real con <span
+                                class="highlight">Google Data Studio</span>, eliminando la gestión manual y
+                            proporcionando visualizaciones dinámicas.</p>
                     </div>
-    
+
                     <div class="workflow-diagram">
                         <div class="workflow-step">
                             <div class="step-icon">📊</div>
@@ -576,11 +605,12 @@
                             <div class="step-name">Data Studio</div>
                         </div>
                     </div>
-    
+
                     <div class="key-achievements">
                         <div class="achievement">
                             <div class="achievement-title">Incentivación BBVA Seguros</div>
-                            <div class="achievement-desc">Datos no estructurados transformados en dashboards dinámicos</div>
+                            <div class="achievement-desc">Datos no estructurados transformados en dashboards dinámicos
+                            </div>
                         </div>
                         <div class="achievement">
                             <div class="achievement-title">Feedback positivo</div>
@@ -597,7 +627,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Proyecto 3: Análisis Exploratorio de Datos -->
             <div class="portfolio__project">
                 <h2 class="portfolio__proyect-name">Análisis Exploratorio Predictivo</h2>
@@ -608,18 +638,19 @@
                         <span class="tag">Pandas</span>
                         <span class="tag">NLTK</span>
                     </div>
-    
+
                     <div class="project-description">
-                        <p>Implementación de análisis exhaustivo de datos para convertir suposiciones en conocimiento basado en evidencia científica, aplicando técnicas estadísticas avanzadas.</p>
+                        <p>Implementación de análisis exhaustivo de datos para convertir suposiciones en conocimiento
+                            basado en evidencia científica, aplicando técnicas estadísticas avanzadas.</p>
                     </div>
-    
+
                     <div class="analysis-types">
                         <div class="analysis-type">Descriptivo</div>
                         <div class="analysis-type">Diagnóstico</div>
                         <div class="analysis-type">Predictivo</div>
                         <div class="analysis-type">Prescriptivo</div>
                     </div>
-    
+
                     <div class="chart-preview">
                         <div class="bar-chart">
                             <div class="bar" style="height: 60%"></div>
@@ -631,7 +662,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Proyecto 4: DataWarehouse -->
             <div class="portfolio__project">
                 <h2 class="portfolio__proyect-name">DataWarehouse Unificado</h2>
@@ -642,11 +673,12 @@
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">Pandas</span>
                     </div>
-    
+
                     <div class="project-description">
-                        <p>Diseño e implementación de una bodega de datos que integra información operativa y financiera de 3 organizaciones, permitiendo análisis avanzados y generación de insights.</p>
+                        <p>Diseño e implementación de una bodega de datos que integra información operativa y financiera
+                            de 3 organizaciones, permitiendo análisis avanzados y generación de insights.</p>
                     </div>
-    
+
                     <div class="warehouse-diagram">
                         <div class="main-table">Repositorio Central</div>
                         <div class="sub-tables">
@@ -655,7 +687,7 @@
                             <div class="sub-table">Empresa 3</div>
                         </div>
                     </div>
-    
+
                     <div class="benefit-grid">
                         <div class="benefit">Análisis de Pareto</div>
                         <div class="benefit">Costeo de Operaciones</div>
@@ -664,7 +696,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Proyecto 5: Análisis Probabilístico Tiendas (Proyecto Personal) -->
             <div class="portfolio__project">
                 <div class="project-badge personal">Proyecto Personal</div>
@@ -677,15 +709,18 @@
                         <span class="tag">Machine Learning</span>
                     </div>
                     <div class="github-link">
-                        <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb" target="_blank">
+                        <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb"
+                            target="_blank">
                             <i class="fab fa-github"></i> Ver en GitHub
                         </a>
                     </div>
-    
+
                     <div class="project-description">
-                        <p>Modelo probabilístico para determinar si un producto A es buena recomendación para un producto B, mejorando la experiencia de compra con análisis de patrones de comportamiento.</p>
+                        <p>Modelo probabilístico para determinar si un producto A es buena recomendación para un
+                            producto B, mejorando la experiencia de compra con análisis de patrones de comportamiento.
+                        </p>
                     </div>
-    
+
                     <div class="key-findings">
                         <div class="finding">
                             <div class="finding-value">89%</div>
@@ -696,7 +731,7 @@
                             <div class="finding-label">Productos analizados</div>
                         </div>
                     </div>
-                    
+
                     <div class="pie-container">
                         <div class="pie-chart"></div>
                         <div class="pie-legend">
@@ -712,7 +747,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Proyecto placeholder -->
             <div class="portfolio__project placeholder">
                 <h2 class="portfolio__proyect-name">Próximo Proyecto</h2>
