@@ -1081,7 +1081,8 @@ h2::after,
 }
 
 .tag {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(93, 78, 78, 0.1);
+  color: #4D94FF;
   border-radius: 30px;
   padding: 5px 12px;
   font-size: 12px;
@@ -1701,8 +1702,6 @@ body:not([style*="background-color: #121a2e"]) footer {
 /* Custom Chart Card - Light Mode Fixes */
 .light-mode-portfolio .finding-value {
   color: #1cafbede !important;
-  /* Vibrant color matching the chart or dark blue */
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .light-mode-portfolio .center-text-pie {

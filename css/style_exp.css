@@ -50,7 +50,6 @@
 
 /* Encabezado de experiencia */
 .experience-header {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background: linear-gradient(135deg, #172554, #1e3a8a);
