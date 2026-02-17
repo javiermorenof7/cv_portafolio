@@ -241,3 +241,100 @@
         width: 100%;
     }
 }
+
+/* ================================================
+   LIGHT MODE OVERRIDES - FULL HARMONY
+   ================================================ */
+
+.light-mode-experiencia {
+    background-color: #f5f7fa !important;
+    color: #1f2937 !important;
+}
+
+.light-mode-experiencia .h2_experiencia {
+    color: #1e3a8a !important;
+}
+
+.light-mode-experiencia .experience-container {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+.light-mode-experiencia .experience-container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.light-mode-experiencia .experience-header {
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+    background-image: none !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.light-mode-experiencia .experience-title {
+    color: #1e40af !important;
+}
+
+.light-mode-experiencia .position {
+    color: #f97316 !important;
+}
+
+.light-mode-experiencia .experience-period {
+    color: #64748b !important;
+}
+
+.light-mode-experiencia .exp-tag {
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
+    border: 1px solid #93c5fd;
+}
+
+.light-mode-experiencia .exp-tag:hover {
+    background-color: #bfdbfe !important;
+}
+
+.light-mode-experiencia .core-achievements {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: none !important;
+}
+
+.light-mode-experiencia .core-metric {
+    background-color: #f9fafb !important;
+    background: #f9fafb !important;
+}
+
+.light-mode-experiencia .core-metric:hover {
+    background-color: #f3f4f6 !important;
+    background: #f3f4f6 !important;
+}
+
+.light-mode-experiencia .metric-number {
+    color: #f97316 !important;
+}
+
+.light-mode-experiencia .metric-description {
+    color: #64748b !important;
+}
+
+.light-mode-experiencia .highlights-container {
+    background-color: #ffffff !important;
+}
+
+.light-mode-experiencia .highlights-container h3 {
+    color: #1e40af !important;
+    border-bottom-color: #e2e8f0 !important;
+}
+
+.light-mode-experiencia .highlights-list li {
+    color: #374151 !important;
+}
+
+.light-mode-experiencia .highlights-list li::before {
+    color: #f97316 !important;
+}
+
+.light-mode-experiencia .highlights-list li strong {
+    color: #1e40af !important;
+}
