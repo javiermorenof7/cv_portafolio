@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum_Portafolio_EN</title>
     <link rel="stylesheet" href="../css/styles.css">
@@ -285,7 +285,7 @@
                         </div>
                     </div>
 
-                    <div class="profile__contact">
+                    <div class="profile__contact" id="contact">
                         <div class="github__container">
                             <img src="../img/png-transparent-github-logo.png" class="github_img" alt="GitHub">
                             <a class="github__link" href="https://github.com/javiermorenof7"
@@ -302,7 +302,8 @@
                             <a class="github__link" href="https://javiermorenof7.github.io/cv_portafolio/"
                                 target="_blank" rel="noopener noreferrer">View Complete Portfolio</a>
                         </div>
-                        <a href="#contact" class="contact-button">Contact</a>
+                        <a href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/" class="contact-button"
+                            target="_blank" rel="noopener noreferrer">Contact</a>
                     </div>
                 </div>
             </div>
@@ -743,21 +744,6 @@
                 <div class="placeholder-content">+</div>
             </div>
         </div>
-    </section>
-    <section class="form" id="contact">
-        <h2 class="form__title">CONTACT</h2>
-        <form class="form__form">
-            <div class="form__input-container">
-                <label for="">E-MAIL
-                    <input type="email" placeholder="your@email.com">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label for="">Message
-                    <textarea type="message" placeholder="Your Message"></textarea>
-                </label>
-            </div>
-        </form>
     </section>
     <footer>
         <strong>Francisco Javier Garcia Moreno</strong> - Copyright
