@@ -1,0 +1,32 @@
+#!/bin/sh
+# Antes de cada commit, quita los metadatos (EXIF con GPS, XMP, IPTC) de las
+# imágenes JPEG y PNG que se van a subir, y las vuelve a añadir ya limpias.
+#
+# Se activa una vez por clon con: git config core.hooksPath .githooks
+
+raiz="$(git rev-parse --show-toplevel)" || exit 1
+cd "$raiz" || exit 1
+
+imagenes="$(git diff --cached --name-only --diff-filter=ACM | grep -i -E '\.(jpe?g|png)$')"
+[ -n "$imagenes" ] || exit 0
+
+python=""
+for candidato in python3 python py; do
+  if command -v "$candidato" >/dev/null 2>&1; then
+    python="$candidato"
+    break
+  fi
+done
+if [ -z "$python" ]; then
+  echo "pre-commit: hay imágenes en el commit y no se encontró Python para quitarles los metadatos." >&2
+  echo "pre-commit: instala Python o límpialas a mano antes de hacer el commit." >&2
+  exit 1
+fi
+
+echo "$imagenes" | while IFS= read -r imagen; do
+  [ -f "$imagen" ] || continue
+  if [ -n "$("$python" .githooks/quitar_metadatos.py "$imagen")" ]; then
+    git add -- "$imagen"
+    echo "pre-commit: metadatos eliminados de $imagen"
+  fi
+done

@@ -1717,3 +1717,18 @@ body:not([style*="background-color: #121a2e"]) footer {
   color: #374151 !important;
   font-weight: 500;
 }
+/* Valores que antes iban como estilos inline (la CSP no los permite) */
+.text-justify {
+  text-align: justify;
+}
+
+.skill-bar.w-88 { width: 88%; }
+.skill-bar.w-90 { width: 90%; }
+.skill-bar.w-92 { width: 92%; }
+.skill-bar.w-95 { width: 95%; }
+
+.bar.h-35 { height: 35%; }
+.bar.h-50 { height: 50%; }
+.bar.h-60 { height: 60%; }
+.bar.h-75 { height: 75%; }
+.bar.h-85 { height: 85%; }
