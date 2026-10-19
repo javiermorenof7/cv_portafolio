@@ -12,6 +12,11 @@
   --color-titulo: #2266ee;
   --color-acento: #4488ee;
   --color-borde: #d6e0fa;
+  --color-tenue: #4b5563;
+  /* Capas del pipeline (validadas en claro sobre #ffffff) */
+  --capa-bronce: #a25e2b;
+  --capa-plata: #6b7c93;
+  --capa-oro: #9b7c19;
 }
 
 [data-theme="dark"] {
@@ -22,6 +27,11 @@
   --color-titulo: #8aabff;
   --color-acento: #8aabff;
   --color-borde: #2a3a5f;
+  --color-tenue: #a8b6d6;
+  /* Capas del pipeline (validadas en oscuro sobre #18233f) */
+  --capa-bronce: #b97340;
+  --capa-plata: #8494ab;
+  --capa-oro: #a7882a;
 }
 
 body {
@@ -1513,96 +1523,6 @@ footer {
    LIGHT MODE STYLES - Full Harmony 
    =============================================== */
 
-/* Experience Section Light Mode */
-[data-theme="light"] .experiencia {
-  background-color: #f5f7fa !important;
-  padding: 60px 20px;
-}
-
-[data-theme="light"] .experiencia h2,
-[data-theme="light"] .experiencia h3 {
-  color: #1e3a8a !important;
-}
-
-[data-theme="light"] .experiencia .experiencia__container-item,
-[data-theme="light"] .experiencia .experience-card,
-[data-theme="light"] .experiencia .experience-container {
-  background-color: #ffffff !important;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
-  border: 1px solid #e5e7eb !important;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-[data-theme="light"] .experiencia .experiencia__container-item:hover,
-[data-theme="light"] .experiencia .experience-card:hover,
-[data-theme="light"] .experiencia .experience-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
-  transform: translateY(-2px);
-}
-
-[data-theme="light"] .experiencia p,
-[data-theme="light"] .experiencia li,
-[data-theme="light"] .experiencia span {
-  color: #374151 !important;
-}
-
-[data-theme="light"] .experiencia strong {
-  color: #1e40af !important;
-}
-
-[data-theme="light"] .experiencia .experiencia__nombre,
-[data-theme="light"] .experiencia .job-title {
-  color: #2563eb !important;
-}
-
-[data-theme="light"] .experiencia .tech-badge,
-[data-theme="light"] .experiencia .badge,
-[data-theme="light"] .experiencia .exp-tag {
-  background-color: #dbeafe !important;
-  color: #1e40af !important;
-  border: 1px solid #93c5fd;
-}
-
-/* Experience Card Internal Components - CRITICAL */
-[data-theme="light"] .experiencia .experience-header {
-  background-color: #f8fafc !important;
-  border-bottom: 1px solid #e2e8f0 !important;
-}
-
-[data-theme="light"] .experiencia .experience-title {
-  color: #1e40af !important;
-}
-
-[data-theme="light"] .experiencia .experience-period {
-  color: #64748b !important;
-}
-
-[data-theme="light"] .experiencia .position {
-  color: #f97316 !important;
-}
-
-[data-theme="light"] .experiencia .core-achievements {
-  background-color: #ffffff !important;
-  border: none !important;
-}
-
-[data-theme="light"] .experiencia .metric-number {
-  color: #f97316 !important;
-}
-
-[data-theme="light"] .experiencia .metric-description {
-  color: #64748b !important;
-}
-
-[data-theme="light"] .experiencia .highlights-container {
-  background-color: #ffffff !important;
-}
-
-[data-theme="light"] .experiencia .highlights-container h3 {
-  color: #1e40af !important;
-}
-
-
 /* Portfolio Section Light Mode */
 [data-theme="light"] .portfolio {
   background-color: #ffffff !important;
@@ -1655,13 +1575,11 @@ footer {
 }
 
 /* Ensure links remain accessible in light mode */
-[data-theme="light"] .experiencia a,
 [data-theme="light"] .portfolio a {
   color: #2563eb !important;
   text-decoration: underline;
 }
 
-[data-theme="light"] .experiencia a:hover,
 [data-theme="light"] .portfolio a:hover {
   color: #1d4ed8 !important;
 }
@@ -1725,8 +1643,7 @@ footer {
   background-color: rgba(24, 35, 63, 0.97);
 }
 
-[data-theme="dark"] .portfolio h2,
-[data-theme="dark"] .experiencia h2:not(.portfolio__proyect-name) {
+[data-theme="dark"] .portfolio h2 {
   color: var(--color-titulo);
 }
 
@@ -1743,6 +1660,120 @@ footer {
 [data-theme="dark"] .portfolio__project table {
   border-color: var(--color-borde);
   color: var(--color-texto);
+}
+
+/* -----------------Hero: roles y pipeline-------------------- */
+.profile__roles {
+  max-width: 46ch;
+  margin: 6px auto 16px;
+  color: var(--color-tenue);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Diagrama del pipeline: en columna en pantallas estrechas, en fila desde 560px */
+.pipeline {
+  container-type: inline-size;
+  container-name: pipeline;
+  margin: 22px 0 20px;
+}
+
+.pipeline__etapas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.pipeline__etapa {
+  --capa: var(--color-acento);
+  position: relative;
+  flex: 1 1 0;
+  border-radius: 8px;
+  background-color: var(--color-fondo);
+  border-left: 4px solid var(--capa);
+}
+
+.pipeline__etapa--bronce { --capa: var(--capa-bronce); }
+.pipeline__etapa--plata { --capa: var(--capa-plata); }
+.pipeline__etapa--oro { --capa: var(--capa-oro); }
+
+.pipeline__caja {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  padding: 10px 12px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.pipeline__nombre {
+  display: block;
+  padding-bottom: 0;
+}
+
+.pipeline__etapa > .pipeline__detalle {
+  display: block;
+  padding-top: 0;
+}
+
+.pipeline__nombre {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.pipeline__detalle {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--color-tenue);
+}
+
+.pipeline__enlace:hover .pipeline__nombre {
+  text-decoration: underline;
+}
+
+.pipeline__enlace:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+/* Flecha hacia la siguiente etapa */
+.pipeline__etapa:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  bottom: -19px;
+  transform: translateX(-50%);
+  color: var(--color-tenue);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+@container pipeline (min-width: 560px) {
+  .pipeline__etapas {
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .pipeline__etapa {
+    border-left: none;
+    border-top: 4px solid var(--capa);
+  }
+
+  .pipeline__etapa:not(:last-child)::after {
+    content: '→';
+    left: auto;
+    right: -15px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
 }
 
 /* Botón de tema */

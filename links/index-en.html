@@ -6,13 +6,13 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/tema.js"></script>
+    <script src="../js/tema.js?v=20261019"></script>
     <title>Curriculum_Portafolio_EN</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/style_exp.css">
+    <link rel="stylesheet" href="../css/styles.css?v=20261019">
+    <link rel="stylesheet" href="../css/style_exp.css?v=20261019">
     <link rel="icon" href="../img/javier.jpg" type="image/png">
-    <link rel="stylesheet" href="../css/fonts.css">
-    <script type="text/javascript" src="../js/menuclose.js" defer></script>
+    <link rel="stylesheet" href="../css/fonts.css?v=20261019">
+    <script type="text/javascript" src="../js/menuclose.js?v=20261019" defer></script>
 </head>
 
 <body>
@@ -61,6 +61,7 @@
                             <h1>Francisco Javier Garcia Moreno</h1>
                             <div class="profile__job-title">
                                 <h2>Data Engineer</h2>
+                                <p class="profile__roles">I design data pipelines, analyze data and put models into production.</p>
                                 <div class="profile__indicators">
                                     <div class="indicator">
                                         <div class="indicator__number">5+</div>
@@ -76,6 +77,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <nav class="pipeline" aria-label="How I work with data">
+                                <ol class="pipeline__etapas">
+                                    <li class="pipeline__etapa pipeline__etapa--fuentes"><span class="pipeline__caja"><span class="pipeline__nombre">Sources</span><span class="pipeline__detalle">APIs, files and databases</span></span></li>
+                                    <li class="pipeline__etapa pipeline__etapa--bronce"><a class="pipeline__caja pipeline__enlace" href="#experiencia"><span class="pipeline__nombre">Bronze</span><span class="pipeline__detalle">Raw data ingestion</span></a></li>
+                                    <li class="pipeline__etapa pipeline__etapa--plata"><a class="pipeline__caja pipeline__enlace" href="#experiencia"><span class="pipeline__nombre">Silver</span><span class="pipeline__detalle">Cleaning and modeling</span></a></li>
+                                    <li class="pipeline__etapa pipeline__etapa--oro"><a class="pipeline__caja pipeline__enlace" href="#portfolio"><span class="pipeline__nombre">Gold</span><span class="pipeline__detalle">Analysis and predictive models</span></a></li>
+                                    <li class="pipeline__etapa pipeline__etapa--consumo"><span class="pipeline__caja"><span class="pipeline__nombre">Decisions</span><span class="pipeline__detalle">Dashboards and business decisions</span></span></li>
+                                </ol>
+                            </nav>
                             <p class="profile__summary">
                                 <strong>Data Engineer</strong> with a <strong>Master's degree in Integrated Management Systems</strong> and
                                 <strong>over 5 years</strong> of experience delivering high-impact data solutions in the
@@ -311,188 +321,211 @@
         </div>
     </main>
     <section class="experiencia" id="experiencia">
-        <h2 class="h2_experiencia">Professional Experience</h2>
-        <div class="experiencia__container">
-            <!-- BANCO FALABELLA -->
-            <div class="experience-container">
+        <h2 class="h2_experiencia">Professional experience</h2>
+        <ol class="experiencia__container">
+            <li class="experience-container experience-container--actual">
                 <div class="experience-header">
                     <div class="job-title-wrapper">
-                        <h2 class="experience-title">BANCO FALABELLA <span class="position">Data Engineer</span></h2>
-                        <div class="experience-period">January 2023 – March 2026</div>
+                        <p class="experience-period">July 2026 – Present</p>
+                        <h3 class="experience-title">Scala Learning <span class="position">Data Engineer</span></h3>
+                        <p class="experience-roles">Data engineering and data analysis</p>
                     </div>
-                    <div class="tag-container">
-                        <span class="exp-tag">GCP</span>
-                        <span class="exp-tag">Python</span>
-                        <span class="exp-tag">Scala</span>
-                        <span class="exp-tag">BigQuery</span>
-                    </div>
-                </div>
-
-                <div class="core-achievements">
-                    <div class="core-metric">
-                        <div class="metric-number">91%</div>
-                        <div class="metric-description">Reduction in processing time</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">3+</div>
-                        <div class="metric-description">Countries with standardized architecture</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">25%</div>
-                        <div class="metric-description">Savings in cloud costs</div>
-                    </div>
-                </div>
-
-                <div class="highlights-container">
-                    <h3>Key Contributions</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Led the multi-country migration</strong> from On-Premise systems to Google Cloud,
-                            implementing scalable and secure architectures</li>
-                        <li><strong>Redesigned the Onboarding pipeline</strong> from MySQL to BigQuery, achieving 85%
-                            greater processing efficiency</li>
-                        <li><strong>Optimized complex JSON schemas</strong> accelerating queries by 40% and improving
-                            analysis for business decisions</li>
-                        <li><strong>Standardized data processes</strong> between Colombia, Peru and Chile, reducing
-                            report generation from 8h to 45min</li>
+                    <ul class="tag-container">
+                        <li class="exp-tag">Databricks</li>
+                        <li class="exp-tag">Unity Catalog</li>
+                        <li class="exp-tag">Spark</li>
+                        <li class="exp-tag">Python</li>
+                        <li class="exp-tag">SQL</li>
+                        <li class="exp-tag">AWS S3</li>
+                        <li class="exp-tag">Delta Lake</li>
+                        <li class="exp-tag">GitLab</li>
+                        <li class="exp-tag">Google Drive API</li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- FACTOR IT -->
-            <div class="experience-container">
+                <ul class="core-achievements" aria-label="Results in numbers">
+                    <li class="core-metric">
+                        <span class="metric-number">4</span>
+                        <span class="metric-description">Medallion pipelines on Databricks</span>
+                    </li>
+                    <li class="core-metric">
+                        <span class="metric-number">15</span>
+                        <span class="metric-description">Gantt plans consolidated</span>
+                    </li>
+                    <li class="core-metric">
+                        <span class="metric-number">96</span>
+                        <span class="metric-description">Automated SQL tests</span>
+                    </li>
+                </ul>
+
+                <div class="highlights-container">
+                    <h4>Key contributions</h4>
+                    <ul class="highlights-list">
+                        <li><strong>Built 4 medallion pipelines</strong> (Bronze, Silver, Gold) on Databricks Serverless over AWS S3 and Unity Catalog, with Delta tables, incremental MERGE loads and historical snapshots.</li>
+                        <li><strong>Automated the academic calendars</strong> by consolidating 15 Gantt plans from Google Drive into Gold tables per partner university, reprocessing only the files that change.</li>
+                        <li><strong>Modeled student course enrollments</strong> with cohort, term and course catalogs, validated by 96 automated SQL tests.</li>
+                        <li><strong>Integrated the SurveyMonkey API</strong> and automated survey audiences, which are now generated automatically from the academic calendar.</li>
+                        <li><strong>Took the jobs to production with quality gates</strong>: defined as code, with a final test task that stops the job and alerts on any failure, and promotion to production through merge requests.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="experience-container">
                 <div class="experience-header">
                     <div class="job-title-wrapper">
-                        <h2 class="experience-title">FACTOR IT <span class="position">Data Engineer</span></h2>
-                        <div class="experience-period">April 2022 – January 2023</div>
+                        <p class="experience-period">January 2023 – March 2026</p>
+                        <h3 class="experience-title">Banco Falabella <span class="position">Data Engineer</span></h3>
+                        <p class="experience-roles">Data engineering</p>
                     </div>
-                    <div class="tag-container">
-                        <span class="exp-tag">Python</span>
-                        <span class="exp-tag">SQL</span>
-                        <span class="exp-tag">ML/AI</span>
-                        <span class="exp-tag">ETL</span>
-                    </div>
-                </div>
-
-                <div class="core-achievements">
-                    <div class="core-metric">
-                        <div class="metric-number">40%</div>
-                        <div class="metric-description">Reduction in processing time</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">15TB</div>
-                        <div class="metric-description">Unstructured data analyzed</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">$1.2M</div>
-                        <div class="metric-description">Savings generated with predictive model</div>
-                    </div>
-                </div>
-
-                <div class="highlights-container">
-                    <h3>Key Contributions</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Developed advanced models</strong> of natural language processing with 92%
-                            accuracy for predictive analysis</li>
-                        <li><strong>Implemented sentiment analysis solutions</strong> that improved customer
-                            satisfaction by 23%</li>
-                        <li><strong>Transformed unstructured data</strong> into actionable insights for strategic
-                            decision making</li>
-                        <li><strong>Redesigned ETL systems</strong> reducing operational costs by 35% and improving
-                            processing speed</li>
+                    <ul class="tag-container">
+                        <li class="exp-tag">GCP</li>
+                        <li class="exp-tag">AWS</li>
+                        <li class="exp-tag">Azure</li>
+                        <li class="exp-tag">Python</li>
+                        <li class="exp-tag">Scala</li>
+                        <li class="exp-tag">Databricks</li>
+                        <li class="exp-tag">BigQuery</li>
+                        <li class="exp-tag">Redshift</li>
+                        <li class="exp-tag">Synapse</li>
+                        <li class="exp-tag">ETL/ELT</li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- BBVA -->
-            <div class="experience-container">
+                <ul class="core-achievements" aria-label="Results in numbers">
+                    <li class="core-metric">
+                        <span class="metric-number">−45%</span>
+                        <span class="metric-description">Processing time</span>
+                    </li>
+                    <li class="core-metric">
+                        <span class="metric-number">3</span>
+                        <span class="metric-description">Clouds integrated (GCP, AWS, Azure)</span>
+                    </li>
+                    <li class="core-metric">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-description">Sensitive ingestion encrypted</span>
+                    </li>
+                </ul>
+
+                <div class="highlights-container">
+                    <h4>Key contributions</h4>
+                    <ul class="highlights-list">
+                        <li><strong>Cut processing times by 45%</strong> by migrating critical On-Premise systems to Multi-Cloud ecosystems under the Medallion Architecture.</li>
+                        <li><strong>Designed scalable Data Lakes and ETL/ELT pipelines</strong>, centralizing large-scale distributed data processing with Databricks and modern analytical engines.</li>
+                        <li><strong>Standardized critical operations by orchestrating</strong> automated workflows with Cloud Composer, Amazon MWAA and Azure Data Factory.</li>
+                        <li><strong>Secured sensitive data ingestion</strong> into the Raw/Bronze layer of the Data Lake, applying strict cloud encryption protocols.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="experience-container">
                 <div class="experience-header">
                     <div class="job-title-wrapper">
-                        <h2 class="experience-title">BBVA <span class="position">Data Engineer</span></h2>
-                        <div class="experience-period">November 2021 – April 2022</div>
+                        <p class="experience-period">April 2022 – January 2023</p>
+                        <h3 class="experience-title">Factor IT <span class="position">Data Engineer</span></h3>
+                        <p class="experience-roles">Data engineering and data analysis</p>
                     </div>
-                    <div class="tag-container">
-                        <span class="exp-tag">Python</span>
-                        <span class="exp-tag">SQL Server</span>
-                        <span class="exp-tag">Data Studio</span>
-                        <span class="exp-tag">GitHub</span>
-                    </div>
-                </div>
-
-                <div class="core-achievements">
-                    <div class="core-metric">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-description">Adoption of new reporting system</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">65%</div>
-                        <div class="metric-description">Reduction of analysis time</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">0</div>
-                        <div class="metric-description">Information losses with versioning</div>
-                    </div>
-                </div>
-
-                <div class="highlights-container">
-                    <h3>Key Contributions</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Transformed the reporting system</strong> from Excel to Google Data Studio,
-                            enabling real-time visualizations</li>
-                        <li><strong>Developed automated ETL processes</strong> to extract and process critical
-                            banking data</li>
-                        <li><strong>Implemented version control</strong> that eliminated information losses and
-                            allowed immediate recovery</li>
-                        <li><strong>Created automation scripts</strong> that reduced report preparation time by 65%</li>
+                    <ul class="tag-container">
+                        <li class="exp-tag">Cloud</li>
+                        <li class="exp-tag">ETL</li>
+                        <li class="exp-tag">Big Data</li>
+                        <li class="exp-tag">Databricks</li>
+                        <li class="exp-tag">PySpark</li>
+                        <li class="exp-tag">Medallion Architecture</li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- AVIOMAR -->
-            <div class="experience-container">
+                <ul class="core-achievements" aria-label="Results in numbers">
+                    <li class="core-metric">
+                        <span class="metric-number">+35%</span>
+                        <span class="metric-description">Data adoption</span>
+                    </li>
+                </ul>
+
+                <div class="highlights-container">
+                    <h4>Key contributions</h4>
+                    <ul class="highlights-list">
+                        <li><strong>Increased data adoption by 35%</strong> by designing scalable cloud ETL pipelines that feed Big Data ecosystems and analytical models.</li>
+                        <li><strong>Structured large data volumes</strong> with the Medallion Architecture to organize information efficiently.</li>
+                        <li><strong>Ran distributed data cleaning and transformation</strong> using the processing power of Databricks (PySpark).</li>
+                        <li><strong>Optimized processing workflows</strong>, delivering strategic insights through cloud-native data architectures.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="experience-container">
                 <div class="experience-header">
                     <div class="job-title-wrapper">
-                        <h2 class="experience-title">AVIOMAR GRUPO EMPRESARIAL <span class="position">Data Process
-                                Engineer</span></h2>
-                        <div class="experience-period">February 2020 – October 2021</div>
+                        <p class="experience-period">November 2021 – April 2022</p>
+                        <h3 class="experience-title">BBVA <span class="position">Data Engineer</span></h3>
+                        <p class="experience-roles">Data engineering and data analysis</p>
                     </div>
-                    <div class="tag-container">
-                        <span class="exp-tag">PostgreSQL</span>
-                        <span class="exp-tag">Python</span>
-                        <span class="exp-tag">ETL</span>
-                        <span class="exp-tag">Power BI/Tableau</span>
-                    </div>
-                </div>
-
-                <div class="core-achievements">
-                    <div class="core-metric">
-                        <div class="metric-number">200%</div>
-                        <div class="metric-description">Improvement in process accuracy</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">3</div>
-                        <div class="metric-description">Companies integrated into a single DB</div>
-                    </div>
-                    <div class="core-metric">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-description">Automation of critical reports</div>
-                    </div>
-                </div>
-
-                <div class="highlights-container">
-                    <h3>Key Contributions</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Designed and implemented corporate data architecture</strong> from scratch for three
-                            companies in the group</li>
-                        <li><strong>Developed automated costing system</strong> for customs operations
-                            improving accuracy by 200%</li>
-                        <li><strong>Created corporate ETL pipeline</strong> reducing monthly data processing from
-                            days to hours</li>
-                        <li><strong>Implemented profitability analysis</strong> and customer segmentation for
-                            SARLAFT compliance</li>
+                    <ul class="tag-container">
+                        <li class="exp-tag">Python</li>
+                        <li class="exp-tag">Databricks</li>
+                        <li class="exp-tag">Cloud</li>
+                        <li class="exp-tag">Big Data</li>
+                        <li class="exp-tag">Power BI</li>
+                        <li class="exp-tag">IBM Cognos</li>
+                        <li class="exp-tag">ETL</li>
                     </ul>
                 </div>
-            </div>
-        </div>
+
+                <ul class="core-achievements" aria-label="Results in numbers">
+                    <li class="core-metric">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-description">No manual Excel dependency</span>
+                    </li>
+                </ul>
+
+                <div class="highlights-container">
+                    <h4>Key contributions</h4>
+                    <ul class="highlights-list">
+                        <li><strong>Removed the dependency on Excel</strong> by automating ETL extractions from transactional databases into high-performance cloud repositories.</li>
+                        <li><strong>Turned raw data into analytical views</strong> using distributed processing with Databricks.</li>
+                        <li><strong>Enabled real-time Big Data analysis</strong> with pipelines and semantic layers connected to dynamic dashboards (Power BI, IBM Cognos).</li>
+                        <li><strong>Simplified complex data engineering workflows</strong>, ensuring version control and high availability across Multi-Cloud ecosystems.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="experience-container">
+                <div class="experience-header">
+                    <div class="job-title-wrapper">
+                        <p class="experience-period">February 2020 – October 2021</p>
+                        <h3 class="experience-title">Aviomar Grupo Empresarial <span class="position">Data Process Engineer</span></h3>
+                        <p class="experience-roles">Data engineering and data analysis</p>
+                    </div>
+                    <ul class="tag-container">
+                        <li class="exp-tag">Cloud Databases</li>
+                        <li class="exp-tag">Big Data</li>
+                        <li class="exp-tag">PostgreSQL</li>
+                        <li class="exp-tag">ETL/ELT</li>
+                        <li class="exp-tag">Data Integration</li>
+                    </ul>
+                </div>
+
+                <ul class="core-achievements" aria-label="Results in numbers">
+                    <li class="core-metric">
+                        <span class="metric-number">+200%</span>
+                        <span class="metric-description">Operational accuracy</span>
+                    </li>
+                    <li class="core-metric">
+                        <span class="metric-number">3</span>
+                        <span class="metric-description">Companies centralized in one architecture</span>
+                    </li>
+                </ul>
+
+                <div class="highlights-container">
+                    <h4>Key contributions</h4>
+                    <ul class="highlights-list">
+                        <li><strong>Improved operational accuracy by 200%</strong> by designing from scratch a centralized cloud Big Data architecture for three group companies.</li>
+                        <li><strong>Integrated core systems (CRM, ERP, WMS)</strong> through native ETL processes, consolidating corporate information.</li>
+                        <li><strong>Structured optimized data layers</strong> to make information faster and easier to access and process.</li>
+                        <li><strong>Enabled efficient data consumption</strong> for segmentation models and profitability analysis.</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
     </section>
     <section class="portfolio" id="portfolio">
         <h2 class="h2_portfolio">MY PORTFOLIO</h2>

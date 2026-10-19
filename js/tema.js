@@ -30,8 +30,12 @@
         }
     };
 
-    // La versión anterior guardaba siempre "darkMode" y no dejaba seguir al sistema
+    // La versión anterior guardaba "darkMode": "enabled" solo si el visitante eligió el modo
+    // oscuro, pero "disabled" en cada visita, así que solo se conserva "enabled"
     try {
+        if (localStorage.getItem('darkMode') === 'enabled' && !leerGuardado()) {
+            guardar('dark');
+        }
         localStorage.removeItem('darkMode');
     } catch (e) {
         // Sin almacenamiento
@@ -40,11 +44,17 @@
     aplicar(leerGuardado() || (sistemaOscuro.matches ? 'dark' : 'light'));
 
     // Si el visitante no eligió tema, la página cambia junto con el sistema
-    sistemaOscuro.addEventListener('change', (evento) => {
+    const alCambiarSistema = (evento) => {
         if (!leerGuardado()) {
             aplicar(evento.matches ? 'dark' : 'light');
         }
-    });
+    };
+    if (sistemaOscuro.addEventListener) {
+        sistemaOscuro.addEventListener('change', alCambiarSistema);
+    } else if (sistemaOscuro.addListener) {
+        // Safari 13 y anteriores
+        sistemaOscuro.addListener(alCambiarSistema);
+    }
 
     document.addEventListener('DOMContentLoaded', () => {
         const boton = document.getElementById('dark_mode_menu');

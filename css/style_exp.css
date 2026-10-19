@@ -1,16 +1,44 @@
-/* Sección de Experiencia */
+/* Sección de Experiencia: línea de tiempo */
 .experiencia {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    --exp-fondo: #f5f7fa;
+    --exp-tarjeta: #ffffff;
+    --exp-cabecera: #f8fafc;
+    --exp-borde: #e2e8f0;
+    --exp-texto: #374151;
+    --exp-titulo: #1e40af;
+    --exp-tenue: #5b6779;
+    --exp-acento: #c2410c;
+    --exp-linea: #93c5fd;
+    --exp-tag-fondo: #dbeafe;
+    --exp-tag-texto: #1e40af;
+    --exp-metrica-fondo: #f8fafc;
+
+    background-color: var(--exp-fondo);
+    color: var(--exp-texto);
     padding: 60px 20px;
     font-family: 'Montserrat', sans-serif;
+}
+
+[data-theme="dark"] .experiencia {
+    --exp-fondo: #0f172a;
+    --exp-tarjeta: #1e293b;
+    --exp-cabecera: linear-gradient(135deg, #172554, #1e3a8a);
+    --exp-borde: #334155;
+    --exp-texto: #e2e8f0;
+    --exp-titulo: #60a5fa;
+    --exp-tenue: #a3b1c6;
+    --exp-acento: #f97316;
+    --exp-linea: #1e3a8a;
+    --exp-tag-fondo: rgba(59, 130, 246, 0.2);
+    --exp-tag-texto: #93c5fd;
+    --exp-metrica-fondo: #172554;
 }
 
 .h2_experiencia {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 40px;
-    color: #3b82f6;
+    margin: 0 auto 48px;
+    color: var(--exp-titulo);
     position: relative;
 }
 
@@ -26,314 +54,271 @@
     border-radius: 2px;
 }
 
+/* La línea vertical une las experiencias, de la más reciente a la más antigua */
 .experiencia__container {
+    list-style: none;
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 32px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 0 0 28px;
 }
 
-/* Contenedor de cada experiencia */
+.experiencia__container::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background-color: var(--exp-linea);
+}
+
 .experience-container {
-    background-color: #1e293b;
+    position: relative;
+    background-color: var(--exp-tarjeta);
+    border: 1px solid var(--exp-borde);
     border-radius: 10px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.25);
 }
 
-.experience-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+/* Punto de la línea de tiempo; relleno en el trabajo actual */
+.experience-container::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 26px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--exp-fondo);
+    border: 3px solid var(--exp-acento);
 }
 
-/* Encabezado de experiencia */
+.experience-container--actual::before {
+    background-color: var(--exp-acento);
+}
+
+/* Encabezado */
 .experience-header {
-    justify-content: space-between;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #172554, #1e3a8a);
-    padding: 20px;
-    border-bottom: 1px solid #334155;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--exp-cabecera);
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--exp-borde);
+    border-radius: 10px 10px 0 0;
 }
 
 .job-title-wrapper {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
+    text-align: left;
+}
+
+.experience-period {
+    margin: 0 0 6px;
+    color: var(--exp-acento);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
 }
 
 .experience-title {
     font-size: 1.4rem;
-    margin: 0 0 5px 0;
-    color: #60a5fa;
+    margin: 0;
+    color: var(--exp-titulo);
     line-height: 1.3;
-    text-align: center;
 }
 
 .position {
-    color: #f97316;
+    display: inline-block;
+    color: var(--exp-texto);
     font-weight: 600;
-    margin-left: 8px;
-    white-space: nowrap;
+    font-size: 1.05rem;
 }
 
-.experience-period {
-    color: #94a3b8;
+.experience-roles {
+    margin: 6px 0 0;
+    color: var(--exp-tenue);
     font-size: 0.9rem;
-    margin-top: 5px;
+    text-align: left;
 }
 
 .tag-container {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .exp-tag {
-    background-color: rgba(59, 130, 246, 0.2);
-    color: #60a5fa;
-    padding: 5px 12px;
+    background-color: var(--exp-tag-fondo);
+    color: var(--exp-tag-texto);
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
     white-space: nowrap;
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.exp-tag:hover {
-    background-color: rgba(59, 130, 246, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Métricas principales */
+/* Cifras */
 .core-achievements {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 25px 20px;
-    gap: 15px;
-    background-color: #172554;
+    gap: 12px;
+    margin: 0;
+    padding: 20px 22px 0;
 }
 
 .core-metric {
-    text-align: center;
-    flex: 1;
-    min-width: 120px;
-    padding: 15px 10px;
+    flex: 1 1 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px;
     border-radius: 8px;
-    background-color: rgba(15, 23, 42, 0.3);
-    transition: transform 0.2s ease;
-}
-
-.core-metric:hover {
-    transform: scale(1.05);
-    background-color: rgba(15, 23, 42, 0.5);
+    background: var(--exp-metrica-fondo);
+    border-left: 4px solid var(--exp-acento);
 }
 
 .metric-number {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #f97316;
-    margin-bottom: 5px;
+    color: var(--exp-acento);
     line-height: 1;
+    font-variant-numeric: tabular-nums;
 }
 
 .metric-description {
     font-size: 0.85rem;
-    color: #cbd5e1;
-    line-height: 1.3;
+    color: var(--exp-tenue);
+    line-height: 1.35;
 }
 
-/* Destacados */
+/* Contribuciones */
 .highlights-container {
-    padding: 25px;
+    padding: 20px 22px 24px;
 }
 
-.highlights-container h3 {
-    color: #60a5fa;
-    font-size: 1.2rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 10px;
-    text-align: center;
+.highlights-container h4 {
+    color: var(--exp-titulo);
+    font-size: 1.05rem;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--exp-borde);
 }
 
 .highlights-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .highlights-list li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    line-height: 1.55;
+    max-width: 75ch;
+}
+
+.highlights-list li:last-child {
+    margin-bottom: 0;
 }
 
 .highlights-list li::before {
     content: "→";
     position: absolute;
     left: 0;
-    color: #f97316;
+    color: var(--exp-acento);
     font-weight: bold;
 }
 
 .highlights-list li strong {
-    color: #60a5fa;
+    color: var(--exp-titulo);
     font-weight: 600;
 }
 
-/* Media queries */
-@media (min-width: 768px) {
-    .experiencia__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .core-achievements {
-        flex-direction: row;
-    }
-
-    .highlights-list {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .experiencia__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .experience-title {
-        font-size: 1.6rem;
-    }
-
+/* Móvil: las cifras en fila para no alargar la tarjeta */
+@media (max-width: 599px) {
     .core-metric {
-        padding: 20px 15px;
+        flex: 1 1 88px;
+        padding: 10px 10px 10px 12px;
     }
 
     .metric-number {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    .metric-description {
+        font-size: 0.78rem;
     }
 }
 
-@media (max-width: 576px) {
-    .experience-title {
-        font-size: 1.2rem;
+/* Tablet: un poco más de aire para la línea */
+@media (min-width: 600px) {
+    .experiencia__container {
+        padding-left: 40px;
+    }
+
+    .experiencia__container::before {
+        left: 15px;
+    }
+
+    .experience-container::before {
+        left: -32px;
+    }
+
+    .experience-header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .job-title-wrapper {
+        flex: 1 1 50%;
     }
 
     .tag-container {
-        margin-top: 15px;
+        flex: 1 1 40%;
+        justify-content: flex-end;
+    }
+}
+
+/* Escritorio: cifras a la izquierda y contribuciones a la derecha */
+@media (min-width: 1024px) {
+    .experience-container {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr) 2.4fr;
+        grid-template-areas:
+            "cabecera cabecera"
+            "cifras contribuciones";
+    }
+
+    .experience-header {
+        grid-area: cabecera;
     }
 
     .core-achievements {
+        grid-area: cifras;
         flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 22px 0 24px 22px;
     }
 
     .core-metric {
-        width: 100%;
+        flex: 0 0 auto;
     }
-}
 
-/* ================================================
-   LIGHT MODE OVERRIDES - FULL HARMONY
-   ================================================ */
+    .highlights-container {
+        grid-area: contribuciones;
+        padding: 22px 26px 24px;
+    }
 
-[data-theme="light"] .experiencia {
-    background-color: #f5f7fa !important;
-    color: #1f2937 !important;
-}
-
-[data-theme="light"] .experiencia .h2_experiencia {
-    color: #1e3a8a !important;
-}
-
-[data-theme="light"] .experiencia .experience-container {
-    background-color: #ffffff !important;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid #e5e7eb !important;
-}
-
-[data-theme="light"] .experiencia .experience-container:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
-}
-
-[data-theme="light"] .experiencia .experience-header {
-    background: #f8fafc !important;
-    background-color: #f8fafc !important;
-    background-image: none !important;
-    border-bottom: 1px solid #e2e8f0 !important;
-}
-
-[data-theme="light"] .experiencia .experience-title {
-    color: #1e40af !important;
-}
-
-[data-theme="light"] .experiencia .position {
-    color: #f97316 !important;
-}
-
-[data-theme="light"] .experiencia .experience-period {
-    color: #64748b !important;
-}
-
-[data-theme="light"] .experiencia .exp-tag {
-    background-color: #dbeafe !important;
-    color: #1e40af !important;
-    border: 1px solid #93c5fd;
-}
-
-[data-theme="light"] .experiencia .exp-tag:hover {
-    background-color: #bfdbfe !important;
-}
-
-[data-theme="light"] .experiencia .core-achievements {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-    border: none !important;
-}
-
-[data-theme="light"] .experiencia .core-metric {
-    background-color: #f9fafb !important;
-    background: #f9fafb !important;
-}
-
-[data-theme="light"] .experiencia .core-metric:hover {
-    background-color: #f3f4f6 !important;
-    background: #f3f4f6 !important;
-}
-
-[data-theme="light"] .experiencia .metric-number {
-    color: #f97316 !important;
-}
-
-[data-theme="light"] .experiencia .metric-description {
-    color: #64748b !important;
-}
-
-[data-theme="light"] .experiencia .highlights-container {
-    background-color: #ffffff !important;
-}
-
-[data-theme="light"] .experiencia .highlights-container h3 {
-    color: #1e40af !important;
-    border-bottom-color: #e2e8f0 !important;
-}
-
-[data-theme="light"] .experiencia .highlights-list li {
-    color: #374151 !important;
-}
-
-[data-theme="light"] .experiencia .highlights-list li::before {
-    color: #f97316 !important;
-}
-
-[data-theme="light"] .experiencia .highlights-list li strong {
-    color: #1e40af !important;
+    .experience-title {
+        font-size: 1.55rem;
+    }
 }
