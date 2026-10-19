@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/fonts.css?v=20261019">
     <script type="text/javascript" src="../js/menuclose.js?v=20261019" defer></script>
     <script src="../js/filtro.js?v=20261019" defer></script>
+    <script src="../js/graficos.js?v=20261019" defer></script>
 </head>
 
 <body>
@@ -107,100 +108,108 @@
 
                     <div class="profile__sections">
                         <div class="profile__technologies">
-                            <h2 class="h2_skills">KEY TECHNOLOGIES</h2>
+                            <h2 class="h2_skills">Key technologies</h2>
+                            <p class="tecnologias__intro">Where I used each one, based on the experience and projects on this page.</p>
                             <div class="tech-categories">
                                 <div class="tech-category">
                                     <h3 class="tech-category__title">Databases</h3>
-                                    <ul>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--100">100%</div>
-                                            </div>
-                                            <span class="profile__skill-name">SQL - DATABASES</span>
+                                    <ul class="tecnologias">
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">SQL</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Scala Learning</li>
+                                                <li>3 personal projects</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--90">90%</div>
-                                            </div>
-                                            <span class="profile__skill-name">PostgreSQL / MySQL</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">PostgreSQL / MySQL</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Aviomar</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--85">85%</div>
-                                            </div>
-                                            <span class="profile__skill-name">NoSQL / BigQuery</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="tech-category">
-                                    <h3 class="tech-category__title">Cloud & DevOps</h3>
-                                    <ul>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--80">80%</div>
-                                            </div>
-                                            <span class="profile__skill-name">GCP CLOUD</span>
-                                        </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--75">75%</div>
-                                            </div>
-                                            <span class="profile__skill-name">AWS / Azure</span>
-                                        </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--80">80%</div>
-                                            </div>
-                                            <span class="profile__skill-name">CI/CD / Docker</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">NoSQL / BigQuery</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Banco Falabella</li>
+                                                <li>4 personal projects</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
-
                                 <div class="tech-category">
-                                    <h3 class="tech-category__title">Programming Languages</h3>
-                                    <ul>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--80">80%</div>
-                                            </div>
-                                            <span class="profile__skill-name">PYTHON</span>
+                                    <h3 class="tech-category__title">Cloud and DevOps</h3>
+                                    <ul class="tecnologias">
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Google Cloud</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Banco Falabella</li>
+                                                <li>4 personal projects</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--75">75%</div>
-                                            </div>
-                                            <span class="profile__skill-name">SCALA</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">AWS / Azure</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Scala Learning</li>
+                                                <li>Banco Falabella</li>
+                                                <li>1 personal project</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--60">60%</div>
-                                            </div>
-                                            <span class="profile__skill-name">JS / HTML / CSS</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">CI/CD / Docker</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Scala Learning</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
-
                                 <div class="tech-category">
-                                    <h3 class="tech-category__title">Analytics & BI</h3>
-                                    <ul>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--90">90%</div>
-                                            </div>
-                                            <span class="profile__skill-name">Power BI / Tableau</span>
+                                    <h3 class="tech-category__title">Programming languages</h3>
+                                    <ul class="tecnologias">
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Python</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Scala Learning</li>
+                                                <li>Banco Falabella</li>
+                                                <li>BBVA</li>
+                                                <li>8 personal projects</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--80">80%</div>
-                                            </div>
-                                            <span class="profile__skill-name">Airflow / Apache NIFI</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Scala</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Banco Falabella</li>
+                                            </ul>
                                         </li>
-                                        <li class="profile__skill">
-                                            <div class="load-bar">
-                                                <div class="load-bar__bar bar--70">70%</div>
-                                            </div>
-                                            <span class="profile__skill-name">ML (TensorFlow, Scikit-learn)</span>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">JavaScript / HTML / CSS</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>This website</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tech-category">
+                                    <h3 class="tech-category__title">Analytics and BI</h3>
+                                    <ul class="tecnologias">
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Power BI / Tableau</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>BBVA</li>
+                                                <li>1 personal project</li>
+                                            </ul>
+                                        </li>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Airflow / Apache NiFi</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>Banco Falabella</li>
+                                                <li>2 personal projects</li>
+                                            </ul>
+                                        </li>
+                                        <li class="tecnologia">
+                                            <span class="tecnologia__nombre">Machine learning (TensorFlow, Scikit-learn)</span>
+                                            <ul class="tecnologia__donde" aria-label="Where I used it">
+                                                <li>2 personal projects</li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -570,32 +579,16 @@
                         <div class="arch-node">BigQuery</div>
                     </div>
 
-                    <div class="skills-grid">
-                        <div class="skill">
-                            <h5>Cloud architecture design</h5>
-                            <div class="skill-level">
-                                <div class="skill-bar w-95"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h5>SQL Development</h5>
-                            <div class="skill-level">
-                                <div class="skill-bar w-90"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h5>Systems integration</h5>
-                            <div class="skill-level">
-                                <div class="skill-bar w-92"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h5>Performance optimization</h5>
-                            <div class="skill-level">
-                                <div class="skill-bar w-88"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <figure class="grafico" data-tipo="barras">
+                        <figcaption>Processing time</figcaption>
+                        <table class="grafico__tabla">
+                            <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
+                            <tbody>
+                                <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
+                                <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">< 1 min</td></tr>
+                            </tbody>
+                        </table>
+                    </figure>
 
                     <div class="impact-box">
                         <h5>Business Impact</h5>
@@ -690,15 +683,6 @@
                         <div class="analysis-type">Prescriptive</div>
                     </div>
 
-                    <div class="chart-preview">
-                        <div class="bar-chart">
-                            <div class="bar h-60"></div>
-                            <div class="bar h-85"></div>
-                            <div class="bar h-35"></div>
-                            <div class="bar h-75"></div>
-                            <div class="bar h-50"></div>
-                        </div>
-                    </div>
                 </div>
             </article>
 
@@ -770,6 +754,22 @@
                     <li class="proyecto-personal" data-roles="ing cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
                         <p class="proyecto-personal__descripcion">Data processing, machine learning and a cloud architecture to take a health insurer's analytics from one-off solutions to production.</p>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Status of 1,245,491 health authorizations</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Status</th><th scope="col">Share</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="gris"><th scope="row">Paid</th><td data-valor="34.04">34.0%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Delivered</th><td data-valor="23.37">23.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Cancelled</th><td data-valor="10.57">10.6%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Under agreement</th><td data-valor="10.4">10.4%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Issued</th><td data-valor="9.26">9.3%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Under audit</th><td data-valor="6.35">6.3%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Agreement paid</th><td data-valor="6.01">6.0%</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Cancelled ones are what the proposed model aims to anticipate.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>SQL</li>
@@ -797,6 +797,18 @@
                     <li class="proyecto-personal" data-roles="ing">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws" target="_blank" rel="noopener noreferrer">Academic calendars on Databricks</a></h5>
                         <p class="proyecto-personal__descripcion">Takes the calendars that partner universities drop in S3 through bronze, silver and gold Delta tables on Databricks. Files that have not changed are skipped, and rows that cannot be used are set aside with the reason.</p>
+                        <figure class="grafico" data-tipo="apilada">
+                            <figcaption>What happens to the 19 sample rows in the silver layer</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Outcome</th><th scope="col">Rows</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Valid</th><td data-valor="16">16</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Rejected with their reason</th><td data-valor="2">2</td></tr>
+                                    <tr data-color="gris"><th scope="row">Duplicate</th><td data-valor="1">1</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">The gold layer ends with 9 terms.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Databricks</li>
                             <li>PySpark</li>
@@ -830,6 +842,18 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
                         <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Median effective rate by type of institution, October 2022</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Institution type</th><th scope="col">Rate</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Financing companies</th><td data-valor="26.82">26.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Financial cooperatives</th><td data-valor="26.32">26.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Banks</th><td data-valor="22.99">23.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Special public institutions</th><td data-valor="16.1">16.1%</td></tr>
+                                </tbody>
+                            </table>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
@@ -841,6 +865,33 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
                         <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
+                        <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17">
+                            <figcaption>Hours lost to absences and sick leave, as % of contracted hours</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Month</th><th scope="col">Hours lost</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Jan 2019</th><td data-valor="2.26">2.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Feb 2019</th><td data-valor="2.3">2.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Mar 2019</th><td data-valor="1.93">1.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Apr 2019</th><td data-valor="2.1">2.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">May 2019</th><td data-valor="2.66">2.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jun 2019</th><td data-valor="2.7">2.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jul 2019</th><td data-valor="3.29">3.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Aug 2019</th><td data-valor="3.31">3.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Sep 2019</th><td data-valor="3.15">3.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Oct 2019</th><td data-valor="3.26">3.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Nov 2019</th><td data-valor="3.2">3.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Dec 2019</th><td data-valor="2.89">2.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jan 2020</th><td data-valor="2.95">3.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Feb 2020</th><td data-valor="3.73">3.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Mar 2020</th><td data-valor="3.67">3.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Apr 2020</th><td data-valor="4.06">4.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">May 2020</th><td data-valor="4.15">4.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jun 2020</th><td data-valor="5.23">5.2%</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">They rose from 2.3% to 5.2% in 18 months.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
@@ -852,6 +903,17 @@
                     <li class="proyecto-personal" data-roles="ana cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
                         <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
+                        <figure class="grafico" data-tipo="apilada">
+                            <figcaption>Recommendations approved by users (60,430 records)</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Response</th><th scope="col">Share</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Approved</th><td data-valor="89.65">89.7% (54,174)</td></tr>
+                                    <tr data-color="gris"><th scope="row">Not approved</th><td data-valor="10.35">10.3% (6,256)</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">36,067 distinct products in the training set.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
