@@ -1,389 +1,295 @@
-        /* Estilos generales y reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', Arial, sans-serif;
-        }
-        
-        body {
-            background-color: #18233f;
-            color: #e2e8f0;
-            line-height: 1.5;
-            font-size: 11pt;
-        }
-        
-        /* Configuración para contenedor principal */
-        .page {
-            width: 100%;
-            max-width: 210mm; /* Ancho A4 */
-            margin: 0 auto;
-            background: #18233f;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-        }
-        
-        /* Encabezado con foto */
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .profile-photo {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #3b82f6;
-        }
-        
-        .header-content {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .person-name {
-            font-size: 22pt;
-            font-weight: 700;
-            color: #fff;
-            line-height: 1.1;
-        }
-        
-        .job-title {
-            font-size: 14pt;
-            color: #60a5fa;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-        
-        .contact-row {
-            display: flex;
-            gap: 15px;
-            margin-top: 8px;
-            font-size: 10pt;
-            flex-wrap: wrap;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .contact-icon {
-            width: 16px;
-            height: 16px;
-            fill: #60a5fa;
-        }
-        
-        .contact-text {
-            color: #cbd5e1;
-            text-decoration: none;
-        }
-        
-        .contact-text:hover {
-            color: #60a5fa;
-            text-decoration: underline;
-        }
-        
-        /* Resumen profesional */
-        .summary-box {
-            background: rgba(30, 41, 59, 0.6);
-            border-left: 3px solid #60a5fa;
-            padding: 12px;
-            margin: 15px 0;
-            border-radius: 4px;
-            font-size: 11pt;
-        }
-        
-        .summary-box strong {
-            color: #60a5fa;
-        }
-        
-        /* Secciones */
-        .sections-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        
-        /* Columnas responsivas */
-        @media (max-width: 768px) {
-            .sections-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .section {
-            margin-bottom: 20px;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            hyphens: auto;
-        }
-        
-        .section-title {
-            color: #60a5fa;
-            font-size: 14pt;
-            font-weight: 600;
-            margin-bottom: 10px;
-            position: relative;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 4px;
-        }
-        
-        /* Impacto métricas */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns:repeat(2,1fr);
-            gap: 10px
-        }
-        
-        /* Métricas responsivas */
-        @media (max-width: 480px) {
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .metric-card {
-            background-color: rgba(15, 23, 42, 0.5);
-            border-radius: 5px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Corregido: Mejora en la visualización de los números de métricas */
-        .metric-number {
-            font-size: 20pt;
-            font-weight: 700;
-            color: #f97316;
-            width: 60px; /* Ancho fijo para alinear todos los números */
-            text-align: center;
-            flex-shrink: 0; /* No permitir que se encoja */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .metric-label {
-            font-size: 10pt;
-            color: #cbd5e1;
-            line-height: 1.2;
-            flex: 1; /* Tomar el espacio restante */
-            padding-left: 8px; /* Espacio consistente entre número y texto */
-        }
-        
-        /* Experiencia */
-        .experience-item {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 15px;
-        }
-        
-        .experience-item:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: #f97316;
-        }
-        
-        .company-name {
-            font-weight: 700;
-            font-size: 12pt;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .position {
-            color: #60a5fa;
-            font-weight: 600;
-            font-size: 11pt;
-        }
-        
-        .period {
-            color: #94a3b8;
-            font-size: 9pt;
-            font-style: italic;
-        }
-        
-        .exp-summary {
-            font-size: 10pt;
-            color: #cbd5e1;
-            margin-top: 3px;
-        }
-        
-        /* Proyectos */
-        .project-item {
-            margin-bottom: 12px;
-            background-color: rgba(15, 23, 42, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        
-        .project-title {
-            font-weight: 600;
-            font-size: 12pt;
-            color: #fff;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin: 5px 0;
-        }
-        
-        .tech-tag {
-            background-color: #1e3a8a;
-            color: #60a5fa;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 9pt;
-        }
-        
-        .project-desc {
-            font-size: 10pt;
-            color: #cbd5e1;
-            margin-top: 3px;
-        }
-        
-        /* Skills */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        
-        .skill-badge {
-            background-color: rgba(15, 23, 42, 0.6);
-            color: #60a5fa;
-            padding: 4px 10px;
-            border-radius: 3px;
-            font-size: 10pt;
-        }
-        
-        /* Educación */
-        .education-item {
-            margin-bottom: 10px;
-        }
-        
-        .degree {
-            font-weight: 600;
-            font-size: 11pt;
-            color: #fff;
-        }
-        
-        .university {
-            font-style: italic;
-            font-size: 10pt;
-            color: #cbd5e1;
-        }
-        
-        .edu-year {
-            color: #94a3b8;
-            font-size: 9pt;
-        }
-        
-        /* CTA */
-        .portfolio-cta {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            border-radius: 5px;
-            padding: 15px;
-            margin: 15px 0;
-            text-align: center;
-        }
-        
-        .cta-title {
-            font-size: 14pt;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #f97316;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 11pt;
-        }
-        
-        .cta-button:hover {
-            background-color: #ea580c;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            font-size: 9pt;
-            color: #94a3b8;
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid #334155;
-        }
-        
-        /* Ajustes específicos para impresión */
-        @media print {
-            body {
-                background-color: #18233f !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            
-            .page {
-                width: 210mm;
-                height: 297mm;
-                max-width: none;
-                padding: 15mm;
-                margin: 0;
-                border: none;
-                overflow: hidden;
-            }
-            
-            .sections-grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 15px !important;
-            }
-            
-            .section {
-                margin-bottom: 15px;
-            }
-            
-            .section-title {
-                margin-bottom: 8px;
-            }
-            
-            .experience-item, .project-item {
-                margin-bottom: 10px;
-            }
-            
-            /* Ajustes específicos para métricas en impresión */
-            .metric-card {
-                padding: 8px;
-            }
-            
-            .metric-number {
-                font-size: 18pt;
-                width: 50px;
-            }
-            
-            .metric-label {
-                font-size: 9pt;
-            }
-            
-            .contact-row {
-                font-size: 9pt;
-            }
-        }
+/* CV para imprimir o guardar como PDF: dos hojas A4 con los colores del sitio en tema claro */
+:root {
+    --color-fondo: #e2eaff;
+    --color-superficie: #ffffff;
+    --color-texto: #1a1f2b;
+    --color-titulo: #2266ee;
+    --color-acento: #2266ee;
+    --color-borde: #d6e0fa;
+    --color-tenue: #4b5563;
+    --color-periodo: #c2410c;
+    --g-azul: #2266ee;
+    --g-naranja: #c2410c;
+    --g-gris: #7b8496;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #9aa3b2;
+    color: var(--color-texto);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.38;
+}
+
+a {
+    color: var(--color-titulo);
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/* Cada hoja es una página A4 */
+.hoja {
+    display: block;
+    width: 210mm;
+    height: 297mm;
+    margin: 10mm auto;
+    padding: 9.5mm 13mm;
+    overflow: hidden;
+    background-color: var(--color-superficie);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media print {
+    html,
+    body {
+        background: none;
+    }
+
+    .hoja {
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+    }
+
+    .hoja:last-child {
+        break-after: auto;
+    }
+
+    .grafico__datos {
+        display: none;
+    }
+}
+
+/* Cabecera */
+.cv-cabecera {
+    display: grid;
+    grid-template-columns: 22mm 1fr auto;
+    gap: 6mm;
+    align-items: center;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid var(--color-titulo);
+}
+
+.cv-cabecera__foto {
+    width: 22mm;
+    height: 22mm;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cv-cabecera__nombre {
+    font-size: 17pt;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-titulo);
+}
+
+.cv-cabecera__cargo {
+    margin-top: 1mm;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.cv-cabecera__roles {
+    margin-top: 0.5mm;
+    color: var(--color-tenue);
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1mm;
+    text-align: right;
+    font-size: 8pt;
+}
+
+/* Bloques */
+.bloque {
+    margin-top: 3.6mm;
+}
+
+.bloque__titulo {
+    margin-bottom: 2mm;
+    padding-bottom: 1mm;
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--color-titulo);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.bloque__intro {
+    margin-bottom: 2.5mm;
+    color: var(--color-tenue);
+}
+
+.perfil {
+    max-width: 175mm;
+}
+
+/* Experiencia */
+.trabajo {
+    margin-bottom: 2.7mm;
+    padding-left: 3mm;
+    border-left: 2px solid var(--color-borde);
+    break-inside: avoid;
+}
+
+.trabajo__cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4mm;
+}
+
+.trabajo__empresa {
+    font-size: 9.6pt;
+    font-weight: 700;
+}
+
+.trabajo__cargo {
+    font-weight: 500;
+    color: var(--color-tenue);
+}
+
+.trabajo__periodo {
+    flex: none;
+    font-weight: 700;
+    color: var(--color-periodo);
+}
+
+.trabajo__cifras {
+    margin-top: 0.5mm;
+    font-weight: 600;
+    color: var(--color-titulo);
+}
+
+.trabajo__logros {
+    margin-top: 1mm;
+}
+
+.trabajo__logros li {
+    position: relative;
+    padding-left: 3mm;
+    margin-bottom: 0.6mm;
+}
+
+.trabajo__logros li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--color-periodo);
+}
+
+.trabajo__tags {
+    margin-top: 0.8mm;
+    font-size: 7.6pt;
+    color: var(--color-tenue);
+}
+
+/* Página 2 */
+.hoja__columnas {
+    display: grid;
+    grid-template-columns: 1fr 58mm;
+    gap: 8mm;
+}
+
+.hoja__columnas > .bloque {
+    margin-top: 0;
+}
+
+.lateral > .bloque:first-child {
+    margin-top: 0;
+}
+
+.proyecto {
+    margin-bottom: 4mm;
+    break-inside: avoid;
+}
+
+.proyecto__titulo {
+    font-size: 9.6pt;
+    font-weight: 700;
+}
+
+.proyecto__desc {
+    margin: 0.5mm 0 1.5mm;
+    color: var(--color-tenue);
+}
+
+.proyecto .grafico {
+    padding: 2.5mm 3mm 2mm;
+}
+
+.otros__titulo {
+    margin: 1mm 0 1.5mm;
+    font-size: 9.6pt;
+    font-weight: 700;
+}
+
+.otros li {
+    margin-bottom: 1mm;
+}
+
+.otros__stack {
+    color: var(--color-tenue);
+}
+
+.tec li {
+    margin-bottom: 1.6mm;
+}
+
+.tec__area {
+    display: block;
+    font-weight: 700;
+}
+
+.formacion li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4mm;
+}
+
+.formacion__titulo {
+    font-weight: 700;
+}
+
+.formacion__lugar,
+.formacion__anios {
+    color: var(--color-tenue);
+}
+
+.enlace-portafolio a {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* En pantalla estrecha la hoja se ve completa con scroll; el diseño es para A4 */
+@media screen and (max-width: 840px) {
+    .hoja {
+        margin: 0 auto 8mm;
+    }
+}

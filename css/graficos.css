@@ -1,0 +1,170 @@
+/* Gráficos SVG de js/graficos.js; los colores salen de las variables del tema de cada página */
+.grafico {
+  margin: 4px 0 6px;
+  padding: 14px 14px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  text-align: left;
+}
+
+.grafico figcaption {
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-texto);
+}
+
+.grafico__lienzo {
+  width: 100%;
+}
+
+.grafico__svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grafico__marca--azul { fill: var(--g-azul); }
+.grafico__marca--naranja { fill: var(--g-naranja); }
+.grafico__marca--gris { fill: var(--g-gris); }
+
+.grafico__texto {
+  fill: var(--color-texto);
+  font-size: 12px;
+}
+
+.grafico__texto--valor {
+  font-weight: 700;
+}
+
+.grafico__eje {
+  fill: var(--color-tenue);
+  font-size: 11px;
+}
+
+.grafico__rejilla {
+  stroke: var(--color-borde);
+  stroke-width: 1;
+}
+
+.grafico__linea {
+  fill: none;
+  stroke: var(--g-azul);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.grafico__punto {
+  fill: var(--g-azul);
+  stroke: var(--color-superficie);
+  stroke-width: 2;
+}
+
+.grafico__cruz {
+  stroke: var(--color-tenue);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.grafico__zona {
+  fill: transparent;
+}
+
+.grafico [tabindex]:focus-visible,
+.grafico__svg:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+.grafico__fila:hover .grafico__marca,
+.grafico__fila:focus-visible .grafico__marca {
+  opacity: 0.85;
+}
+
+.grafico__leyenda {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 0.82rem;
+}
+
+.grafico__leyenda li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.grafico__muestra {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex: none;
+}
+
+.grafico__muestra--azul { background-color: var(--g-azul); }
+.grafico__muestra--naranja { background-color: var(--g-naranja); }
+.grafico__muestra--gris { background-color: var(--g-gris); }
+
+.grafico__nota {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: var(--color-tenue);
+  text-align: left;
+}
+
+.grafico__datos {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+.grafico__datos summary {
+  cursor: pointer;
+  color: var(--color-acento);
+  font-weight: 600;
+}
+
+.grafico__tabla {
+  width: 100%;
+  margin-top: 6px;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.grafico__tabla :is(th, td) {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--color-borde);
+  text-align: left;
+  font-weight: 400;
+}
+
+.grafico__tabla td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.grafico__tabla thead th {
+  font-weight: 700;
+}
+
+.grafico__tooltip {
+  position: fixed;
+  z-index: 2000;
+  max-width: 260px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: var(--color-texto);
+  color: var(--color-superficie);
+  font-size: 0.8rem;
+  font-weight: 600;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+

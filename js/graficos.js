@@ -12,8 +12,13 @@
         return el;
     };
 
+    // Colores por defecto como atributos del SVG: el CSS del tema los sobrescribe, pero si el CSS
+    // no llega (caché vieja) el gráfico sigue legible en lugar de salir en negro
+    const COLOR = { azul: '#2266ee', naranja: '#c2410c', gris: '#7b8496' };
+    const colorDe = (clase) => COLOR[(clase.match(/--(azul|naranja|gris)/) || [])[1]] || COLOR.azul;
+
     const texto = (padre, x, y, contenido, clase, ancla) => {
-        const t = crear('text', { x, y, class: clase, 'text-anchor': ancla || 'start' }, padre);
+        const t = crear('text', { x, y, class: clase, 'text-anchor': ancla || 'start', fill: 'currentColor', 'font-size': 12 }, padre);
         t.textContent = contenido;
         return t;
     };
@@ -34,7 +39,7 @@
             izq ? `Q${x},${y} ${x + izq},${y}` : '',
             'Z',
         ].join(' ');
-        return crear('path', { d, class: clase }, padre);
+        return crear('path', { d, class: clase, fill: colorDe(clase) }, padre);
     };
 
     const leerFilas = (tabla) => Array.from(tabla.tBodies[0].rows).map((fila) => {
@@ -97,7 +102,7 @@
             const y = i * paso;
             const largo = Math.max(2, (f.valor / maximo) * util);
             const grupo = crear('g', { class: 'grafico__fila' }, svg);
-            crear('rect', { x: 0, y, width: ancho, height: paso - 4, class: 'grafico__zona' }, grupo);
+            crear('rect', { x: 0, y, width: ancho, height: paso - 4, class: 'grafico__zona', fill: 'transparent' }, grupo);
             texto(grupo, 0, y + 14, f.nombre, 'grafico__texto');
             barra(grupo, 0, y + 20, largo, altoBarra, `grafico__marca grafico__marca--${f.color}`, ['der']);
             texto(grupo, largo + 6, y + 32, f.etiqueta, 'grafico__texto grafico__texto--valor');
@@ -151,7 +156,7 @@
         const yDe = (v) => margen.arr + plotAlto - (v / tope) * plotAlto;
 
         for (let v = 0; v <= tope + 1e-9; v += paso) {
-            crear('line', { x1: margen.izq, x2: margen.izq + plotAncho, y1: yDe(v), y2: yDe(v), class: 'grafico__rejilla' }, svg);
+            crear('line', { x1: margen.izq, x2: margen.izq + plotAncho, y1: yDe(v), y2: yDe(v), class: 'grafico__rejilla', stroke: '#d6e0fa' }, svg);
             texto(svg, margen.izq - 6, yDe(v) + 4, `${v.toLocaleString(idioma)}${unidad}`, 'grafico__eje', 'end');
         }
         const marcasX = (figura.dataset.marcasX || '').split(',').map(Number).filter((n) => !Number.isNaN(n));
@@ -160,19 +165,19 @@
         });
 
         const puntos = filas.map((f, i) => `${xDe(i)},${yDe(f.valor)}`).join(' ');
-        crear('polyline', { points: puntos, class: 'grafico__linea' }, svg);
+        crear('polyline', { points: puntos, class: 'grafico__linea', fill: 'none', stroke: COLOR.azul, 'stroke-width': 2 }, svg);
 
         // Etiquetas directas solo en el primer y el último punto
         const primero = filas[0];
         const ultimo = filas[filas.length - 1];
-        crear('circle', { cx: xDe(0), cy: yDe(primero.valor), r: 4, class: 'grafico__punto' }, svg);
-        crear('circle', { cx: xDe(filas.length - 1), cy: yDe(ultimo.valor), r: 4, class: 'grafico__punto' }, svg);
+        crear('circle', { cx: xDe(0), cy: yDe(primero.valor), r: 4, class: 'grafico__punto', fill: COLOR.azul }, svg);
+        crear('circle', { cx: xDe(filas.length - 1), cy: yDe(ultimo.valor), r: 4, class: 'grafico__punto', fill: COLOR.azul }, svg);
         texto(svg, xDe(0) + 6, yDe(primero.valor) - 10, primero.etiqueta, 'grafico__texto grafico__texto--valor');
         texto(svg, xDe(filas.length - 1) + 6, yDe(ultimo.valor) + 4, ultimo.etiqueta, 'grafico__texto grafico__texto--valor');
 
-        const cruz = crear('line', { y1: margen.arr, y2: margen.arr + plotAlto, class: 'grafico__cruz', visibility: 'hidden' }, svg);
-        const marcador = crear('circle', { r: 5, class: 'grafico__punto grafico__punto--activo', visibility: 'hidden' }, svg);
-        const zona = crear('rect', { x: margen.izq, y: margen.arr, width: plotAncho, height: plotAlto, class: 'grafico__zona' }, svg);
+        const cruz = crear('line', { y1: margen.arr, y2: margen.arr + plotAlto, class: 'grafico__cruz', visibility: 'hidden', stroke: '#4b5563' }, svg);
+        const marcador = crear('circle', { r: 5, class: 'grafico__punto grafico__punto--activo', visibility: 'hidden', fill: COLOR.azul }, svg);
+        const zona = crear('rect', { x: margen.izq, y: margen.arr, width: plotAncho, height: plotAlto, class: 'grafico__zona', fill: 'transparent' }, svg);
         let actual = filas.length - 1;
         const mostrar = (i, evento) => {
             actual = i;
