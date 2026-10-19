@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/tema.js"></script>
     <title>Curriculum_Portafolio_EN</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/style_exp.css">
     <link rel="icon" href="../img/javier.jpg" type="image/png">
     <link rel="stylesheet" href="../css/fonts.css">
-    <script type="text/javascript" src="../js/darkmode.js" defer></script>
     <script type="text/javascript" src="../js/menuclose.js" defer></script>
 </head>
 
@@ -34,8 +34,9 @@
             </nav>
             <div class="header__buttons-container">
                 <a href="../index.html" class="language-toggle">ES</a>
-                <input type="image" class='darkmode_button' id="dark_mode_menu"
-                    src='../img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png' alt="Toggle Dark Mode">
+                <button type="button" class="darkmode_button" id="dark_mode_menu" aria-pressed="false" aria-label="Dark mode">
+                    <img src='../img/dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.png' alt="" width="24" height="24">
+                </button>
                 <a href="../pdf/Curriculum_EN.pdf" download="Curriculum_EN.pdf" type="application/pdf"
                     class="download-button">CV PDF</a>
             </div>
