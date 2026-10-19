@@ -1063,6 +1063,7 @@ h2::after,
 }
 
 .portfolio__proyect-name {
+  margin-top: 5px;
   font-size: 1.4rem;
   margin-bottom: 15px;
   text-align: left;
@@ -1183,7 +1184,7 @@ h2::after,
   text-align: left;
 }
 
-.skill h4 {
+.skill h5 {
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 14px;
@@ -1213,7 +1214,7 @@ h2::after,
   border-left: 3px solid #00CC88;
 }
 
-.impact-box h3 {
+.impact-box h5 {
   margin-top: 0;
   font-size: 16px;
   color: #00CC88;
@@ -1412,24 +1413,14 @@ h2::after,
   }
 }
 
+/* La destacada ocupa la fila entera; las demás, en columnas debajo */
 @container portfolio (min-width:900px) {
   .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 
   .portfolio__project:nth-child(1) {
-    grid-column: span 2;
-  }
-}
-
-@container portfolio (min-width:1300px) {
-  .portfolio__project-container {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-
-  .portfolio__project:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column: 1 / -1;
   }
 }
 
@@ -1643,7 +1634,9 @@ footer {
   background-color: rgba(24, 35, 63, 0.97);
 }
 
-[data-theme="dark"] .portfolio h2 {
+[data-theme="dark"] .portfolio h2,
+[data-theme="dark"] .portfolio h3,
+[data-theme="dark"] .portfolio__proyect-name {
   color: var(--color-titulo);
 }
 
@@ -1774,6 +1767,206 @@ footer {
     bottom: auto;
     transform: translateY(-50%);
   }
+}
+
+/* -----------------Portafolio: filtro y proyectos personales-------------------- */
+[hidden] {
+  display: none !important;
+}
+
+.portfolio {
+  --pf-item: #f8fafc;
+  --pf-chip: #e0e7ff;
+  --pf-chip-texto: #1e3a8a;
+}
+
+[data-theme="dark"] .portfolio {
+  --pf-item: #121a2e;
+  --pf-chip: rgba(59, 130, 246, 0.2);
+  --pf-chip-texto: #bcd0ff;
+}
+
+.filtro-roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px auto 6px;
+  padding: 0 20px;
+}
+
+.filtro-roles__boton {
+  min-height: 44px;
+  color: var(--color-texto);
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--color-acento);
+  background: transparent;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filtro-roles__boton[aria-pressed="true"] {
+  background-color: var(--color-titulo);
+  border-color: var(--color-titulo);
+  color: var(--color-superficie);
+}
+
+.filtro-roles__boton:focus-visible,
+.proyecto-personal__titulo a:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+.filtro-roles__estado {
+  min-height: 1.4em;
+  margin: 0 auto 18px;
+  color: var(--color-tenue);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.portafolio__bloque {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.portafolio__titulo-bloque {
+  margin: 8px 0 16px;
+  font-size: 1.6rem;
+  color: var(--color-titulo);
+}
+
+.portafolio__intro {
+  max-width: 70ch;
+  margin: 0 0 20px;
+  color: var(--color-tenue);
+  text-align: left;
+}
+
+.project-roles {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: var(--color-tenue);
+  text-align: left;
+}
+
+.personales__grupo {
+  margin-bottom: 28px;
+}
+
+.personales__titulo-grupo {
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.personales__lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+@container portfolio (min-width: 768px) {
+  .personales__lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.proyecto-personal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background-color: var(--pf-item);
+  border: 1px solid var(--color-borde);
+}
+
+.proyecto-personal__titulo {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.proyecto-personal__titulo a {
+  color: var(--color-titulo);
+  text-decoration: none;
+}
+
+.proyecto-personal__titulo a:hover {
+  text-decoration: underline;
+}
+
+.proyecto-personal__descripcion {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.proyecto-personal__stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.proyecto-personal__stack li {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  background-color: var(--pf-chip);
+  color: var(--pf-chip-texto);
+}
+
+[data-theme="light"] .portfolio .proyecto-personal__stack li {
+  color: var(--pf-chip-texto) !important;
+}
+
+.proyecto-personal .project-roles {
+  margin: auto 0 0;
+}
+
+.portfolio__project .project-description p {
+  text-align: left;
+}
+
+/* Tarjetas profesionales en claro: sus cajas estaban pensadas solo para fondo oscuro */
+[data-theme="light"] .portfolio {
+  color: var(--color-texto);
+}
+
+[data-theme="light"] .portfolio :is(.architecture-flow, .skill, .impact-box, .workflow-diagram, .achievement, .analysis-type, .sub-table, .benefit) {
+  background: #f1f5fb;
+}
+
+[data-theme="light"] .portfolio :is(.arch-node, .workflow-step, .main-table) {
+  background: #dbe6fb;
+  color: #1e3a8a;
+}
+
+[data-theme="light"] .portfolio :is(.achievement-title, .tag) {
+  color: #1e40af;
+}
+
+[data-theme="light"] .portfolio .achievement-desc {
+  color: var(--color-tenue);
+}
+
+[data-theme="light"] .portfolio .skill-level {
+  background: #dbe3f0;
 }
 
 /* Botón de tema */

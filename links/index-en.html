@@ -13,6 +13,7 @@
     <link rel="icon" href="../img/javier.jpg" type="image/png">
     <link rel="stylesheet" href="../css/fonts.css?v=20261019">
     <script type="text/javascript" src="../js/menuclose.js?v=20261019" defer></script>
+    <script src="../js/filtro.js?v=20261019" defer></script>
 </head>
 
 <body>
@@ -528,12 +529,23 @@
         </ol>
     </section>
     <section class="portfolio" id="portfolio">
-        <h2 class="h2_portfolio">MY PORTFOLIO</h2>
-        <div class="portfolio__project-container">
+        <h2 class="h2_portfolio">Portfolio</h2>
+        <div class="filtro-roles" role="group" aria-label="Filter projects by role" data-estado="Showing {n} projects" hidden>
+            <button type="button" class="filtro-roles__boton" data-rol="todos" aria-pressed="true">All</button>
+            <button type="button" class="filtro-roles__boton" data-rol="ing" aria-pressed="false">Data engineering</button>
+            <button type="button" class="filtro-roles__boton" data-rol="ana" aria-pressed="false">Data analysis</button>
+            <button type="button" class="filtro-roles__boton" data-rol="cie" aria-pressed="false">Data science</button>
+        </div>
+        <p class="filtro-roles__estado" aria-live="polite"></p>
+
+        <div class="portafolio__bloque">
+            <h3 class="portafolio__titulo-bloque">Professional projects</h3>
+            <div class="portfolio__project-container">
             <!-- Project 1: Cloud Migration: Onboarding Analytics -->
-            <div class="portfolio__project">
+            <article class="portfolio__project" data-roles="ing">
                 <div class="project-badge">Featured Project</div>
-                <h2 class="portfolio__proyect-name">Cloud Migration: Onboarding Analytics</h2>
+                <h4 class="portfolio__proyect-name">Cloud Migration: Onboarding Analytics</h4>
+                <p class="project-roles">Data engineering</p>
                 <div class="content">
                     <div class="project-tags">
                         <span class="tag">Google Cloud</span>
@@ -560,25 +572,25 @@
 
                     <div class="skills-grid">
                         <div class="skill">
-                            <h4>Cloud architecture design</h4>
+                            <h5>Cloud architecture design</h5>
                             <div class="skill-level">
                                 <div class="skill-bar w-95"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <h4>SQL Development</h4>
+                            <h5>SQL Development</h5>
                             <div class="skill-level">
                                 <div class="skill-bar w-90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <h4>Systems integration</h4>
+                            <h5>Systems integration</h5>
                             <div class="skill-level">
                                 <div class="skill-bar w-92"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <h4>Performance optimization</h4>
+                            <h5>Performance optimization</h5>
                             <div class="skill-level">
                                 <div class="skill-bar w-88"></div>
                             </div>
@@ -586,16 +598,17 @@
                     </div>
 
                     <div class="impact-box">
-                        <h3>Business Impact</h3>
+                        <h5>Business Impact</h5>
                         <p>Real-time data access, accelerating decision-making and improving response to market changes.
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 2: Data Visualization and Automation -->
-            <div class="portfolio__project">
-                <h2 class="portfolio__proyect-name">Data Visualization and Automation</h2>
+            <article class="portfolio__project" data-roles="ana ing">
+                <h4 class="portfolio__proyect-name">Data Visualization and Automation</h4>
+                <p class="project-roles">Data analysis and data engineering</p>
                 <div class="content">
                     <div class="project-tags">
                         <span class="tag">Python</span>
@@ -651,11 +664,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 3: Predictive Exploratory Analysis -->
-            <div class="portfolio__project">
-                <h2 class="portfolio__proyect-name">Predictive Exploratory Analysis</h2>
+            <article class="portfolio__project" data-roles="ana cie">
+                <h4 class="portfolio__proyect-name">Predictive Exploratory Analysis</h4>
+                <p class="project-roles">Data analysis and data science</p>
                 <div class="content">
                     <div class="project-tags">
                         <span class="tag">Python</span>
@@ -686,11 +700,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 4: Unified DataWarehouse -->
-            <div class="portfolio__project">
-                <h2 class="portfolio__proyect-name">Unified DataWarehouse</h2>
+            <article class="portfolio__project" data-roles="ing ana">
+                <h4 class="portfolio__proyect-name">Unified DataWarehouse</h4>
+                <p class="project-roles">Data engineering and data analysis</p>
                 <div class="content">
                     <div class="project-tags">
                         <span class="tag">SQL</span>
@@ -720,62 +735,141 @@
                         <div class="benefit">Financial Reports</div>
                     </div>
                 </div>
+            </article>
             </div>
+        </div>
 
-            <!-- Project 5: Probabilistic Recommendation Analysis (Personal Project) -->
-            <div class="portfolio__project">
-                <div class="project-badge personal">Personal Project</div>
-                <h2 class="portfolio__proyect-name">Probabilistic Recommendation Analysis</h2>
-                <div class="content">
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Probability</span>
-                        <span class="tag">Machine Learning</span>
-                    </div>
-                    <div class="github-link">
-                        <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb"
-                            target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-
-                    <div class="project-description">
-                        <p>Probabilistic model to determine if product A is a good recommendation for product B,
-                            improving the shopping experience with analysis of behavior patterns.</p>
-                    </div>
-
-                    <div class="key-findings">
-                        <div class="finding">
-                            <div class="finding-value">89%</div>
-                            <div class="finding-label">Acceptance rate</div>
-                        </div>
-                        <div class="finding">
-                            <div class="finding-value">36K+</div>
-                            <div class="finding-label">Products analyzed</div>
-                        </div>
-                    </div>
-
-                    <div class="pie-container">
-                        <div class="pie-chart"></div>
-                        <div class="pie-legend">
-                            <div class="legend-item">
-                                <span class="legend-color accept"></span>
-                                <span>Approved (89%)</span>
-                            </div>
-                            <div class="legend-item">
-                                <span class="legend-color reject"></span>
-                                <span>Not approved (11%)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="portafolio__bloque portafolio__bloque--personal">
+            <h3 class="portafolio__titulo-bloque">Personal projects</h3>
+            <p class="portafolio__intro">Cases I solved end to end with fictional data. The code for each one is on GitHub.</p>
+            <div class="personales__grupo">
+                <h4 class="personales__titulo-grupo">Pipelines on Google Cloud</h4>
+                <ul class="personales__lista">
+                    <li class="proyecto-personal" data-roles="ing ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust" target="_blank" rel="noopener noreferrer">FinTrust data pipeline</a></h5>
+                        <p class="proyecto-personal__descripcion">Replaces manual report downloads at a consumer-credit fintech with an automated pipeline in BigQuery, with documented technical decisions and data-quality evidence.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>BigQuery</li>
+                            <li>SQL</li>
+                            <li>Airflow</li>
+                        </ul>
+                        <p class="project-roles">Data engineering and data analysis</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ing">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp" target="_blank" rel="noopener noreferrer">Health data ingestion</a></h5>
+                        <p class="proyecto-personal__descripcion">Loads CSV, TXT and Excel files from Cloud Storage into bronze and silver layers in BigQuery. Cloud Composer (Airflow) runs it, and every load is idempotent.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Cloud Storage</li>
+                            <li>BigQuery</li>
+                            <li>Cloud Composer</li>
+                            <li>SQL</li>
+                        </ul>
+                        <p class="project-roles">Data engineering</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ing cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
+                        <p class="proyecto-personal__descripcion">Data processing, machine learning and a cloud architecture to take a health insurer's analytics from one-off solutions to production.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>BigQuery</li>
+                            <li>Vertex AI</li>
+                            <li>PySpark</li>
+                        </ul>
+                        <p class="project-roles">Data engineering and data science</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ing ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales architecture</a></h5>
+                        <p class="proyecto-personal__descripcion">Takes a sales workbook from a local Excel file to a scalable architecture on Google Cloud, with a star schema and the top 10 products per category.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>BigQuery</li>
+                            <li>Excel</li>
+                        </ul>
+                        <p class="project-roles">Data engineering and data analysis</p>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Project placeholder -->
-            <div class="portfolio__project placeholder">
-                <h2 class="portfolio__proyect-name">Next Project</h2>
-                <div class="placeholder-content">+</div>
+            <div class="personales__grupo">
+                <h4 class="personales__titulo-grupo">Pipelines on AWS</h4>
+                <ul class="personales__lista">
+                    <li class="proyecto-personal" data-roles="ing">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws" target="_blank" rel="noopener noreferrer">Academic calendars on Databricks</a></h5>
+                        <p class="proyecto-personal__descripcion">Takes the calendars that partner universities drop in S3 through bronze, silver and gold Delta tables on Databricks. Files that have not changed are skipped, and rows that cannot be used are set aside with the reason.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Databricks</li>
+                            <li>PySpark</li>
+                            <li>Delta Lake</li>
+                            <li>Unity Catalog</li>
+                            <li>AWS S3</li>
+                        </ul>
+                        <p class="project-roles">Data engineering</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="personales__grupo">
+                <h4 class="personales__titulo-grupo">AI</h4>
+                <ul class="personales__lista">
+                    <li class="proyecto-personal" data-roles="cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/ecomerce_agent" target="_blank" rel="noopener noreferrer">Banking and e-commerce agent</a></h5>
+                        <p class="proyecto-personal__descripcion">An assistant that checks a product's price against the customer's balance before recommending it. It combines semantic search over the catalogue (FAISS) with the customer's own data.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>LangChain</li>
+                            <li>FAISS</li>
+                            <li>OpenAI</li>
+                        </ul>
+                        <p class="project-roles">Data science</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="personales__grupo">
+                <h4 class="personales__titulo-grupo">Analysis</h4>
+                <ul class="personales__lista">
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
+                        <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
+                        <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>Tableau</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ana cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
+                        <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis and data science</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Cleaning and transformation</a></h5>
+                        <p class="proyecto-personal__descripcion">A notebook that turns a messy Excel file into a clean dataset.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
