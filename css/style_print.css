@@ -282,6 +282,10 @@ h3 {
     color: var(--color-tenue);
 }
 
+.idiomas {
+    margin: 0;
+}
+
 .enlace-portafolio a {
     font-weight: 600;
     overflow-wrap: anywhere;

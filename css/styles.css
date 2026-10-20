@@ -2160,3 +2160,8 @@ footer {
   padding: 4px 0;
   color: var(--color-titulo);
 }
+
+.profile__idiomas {
+  margin: 12px 0 0;
+  text-align: left;
+}
