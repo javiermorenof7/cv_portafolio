@@ -2118,3 +2118,45 @@ footer {
     transition: none;
   }
 }
+
+/* Decisiones y calidad de datos en el caso de estudio y en las fichas personales */
+.caso__decisiones {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.caso__decisiones h5 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--color-titulo);
+}
+
+.caso__decisiones ul,
+.proyecto-personal__decisiones {
+  margin: 0;
+  padding-left: 1.2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.caso__decisiones li + li,
+.proyecto-personal__decisiones li + li {
+  margin-top: 6px;
+}
+
+.proyecto-personal__decisiones {
+  font-size: 0.88rem;
+}
+
+.proyecto-personal__codigo {
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.proyecto-personal__codigo a {
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--color-titulo);
+}
