@@ -7,8 +7,60 @@
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js?v=d8aec39086"></script>
-    <title>Curriculum_Portafolio_ES</title>
-    <link rel="stylesheet" href="css/styles.css?v=0c58bd8d4b">
+    <title>Francisco Javier Garcia Moreno · Data Engineer | CV y portafolio</title>
+    <meta name="description" content="Data Engineer con más de 5 años en pipelines ETL/ELT y arquitecturas medallón en GCP, AWS y Azure. Experiencia, proyectos con código y gráficos con datos reales.">
+    <link rel="canonical" href="https://javiermorenof7.github.io/cv_portafolio/">
+    <link rel="alternate" hreflang="es" href="https://javiermorenof7.github.io/cv_portafolio/">
+    <link rel="alternate" hreflang="en" href="https://javiermorenof7.github.io/cv_portafolio/links/index-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://javiermorenof7.github.io/cv_portafolio/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Francisco Javier Garcia Moreno · Data Engineer | CV y portafolio">
+    <meta property="og:description" content="Data Engineer con más de 5 años en pipelines ETL/ELT y arquitecturas medallón en GCP, AWS y Azure. Experiencia, proyectos con código y gráficos con datos reales.">
+    <meta property="og:url" content="https://javiermorenof7.github.io/cv_portafolio/">
+    <meta property="og:image" content="https://javiermorenof7.github.io/cv_portafolio/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Francisco Javier Garcia Moreno">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Francisco Javier Garcia Moreno",
+        "jobTitle": "Data Engineer | Ingeniero de Datos",
+        "url": "https://javiermorenof7.github.io/cv_portafolio/",
+        "image": "https://javiermorenof7.github.io/cv_portafolio/img/og.jpg",
+        "worksFor": {
+                "@type": "Organization",
+                "name": "Scala Learning"
+        },
+        "sameAs": [
+                "https://github.com/javiermorenof7",
+                "https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
+        ],
+        "knowsAbout": [
+                "Data engineering",
+                "ETL/ELT",
+                "Databricks",
+                "Apache Spark",
+                "BigQuery",
+                "Delta Lake",
+                "Medallion architecture",
+                "Python",
+                "SQL",
+                "Google Cloud",
+                "AWS",
+                "Azure"
+        ],
+        "knowsLanguage": [
+                "es",
+                "en"
+        ]
+    }
+    </script>
+    <link rel="stylesheet" href="css/styles.css?v=6fa9ff7968">
     <link rel="stylesheet" href="css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="css/graficos.css?v=819c453989">
     <link rel="icon" href="img/javier.jpg" type="image/jpeg">
@@ -58,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="profile__data-container">
+            <div class="profile__data-container" tabindex="0" role="region" aria-label="Perfil profesional">
                 <div class="profile__data">
                     <div class="profile__description">
                         <div class="profile__header">
@@ -567,33 +619,35 @@
                     <div class="project-description">
                         <p>En Scala Learning, los calendarios académicos llegaban como planificaciones Gantt en Google Drive y las encuestas, desde SurveyMonkey. Los llevé a <span class="highlight">4 pipelines medallón</span> que se ejecutan y se prueban solos.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="architecture-flow">
-                        <div class="arch-node">Drive y SurveyMonkey</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Bronze</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Silver</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Gold</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Pruebas SQL</div>
-                    </div>
+                        <div class="architecture-flow">
+                            <div class="arch-node">Drive y SurveyMonkey</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Bronze</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Silver</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Gold</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Pruebas SQL</div>
+                        </div>
 
-                    <div class="caso__decisiones">
-                        <h5>Decisiones de diseño</h5>
-                        <ul>
-                            <li><strong>Carga incremental con MERGE</strong> en tablas Delta, con snapshots históricos: volver a ejecutar un job no duplica datos.</li>
-                            <li><strong>Reproceso por archivo:</strong> solo se vuelven a cargar las planificaciones que cambian.</li>
-                            <li><strong>Cómputo serverless:</strong> no hay clúster encendido entre corridas, así que solo se paga el tiempo de ejecución.</li>
-                            <li><strong>Jobs como código</strong>, con una tarea final de pruebas SQL (96 en el modelo de asignaturas) que detiene el job y avisa si algo falla.</li>
-                            <li><strong>Desarrollo y producción separados:</strong> a producción solo se llega por merge request.</li>
-                        </ul>
-                    </div>
+                        <div class="caso__decisiones">
+                            <h5>Decisiones de diseño</h5>
+                            <ul>
+                                <li><strong>Carga incremental con MERGE</strong> en tablas Delta, con snapshots históricos: volver a ejecutar un job no duplica datos.</li>
+                                <li><strong>Reproceso por archivo:</strong> solo se vuelven a cargar las planificaciones que cambian.</li>
+                                <li><strong>Cómputo serverless:</strong> no hay clúster encendido entre corridas, así que solo se paga el tiempo de ejecución.</li>
+                                <li><strong>Jobs como código</strong>, con una tarea final de pruebas SQL (96 en el modelo de asignaturas) que detiene el job y avisa si algo falla.</li>
+                                <li><strong>Desarrollo y producción separados:</strong> a producción solo se llega por merge request.</li>
+                            </ul>
+                        </div>
 
-                    <div class="impact-box">
-                        <h5>Cómo se opera</h5>
-                        <p>Los jobs corren cada día sin intervención manual, y las audiencias de las encuestas se generan solas según el calendario académico. La misma arquitectura, con código público y datos ficticios, está en <a href="#proyecto-calendarios">Calendarios académicos en Databricks</a>.</p>
+                        <div class="impact-box">
+                            <h5>Cómo se opera</h5>
+                            <p>Los jobs corren cada día sin intervención manual, y las audiencias de las encuestas se generan solas según el calendario académico. La misma arquitectura, con código público y datos ficticios, está en <a href="#proyecto-calendarios">Calendarios académicos en Databricks</a>.</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -613,33 +667,35 @@
                         <p>Migración desde Metabase hacia Google Cloud Platform, reduciendo el tiempo de procesamiento
                             de <span class="highlight">3 horas a menos de 1 minuto</span>.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="architecture-flow">
-                        <div class="arch-node">Metabase</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Dataflow</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Kubernetes</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">BigQuery</div>
-                    </div>
+                        <div class="architecture-flow">
+                            <div class="arch-node">Metabase</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Dataflow</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Kubernetes</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">BigQuery</div>
+                        </div>
 
-                    <figure class="grafico" data-tipo="pendiente">
-                        <figcaption>El procesamiento pasó de 3 horas a menos de 1 minuto</figcaption>
-                        <table class="grafico__tabla">
-                            <thead><tr><th scope="col">Sistema</th><th scope="col">Minutos</th></tr></thead>
-                            <tbody>
-                                <tr data-color="gris"><th scope="row">Antes: Metabase</th><td data-valor="180">3 h</td></tr>
-                                <tr data-color="azul"><th scope="row">Después: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="grafico__nota">Más de 180 veces más rápido.</p>
-                    </figure>
+                        <figure class="grafico" data-tipo="pendiente">
+                            <figcaption>El procesamiento pasó de 3 horas a menos de 1 minuto</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Sistema</th><th scope="col">Minutos</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="gris"><th scope="row">Antes: Metabase</th><td data-valor="180">3 h</td></tr>
+                                    <tr data-color="azul"><th scope="row">Después: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Más de 180 veces más rápido.</p>
+                        </figure>
 
-                    <div class="impact-box">
-                        <h5>Impacto en el negocio</h5>
-                        <p>Datos disponibles en menos de 1 minuto (antes, 3 horas), acelerando la toma de decisiones y mejorando la respuesta a
-                            cambios del mercado.</p>
+                        <div class="impact-box">
+                            <h5>Impacto en el negocio</h5>
+                            <p>Datos disponibles en menos de 1 minuto (antes, 3 horas), acelerando la toma de decisiones y mejorando la respuesta a
+                                cambios del mercado.</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -659,21 +715,23 @@
                         <p>Diseño e implementación de una bodega de datos que integra información operativa y financiera
                             de 3 organizaciones, con un modelo común para analizarla en conjunto.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="warehouse-diagram">
-                        <div class="main-table">Repositorio Central</div>
-                        <div class="sub-tables">
-                            <div class="sub-table">Empresa 1</div>
-                            <div class="sub-table">Empresa 2</div>
-                            <div class="sub-table">Empresa 3</div>
+                        <div class="warehouse-diagram">
+                            <div class="main-table">Repositorio Central</div>
+                            <div class="sub-tables">
+                                <div class="sub-table">Empresa 1</div>
+                                <div class="sub-table">Empresa 2</div>
+                                <div class="sub-table">Empresa 3</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="benefit-grid">
-                        <div class="benefit">Análisis de Pareto</div>
-                        <div class="benefit">Costeo de Operaciones</div>
-                        <div class="benefit">Segmentación de Clientes</div>
-                        <div class="benefit">Informes Financieros</div>
+                        <div class="benefit-grid">
+                            <div class="benefit">Análisis de Pareto</div>
+                            <div class="benefit">Costeo de Operaciones</div>
+                            <div class="benefit">Segmentación de Clientes</div>
+                            <div class="benefit">Informes Financieros</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -694,46 +752,48 @@
                                 class="highlight">Looker Studio</span> (antes Google Data Studio), eliminando la gestión manual y
                             proporcionando visualizaciones dinámicas.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="workflow-diagram">
-                        <div class="workflow-step">
-                            <div class="step-icon">📊</div>
-                            <div class="step-name">Excel</div>
-                        </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">🐍</div>
-                            <div class="step-name">Python</div>
-                        </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">☁️</div>
-                            <div class="step-name">Google Drive</div>
-                        </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">📈</div>
-                            <div class="step-name">Data Studio</div>
-                        </div>
-                    </div>
-
-                    <div class="key-achievements">
-                        <div class="achievement">
-                            <div class="achievement-title">Incentivación BBVA Seguros</div>
-                            <div class="achievement-desc">Datos no estructurados transformados en dashboards dinámicos
+                        <div class="workflow-diagram">
+                            <div class="workflow-step">
+                                <div class="step-icon">📊</div>
+                                <div class="step-name">Excel</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">🐍</div>
+                                <div class="step-name">Python</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">☁️</div>
+                                <div class="step-name">Google Drive</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">📈</div>
+                                <div class="step-name">Data Studio</div>
                             </div>
                         </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Feedback positivo</div>
-                            <div class="achievement-desc">Mayor comprensión y adopción de los informes</div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Versionado</div>
-                            <div class="achievement-desc">Control histórico de cambios en datos</div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Informes periódicos</div>
-                            <div class="achievement-desc">Visualización diaria, semanal y mensual</div>
+
+                        <div class="key-achievements">
+                            <div class="achievement">
+                                <div class="achievement-title">Incentivación BBVA Seguros</div>
+                                <div class="achievement-desc">Datos no estructurados transformados en dashboards dinámicos
+                                </div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Feedback positivo</div>
+                                <div class="achievement-desc">Mayor comprensión y adopción de los informes</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Versionado</div>
+                                <div class="achievement-desc">Control histórico de cambios en datos</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Informes periódicos</div>
+                                <div class="achievement-desc">Visualización diaria, semanal y mensual</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -753,14 +813,16 @@
                     <div class="project-description">
                         <p>Análisis de datos con Python, SQL y Pandas, y de texto con NLTK, para contrastar supuestos del negocio con los datos: qué pasó, por qué, qué puede pasar y qué conviene hacer.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="analysis-types">
-                        <div class="analysis-type">Descriptivo</div>
-                        <div class="analysis-type">Diagnóstico</div>
-                        <div class="analysis-type">Predictivo</div>
-                        <div class="analysis-type">Prescriptivo</div>
+                        <div class="analysis-types">
+                            <div class="analysis-type">Descriptivo</div>
+                            <div class="analysis-type">Diagnóstico</div>
+                            <div class="analysis-type">Predictivo</div>
+                            <div class="analysis-type">Prescriptivo</div>
+                        </div>
+
                     </div>
-
                 </div>
             </article>
             </div>
@@ -833,6 +895,16 @@
                         </ul>
                         <p class="project-roles">Ingeniería de datos</p>
                     </li>
+                    <li class="proyecto-personal" data-roles="ing ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Arquitectura de ventas</a></h5>
+                        <p class="proyecto-personal__descripcion">Lleva un libro de ventas de un Excel local a una arquitectura escalable en Google Cloud, con modelo en estrella y el top 10 de productos por categoría.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
+                            <li>Python</li>
+                            <li>BigQuery</li>
+                            <li>Excel</li>
+                        </ul>
+                        <p class="project-roles">Ingeniería de datos y análisis de datos</p>
+                    </li>
                     <li class="proyecto-personal" data-roles="ing cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
                         <p class="proyecto-personal__descripcion">Procesamiento de datos, machine learning y una arquitectura en la nube para llevar la analítica de una aseguradora de salud de soluciones puntuales a producción.</p>
@@ -866,16 +938,6 @@
                         </ul>
                         <p class="project-roles">Ingeniería de datos y ciencia de datos</p>
                     </li>
-                    <li class="proyecto-personal" data-roles="ing ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Arquitectura de ventas</a></h5>
-                        <p class="proyecto-personal__descripcion">Lleva un libro de ventas de un Excel local a una arquitectura escalable en Google Cloud, con modelo en estrella y el top 10 de productos por categoría.</p>
-                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
-                            <li>Python</li>
-                            <li>BigQuery</li>
-                            <li>Excel</li>
-                        </ul>
-                        <p class="project-roles">Ingeniería de datos y análisis de datos</p>
-                    </li>
                 </ul>
             </div>
             <div class="personales__grupo">
@@ -897,29 +959,6 @@
             <div class="personales__grupo">
                 <h4 class="personales__titulo-grupo">Análisis</h4>
                 <ul class="personales__lista">
-                    <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Riesgo de crédito</a></h5>
-                        <p class="proyecto-personal__descripcion">Tasas de intermediación de la banca por tipo de entidad, tipo de crédito y plazo, para apoyar una estrategia de fondeo.</p>
-                        <figure class="grafico" data-tipo="barras">
-                            <figcaption>Las compañías de financiamiento cobran 10,7 puntos más que las instituciones oficiales especiales (tasa efectiva mediana, octubre 2022)</figcaption>
-                            <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Tipo de entidad</th><th scope="col">Tasa</th></tr></thead>
-                                <tbody>
-                                    <tr data-color="azul"><th scope="row">Compañías de financiamiento</th><td data-valor="26.82">26,8 %</td></tr>
-                                    <tr data-color="azul"><th scope="row">Cooperativas financieras</th><td data-valor="26.32">26,3 %</td></tr>
-                                    <tr data-color="azul"><th scope="row">Bancos</th><td data-valor="22.99">23,0 %</td></tr>
-                                    <tr data-color="azul"><th scope="row">Instituciones oficiales especiales</th><td data-valor="16.1">16,1 %</td></tr>
-                                </tbody>
-                            </table>
-                        </figure>
-                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Scikit-learn</li>
-                            <li>Seaborn</li>
-                        </ul>
-                        <p class="project-roles">Análisis de datos</p>
-                    </li>
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Ausentismo en una fábrica</a></h5>
                         <p class="proyecto-personal__descripcion">Un modelo dimensional y una tabla única de análisis para explicar cómo afectan las ausencias a la productividad.</p>
@@ -958,6 +997,39 @@
                         </ul>
                         <p class="project-roles">Análisis de datos</p>
                     </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Limpieza y transformación</a></h5>
+                        <p class="proyecto-personal__descripcion">Un notebook que convierte un Excel desordenado en un conjunto de datos limpio.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Análisis de datos</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Riesgo de crédito</a></h5>
+                        <p class="proyecto-personal__descripcion">Tasas de intermediación de la banca por tipo de entidad, tipo de crédito y plazo, para apoyar una estrategia de fondeo.</p>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Las compañías de financiamiento cobran 10,7 puntos más que las instituciones oficiales especiales (tasa efectiva mediana, octubre 2022)</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Tipo de entidad</th><th scope="col">Tasa</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Compañías de financiamiento</th><td data-valor="26.82">26,8 %</td></tr>
+                                    <tr data-color="azul"><th scope="row">Cooperativas financieras</th><td data-valor="26.32">26,3 %</td></tr>
+                                    <tr data-color="azul"><th scope="row">Bancos</th><td data-valor="22.99">23,0 %</td></tr>
+                                    <tr data-color="azul"><th scope="row">Instituciones oficiales especiales</th><td data-valor="16.1">16,1 %</td></tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Análisis de datos</p>
+                    </li>
                     <li class="proyecto-personal" data-roles="ana cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Recomendación de productos</a></h5>
                         <p class="proyecto-personal__descripcion">Un análisis probabilístico de si un producto es una buena recomendación para otro, a partir de patrones de compra.</p>
@@ -978,16 +1050,6 @@
                             <li>Seaborn</li>
                         </ul>
                         <p class="project-roles">Análisis de datos y ciencia de datos</p>
-                    </li>
-                    <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Limpieza y transformación</a></h5>
-                        <p class="proyecto-personal__descripcion">Un notebook que convierte un Excel desordenado en un conjunto de datos limpio.</p>
-                        <ul class="proyecto-personal__stack" aria-label="Tecnologías">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Seaborn</li>
-                        </ul>
-                        <p class="project-roles">Análisis de datos</p>
                     </li>
                 </ul>
             </div>

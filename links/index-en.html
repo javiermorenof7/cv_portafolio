@@ -7,8 +7,60 @@
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/tema.js?v=d8aec39086"></script>
-    <title>Curriculum_Portafolio_EN</title>
-    <link rel="stylesheet" href="../css/styles.css?v=0c58bd8d4b">
+    <title>Francisco Javier Garcia Moreno · Data Engineer | Resume and portfolio</title>
+    <meta name="description" content="Data Engineer with 5+ years building ETL/ELT pipelines and medallion architectures on GCP, AWS and Azure. Experience, projects with code and charts with real data.">
+    <link rel="canonical" href="https://javiermorenof7.github.io/cv_portafolio/links/index-en.html">
+    <link rel="alternate" hreflang="es" href="https://javiermorenof7.github.io/cv_portafolio/">
+    <link rel="alternate" hreflang="en" href="https://javiermorenof7.github.io/cv_portafolio/links/index-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://javiermorenof7.github.io/cv_portafolio/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Francisco Javier Garcia Moreno · Data Engineer | Resume and portfolio">
+    <meta property="og:description" content="Data Engineer with 5+ years building ETL/ELT pipelines and medallion architectures on GCP, AWS and Azure. Experience, projects with code and charts with real data.">
+    <meta property="og:url" content="https://javiermorenof7.github.io/cv_portafolio/links/index-en.html">
+    <meta property="og:image" content="https://javiermorenof7.github.io/cv_portafolio/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Francisco Javier Garcia Moreno">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Francisco Javier Garcia Moreno",
+        "jobTitle": "Data Engineer",
+        "url": "https://javiermorenof7.github.io/cv_portafolio/links/index-en.html",
+        "image": "https://javiermorenof7.github.io/cv_portafolio/img/og.jpg",
+        "worksFor": {
+                "@type": "Organization",
+                "name": "Scala Learning"
+        },
+        "sameAs": [
+                "https://github.com/javiermorenof7",
+                "https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
+        ],
+        "knowsAbout": [
+                "Data engineering",
+                "ETL/ELT",
+                "Databricks",
+                "Apache Spark",
+                "BigQuery",
+                "Delta Lake",
+                "Medallion architecture",
+                "Python",
+                "SQL",
+                "Google Cloud",
+                "AWS",
+                "Azure"
+        ],
+        "knowsLanguage": [
+                "es",
+                "en"
+        ]
+    }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css?v=6fa9ff7968">
     <link rel="stylesheet" href="../css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
     <link rel="icon" href="../img/javier.jpg" type="image/jpeg">
@@ -59,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="profile__data-container">
+            <div class="profile__data-container" tabindex="0" role="region" aria-label="Professional profile">
                 <div class="profile__data">
                     <div class="profile__description">
                         <div class="profile__header">
@@ -567,33 +619,35 @@
                     <div class="project-description">
                         <p>At Scala Learning, academic calendars arrived as Gantt plans in Google Drive and surveys came from SurveyMonkey. I moved them into <span class="highlight">4 medallion pipelines</span> that run and test themselves.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="architecture-flow">
-                        <div class="arch-node">Drive and SurveyMonkey</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Bronze</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Silver</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Gold</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">SQL tests</div>
-                    </div>
+                        <div class="architecture-flow">
+                            <div class="arch-node">Drive and SurveyMonkey</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Bronze</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Silver</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Gold</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">SQL tests</div>
+                        </div>
 
-                    <div class="caso__decisiones">
-                        <h5>Design decisions</h5>
-                        <ul>
-                            <li><strong>Incremental MERGE loads</strong> into Delta tables, with historical snapshots: rerunning a job never duplicates data.</li>
-                            <li><strong>Per-file reprocessing:</strong> only the plans that change are loaded again.</li>
-                            <li><strong>Serverless compute:</strong> no cluster stays on between runs, so only execution time is paid for.</li>
-                            <li><strong>Jobs as code</strong>, with a final SQL test task (96 tests on the course model) that stops the job and alerts on any failure.</li>
-                            <li><strong>Separate development and production:</strong> production is reached only through merge requests.</li>
-                        </ul>
-                    </div>
+                        <div class="caso__decisiones">
+                            <h5>Design decisions</h5>
+                            <ul>
+                                <li><strong>Incremental MERGE loads</strong> into Delta tables, with historical snapshots: rerunning a job never duplicates data.</li>
+                                <li><strong>Per-file reprocessing:</strong> only the plans that change are loaded again.</li>
+                                <li><strong>Serverless compute:</strong> no cluster stays on between runs, so only execution time is paid for.</li>
+                                <li><strong>Jobs as code</strong>, with a final SQL test task (96 tests on the course model) that stops the job and alerts on any failure.</li>
+                                <li><strong>Separate development and production:</strong> production is reached only through merge requests.</li>
+                            </ul>
+                        </div>
 
-                    <div class="impact-box">
-                        <h5>How it runs</h5>
-                        <p>The jobs run every day with no manual work, and survey audiences are generated automatically from the academic calendar. The same architecture, with public code and fictional data, is in <a href="#proyecto-calendarios">Academic calendars on Databricks</a>.</p>
+                        <div class="impact-box">
+                            <h5>How it runs</h5>
+                            <p>The jobs run every day with no manual work, and survey audiences are generated automatically from the academic calendar. The same architecture, with public code and fictional data, is in <a href="#proyecto-calendarios">Academic calendars on Databricks</a>.</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -613,33 +667,35 @@
                         <p>Migration from Metabase to Google Cloud Platform, reducing processing time from <span
                                 class="highlight">3 hours to less than 1 minute</span>.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="architecture-flow">
-                        <div class="arch-node">Metabase</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Dataflow</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">Kubernetes</div>
-                        <div class="arch-arrow">→</div>
-                        <div class="arch-node">BigQuery</div>
-                    </div>
+                        <div class="architecture-flow">
+                            <div class="arch-node">Metabase</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Dataflow</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">Kubernetes</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-node">BigQuery</div>
+                        </div>
 
-                    <figure class="grafico" data-tipo="pendiente">
-                        <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
-                        <table class="grafico__tabla">
-                            <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
-                            <tbody>
-                                <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
-                                <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="grafico__nota">Over 180 times faster.</p>
-                    </figure>
+                        <figure class="grafico" data-tipo="pendiente">
+                            <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
+                                    <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Over 180 times faster.</p>
+                        </figure>
 
-                    <div class="impact-box">
-                        <h5>Business impact</h5>
-                        <p>Data available in under 1 minute (previously 3 hours), accelerating decision-making and improving response to market changes.
-                        </p>
+                        <div class="impact-box">
+                            <h5>Business impact</h5>
+                            <p>Data available in under 1 minute (previously 3 hours), accelerating decision-making and improving response to market changes.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -659,21 +715,23 @@
                         <p>Design and implementation of a data warehouse that integrates operational and financial
                             information from 3 organizations, with a shared model to analyze it together.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="warehouse-diagram">
-                        <div class="main-table">Central Repository</div>
-                        <div class="sub-tables">
-                            <div class="sub-table">Company 1</div>
-                            <div class="sub-table">Company 2</div>
-                            <div class="sub-table">Company 3</div>
+                        <div class="warehouse-diagram">
+                            <div class="main-table">Central Repository</div>
+                            <div class="sub-tables">
+                                <div class="sub-table">Company 1</div>
+                                <div class="sub-table">Company 2</div>
+                                <div class="sub-table">Company 3</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="benefit-grid">
-                        <div class="benefit">Pareto Analysis</div>
-                        <div class="benefit">Operations Costing</div>
-                        <div class="benefit">Customer Segmentation</div>
-                        <div class="benefit">Financial Reports</div>
+                        <div class="benefit-grid">
+                            <div class="benefit">Pareto Analysis</div>
+                            <div class="benefit">Operations Costing</div>
+                            <div class="benefit">Customer Segmentation</div>
+                            <div class="benefit">Financial Reports</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -694,45 +752,47 @@
                                 class="highlight">Looker Studio</span> (formerly Google Data Studio), eliminating manual management and providing
                             dynamic visualizations.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="workflow-diagram">
-                        <div class="workflow-step">
-                            <div class="step-icon">📊</div>
-                            <div class="step-name">Excel</div>
+                        <div class="workflow-diagram">
+                            <div class="workflow-step">
+                                <div class="step-icon">📊</div>
+                                <div class="step-name">Excel</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">🐍</div>
+                                <div class="step-name">Python</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">☁️</div>
+                                <div class="step-name">Google Drive</div>
+                            </div>
+                            <div class="workflow-arrow">→</div>
+                            <div class="workflow-step">
+                                <div class="step-icon">📈</div>
+                                <div class="step-name">Data Studio</div>
+                            </div>
                         </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">🐍</div>
-                            <div class="step-name">Python</div>
-                        </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">☁️</div>
-                            <div class="step-name">Google Drive</div>
-                        </div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">
-                            <div class="step-icon">📈</div>
-                            <div class="step-name">Data Studio</div>
-                        </div>
-                    </div>
 
-                    <div class="key-achievements">
-                        <div class="achievement">
-                            <div class="achievement-title">BBVA Seguros incentive reporting</div>
-                            <div class="achievement-desc">Unstructured data transformed into dynamic dashboards</div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Positive feedback</div>
-                            <div class="achievement-desc">Better understanding and adoption of reports</div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Versioning</div>
-                            <div class="achievement-desc">Historical control of data changes</div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-title">Periodic reports</div>
-                            <div class="achievement-desc">Daily, weekly and monthly visualization</div>
+                        <div class="key-achievements">
+                            <div class="achievement">
+                                <div class="achievement-title">BBVA Seguros incentive reporting</div>
+                                <div class="achievement-desc">Unstructured data transformed into dynamic dashboards</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Positive feedback</div>
+                                <div class="achievement-desc">Better understanding and adoption of reports</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Versioning</div>
+                                <div class="achievement-desc">Historical control of data changes</div>
+                            </div>
+                            <div class="achievement">
+                                <div class="achievement-title">Periodic reports</div>
+                                <div class="achievement-desc">Daily, weekly and monthly visualization</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -752,14 +812,16 @@
                     <div class="project-description">
                         <p>Data analysis with Python, SQL and Pandas, plus text analysis with NLTK, to test business assumptions against the data: what happened, why, what may happen and what to do.</p>
                     </div>
+                    <div class="project-cuerpo">
 
-                    <div class="analysis-types">
-                        <div class="analysis-type">Descriptive</div>
-                        <div class="analysis-type">Diagnostic</div>
-                        <div class="analysis-type">Predictive</div>
-                        <div class="analysis-type">Prescriptive</div>
+                        <div class="analysis-types">
+                            <div class="analysis-type">Descriptive</div>
+                            <div class="analysis-type">Diagnostic</div>
+                            <div class="analysis-type">Predictive</div>
+                            <div class="analysis-type">Prescriptive</div>
+                        </div>
+
                     </div>
-
                 </div>
             </article>
             </div>
@@ -832,6 +894,16 @@
                         </ul>
                         <p class="project-roles">Data engineering</p>
                     </li>
+                    <li class="proyecto-personal" data-roles="ing ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales architecture</a></h5>
+                        <p class="proyecto-personal__descripcion">Takes a sales workbook from a local Excel file to a scalable architecture on Google Cloud, with a star schema and the top 10 products per category.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>BigQuery</li>
+                            <li>Excel</li>
+                        </ul>
+                        <p class="project-roles">Data engineering and data analysis</p>
+                    </li>
                     <li class="proyecto-personal" data-roles="ing cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
                         <p class="proyecto-personal__descripcion">Data processing, machine learning and a cloud architecture to take a health insurer's analytics from one-off solutions to production.</p>
@@ -865,16 +937,6 @@
                         </ul>
                         <p class="project-roles">Data engineering and data science</p>
                     </li>
-                    <li class="proyecto-personal" data-roles="ing ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales architecture</a></h5>
-                        <p class="proyecto-personal__descripcion">Takes a sales workbook from a local Excel file to a scalable architecture on Google Cloud, with a star schema and the top 10 products per category.</p>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>BigQuery</li>
-                            <li>Excel</li>
-                        </ul>
-                        <p class="project-roles">Data engineering and data analysis</p>
-                    </li>
                 </ul>
             </div>
             <div class="personales__grupo">
@@ -896,29 +958,6 @@
             <div class="personales__grupo">
                 <h4 class="personales__titulo-grupo">Analysis</h4>
                 <ul class="personales__lista">
-                    <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
-                        <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
-                        <figure class="grafico" data-tipo="barras">
-                            <figcaption>Financing companies charge 10.7 points more than special public institutions (median effective rate, October 2022)</figcaption>
-                            <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Institution type</th><th scope="col">Rate</th></tr></thead>
-                                <tbody>
-                                    <tr data-color="azul"><th scope="row">Financing companies</th><td data-valor="26.82">26.8%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Financial cooperatives</th><td data-valor="26.32">26.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Banks</th><td data-valor="22.99">23.0%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Special public institutions</th><td data-valor="16.1">16.1%</td></tr>
-                                </tbody>
-                            </table>
-                        </figure>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Scikit-learn</li>
-                            <li>Seaborn</li>
-                        </ul>
-                        <p class="project-roles">Data analysis</p>
-                    </li>
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
                         <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
@@ -957,6 +996,39 @@
                         </ul>
                         <p class="project-roles">Data analysis</p>
                     </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Cleaning and transformation</a></h5>
+                        <p class="proyecto-personal__descripcion">A notebook that turns a messy Excel file into a clean dataset.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
+                        <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Financing companies charge 10.7 points more than special public institutions (median effective rate, October 2022)</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Institution type</th><th scope="col">Rate</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Financing companies</th><td data-valor="26.82">26.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Financial cooperatives</th><td data-valor="26.32">26.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Banks</th><td data-valor="22.99">23.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Special public institutions</th><td data-valor="16.1">16.1%</td></tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>Seaborn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
                     <li class="proyecto-personal" data-roles="ana cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
                         <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
@@ -977,16 +1049,6 @@
                             <li>Seaborn</li>
                         </ul>
                         <p class="project-roles">Data analysis and data science</p>
-                    </li>
-                    <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Cleaning and transformation</a></h5>
-                        <p class="proyecto-personal__descripcion">A notebook that turns a messy Excel file into a clean dataset.</p>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Seaborn</li>
-                        </ul>
-                        <p class="project-roles">Data analysis</p>
                     </li>
                 </ul>
             </div>

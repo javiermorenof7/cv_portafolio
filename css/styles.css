@@ -4,7 +4,11 @@
 }
 
 /* -----------------Tema: colores-------------------- */
+/* Alto de la cabecera sticky: el panel del perfil y las anclas lo descuentan */
 :root {
+  --alto-cabecera: 5.25rem;
+  /* Esquinas de la tarjeta del perfil: crecen con la pantalla */
+  --radio-tarjeta: clamp(20px, 1.8vw, 36px);
   color-scheme: light;
   --color-fondo: #e2eaff;
   --color-superficie: #ffffff;
@@ -153,6 +157,16 @@ p {
   scroll-margin-top: 6rem;
 }
 
+/* El ancla #profile deja el panel justo bajo la cabecera, sin sobrante */
+.profile {
+  scroll-margin-top: var(--alto-cabecera);
+}
+
+/* Dentro del panel con scroll no hay cabecera encima */
+.profile__data-container [id] {
+  scroll-margin-top: 1rem;
+}
+
 .saltar-contenido {
   position: absolute;
   left: 1rem;
@@ -213,7 +227,7 @@ p {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 5px 20px;
+  margin: 5px 8px;
 }
 
 .header__logo {
@@ -240,6 +254,7 @@ p {
 }
 
 .download-button {
+  white-space: nowrap;
   text-decoration: none;
   background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   color: white;
@@ -271,7 +286,7 @@ p {
   font-size: 0.9rem;
   transition: all 0.3s ease;
   border: 1px solid rgba(33, 150, 243, 0.3);
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .language-toggle:hover {
@@ -293,7 +308,8 @@ p {
   animation: pulse-glow 2s ease-in-out infinite;
   border: 2px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  margin-left: 15px;
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 /* Pulsing glow animation for light mode */
@@ -352,7 +368,7 @@ p {
 /* -----------------Header Querys-------------------- */
 
 /* Adaptamos a escritorio */
-@container header (min-width: 600px) {
+@container header (min-width: 900px) {
 
   [data-theme="dark"] .header__nav {
     background: transparent;
@@ -465,6 +481,11 @@ footer {
   width: 100%;
 }
 
+/* En monitores grandes el perfil puede pasar de 1440 px para que la tarjeta crezca con la pantalla */
+.profile {
+  max-width: max(1440px, 80vw);
+}
+
 .profile__badge {
   background-color: rgba(59, 130, 246, 0.85);
   color: #fff;
@@ -486,6 +507,7 @@ footer {
 }
 
 .profile__cargo {
+  text-align: center;
   color: var(--color-titulo);
   margin: 0 0 12px;
   font-size: 1.4rem;
@@ -526,7 +548,9 @@ footer {
 }
 
 .profile__summary {
-  text-align: left;
+  text-align: justify;
+  /* Guiones según el idioma de la página: evita huecos grandes entre palabras al justificar */
+  hyphens: auto;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto
@@ -986,24 +1010,104 @@ h2::after,
 
 /* Media queries */
 @container profile (min-width:720px) {
+  /* Panel a la altura de la pantalla menos la cabecera (svh: sin las barras del navegador móvil), con topes */
   .profile__wrapper {
     flex-direction: row;
-    align-items: flex-start;
-    padding: 20px;
+    /* Todo fluido: margen, alto y ancho siguen a la pantalla, con topes para monitores muy grandes */
+    padding: clamp(12px, 1.5vw, 28px);
     background-color: transparent;
+    height: calc(100vh - var(--alto-cabecera) - 1rem);
+    height: calc(100svh - var(--alto-cabecera) - 1rem);
+    min-height: 32rem;
+    /* En monitores grandes también crece: hasta el 75 % del ancho y casi todo el alto */
+    width: min(100%, max(1320px, 66vw));
+    max-width: none;
+    /* Foto y texto como dos tarjetas redondeadas, separadas por un hueco que crece con la pantalla */
+    gap: clamp(10px, 1vw, 20px);
     margin: auto
   }
 
-  .profile__data-container {
-    background-color: #fff;
-    display: flex;
-    align-items: safe center;
-    border-radius: 0 25px 25px 0;
+  /* En escritorio la tarjeta flota sobre el fondo de la página: sin caja de color alrededor */
+  [data-theme="dark"] .profile__wrapper {
+    background-color: transparent
+  }
+
+  .profile__img-container {
+    flex: 0 0 clamp(240px, 38%, 720px);
+    max-height: initial;
+    border-radius: var(--radio-tarjeta);
     box-shadow: 0 0 9px #0005
   }
 
-  [data-theme="dark"] .profile__data-container {
-    background-color: #18233f
+  .profile__img {
+    height: 100%;
+    max-width: none;
+    object-fit: cover
+  }
+
+  /* Scroll interno con barra fina del tema y sombras arriba/abajo solo cuando queda contenido
+     (las capas "local" tapan la sombra en los extremos). Al llegar al final, la rueda sigue con la página */
+  .profile__data-container {
+    --sombra-scroll: color-mix(in srgb, var(--color-acento) 35%, transparent);
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: safe center;
+    border-radius: var(--radio-tarjeta);
+    box-shadow: 0 0 9px #0005;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-acento) transparent;
+    background:
+      linear-gradient(var(--color-superficie) 30%, transparent) center top / 100% 48px no-repeat local,
+      linear-gradient(transparent, var(--color-superficie) 70%) center bottom / 100% 48px no-repeat local,
+      radial-gradient(farthest-side at 50% 0, var(--sombra-scroll), transparent) center top / 100% 16px no-repeat scroll,
+      radial-gradient(farthest-side at 50% 100%, var(--sombra-scroll), transparent) center bottom / 100% 16px no-repeat scroll,
+      var(--color-superficie)
+  }
+
+  .profile__data-container:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: -3px
+  }
+
+  /* Safari no soporta scrollbar-color */
+  .profile__data-container::-webkit-scrollbar {
+    width: 8px
+  }
+
+  .profile__data-container::-webkit-scrollbar-track {
+    background: transparent
+  }
+
+  .profile__data-container::-webkit-scrollbar-thumb {
+    background: var(--color-acento);
+    border-radius: 8px;
+    border: 2px solid var(--color-superficie)
+  }
+
+  /* Pantallas bajas: sin scroll interno, la página hace el scroll y la foto acompaña */
+  @media (max-height: 540px) {
+    .profile__wrapper {
+      height: auto;
+      min-height: 0;
+      max-height: none;
+      align-items: flex-start
+    }
+
+    .profile__data-container {
+      overflow-y: visible;
+      scrollbar-gutter: auto;
+      background: var(--color-superficie)
+    }
+
+    .profile__img-container {
+      position: sticky;
+      top: var(--alto-cabecera);
+      height: calc(100vh - var(--alto-cabecera));
+      height: calc(100svh - var(--alto-cabecera))
+    }
   }
 
   h1 {
@@ -1011,24 +1115,11 @@ h2::after,
     font-size: 3rem
   }
 
+  /* Margen interior proporcional al ancho: el texto no queda pegado al borde del panel */
   .profile__data {
-    max-width: 620px
-  }
-
-  /* La foto queda fija junto al texto mientras se lee el perfil */
-  .profile__img-container {
-    position: sticky;
-    top: 6rem;
-    flex: 0 0 auto;
-    height: min(720px, calc(100vh - 8rem));
-    max-height: initial;
-    border-radius: 25px 0 0 25px
-  }
-
-  .profile__img {
-    height: 100%;
-    object-fit: cover;
-    max-width: 450px
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px clamp(28px, 4cqi, 56px)
   }
 
   .tech-categories,
@@ -2092,26 +2183,6 @@ footer {
 }
 
 /* Pantallas muy estrechas (320px): la cabecera no debe salirse */
-@media (max-width: 380px) {
-  .header__buttons-container {
-    margin: 5px 34px 5px 4px;
-  }
-
-  .language-toggle {
-    margin-right: 6px;
-    padding: 8px 12px;
-  }
-
-  .darkmode_button {
-    margin-left: 4px;
-  }
-
-  .download-button {
-    margin: 0 4px;
-    padding: 10px 14px;
-  }
-}
-
 /* Botón de tema */
 .darkmode_button {
   display: inline-flex;
@@ -2192,12 +2263,14 @@ footer {
   text-align: left;
 }
 
-/* Cabecera en móvil: los cuatro controles caben en una fila desde 320 px */
+/* Cabecera mientras se ve el botón de menú (hasta 900 px): los controles caben en una fila desde 320 px */
 @media (max-width: 599px) {
   .header__content-wrapper {
     padding: 8px 12px;
   }
+}
 
+@container header (max-width: 899px) {
   .header__logo {
     height: 44px;
   }
@@ -2208,22 +2281,287 @@ footer {
   }
 
   .language-toggle {
-    margin-right: 0;
+    margin: 0;
     padding: 8px 12px;
   }
 
   .darkmode_button {
     width: 44px;
     height: 44px;
-    margin-left: 0;
+    margin: 0;
   }
 
   .download-button {
+    margin: 0;
     padding: 10px 12px;
-    white-space: nowrap;
   }
 }
 
 footer p {
   text-align: center;
+}
+
+/* Página 404 */
+.no-encontrada {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.no-encontrada p {
+  text-align: center;
+}
+
+.no-encontrada__codigo {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-titulo);
+}
+
+.no-encontrada__enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  list-style: none;
+}
+
+.no-encontrada__enlaces a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  color: var(--color-titulo);
+}
+
+
+/* Fondos de sección a todo el ancho de la pantalla; el contenido sigue limitado a 1440 px.
+   border-image con "outset" pinta a los lados sin crear scroll horizontal */
+.experiencia {
+  border-image: linear-gradient(var(--exp-fondo), var(--exp-fondo)) 0 fill / 0 / 0 100vmax;
+}
+
+.portfolio {
+  --pf-fondo: #18233f;
+  border-image: linear-gradient(var(--pf-fondo), var(--pf-fondo)) 0 fill / 0 / 0 100vmax;
+}
+
+[data-theme="light"] .portfolio {
+  --pf-fondo: #ffffff;
+}
+
+footer {
+  --pie-fondo: #18233f;
+  border-image: linear-gradient(var(--pie-fondo), var(--pie-fondo)) 0 fill / 0 / 0 100vmax;
+}
+
+[data-theme="light"] footer {
+  --pie-fondo: #1f2937;
+}
+
+/* Móvil y tableta estrecha: la tarjeta del perfil también con esquinas redondeadas y un poco de aire */
+@container profile (max-width: 719px) {
+  .profile__wrapper {
+    margin: 12px;
+    border-radius: var(--radio-tarjeta);
+    overflow: hidden;
+    box-shadow: 0 0 9px #0003;
+  }
+
+  /* La foto, también redondeada dentro de la tarjeta */
+  .profile__img-container {
+    margin: 12px 12px 0;
+    border-radius: calc(var(--radio-tarjeta) - 6px);
+  }
+}
+
+/* -----------------Experiencia y portafolio con la misma medida que la tarjeta del perfil-------------------- */
+/* Mismo margen, ancho, radio, sombra y hueco que el perfil: los bordes de las tarjetas caen en la misma línea en cada ancho */
+:root {
+  --margen-tarjeta: clamp(12px, 1.5vw, 28px);
+  --ancho-tarjeta: calc(min(100%, max(1320px, 66vw)) - 2 * var(--margen-tarjeta));
+  --hueco-tarjeta: clamp(10px, 1vw, 20px);
+  --relleno-tarjeta: clamp(16px, 0.5rem + 1.6vw, 36px);
+  --radio-interno: calc(var(--radio-tarjeta) * .5);
+  --sombra-tarjeta: 0 0 9px #0005;
+}
+
+/* En móvil, la sombra más suave, como la de la tarjeta del perfil */
+@media (max-width: 719px) {
+  :root {
+    --sombra-tarjeta: 0 0 9px #0003;
+  }
+}
+
+/* Las secciones crecen como el perfil; el margen lateral lo pone cada bloque */
+:root :is(.experiencia, .portfolio) {
+  max-width: max(1440px, 80vw);
+  padding: clamp(40px, 5vw, 96px) 0;
+}
+
+/* Bloques a lo ancho de la tarjeta del perfil */
+.experiencia :is(.grafico--trayectoria, .experiencia__container),
+.portfolio .portafolio__bloque {
+  width: var(--ancho-tarjeta);
+  max-width: none;
+  margin-inline: auto;
+}
+
+/* Títulos fluidos */
+.experiencia .h2_experiencia,
+.portfolio .h2_portfolio {
+  font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.75rem);
+}
+
+.experiencia .experience-title,
+.portfolio .portfolio__proyect-name {
+  font-size: clamp(1.2rem, 1rem + .6vw, 1.7rem);
+}
+
+.portfolio .portafolio__titulo-bloque {
+  font-size: clamp(1.3rem, 1.05rem + .8vw, 1.9rem);
+}
+
+/* Experiencia: Gantt y línea de tiempo */
+.experiencia .grafico--trayectoria {
+  margin-block: 0 calc(var(--hueco-tarjeta) * 2.5);
+  padding: var(--relleno-tarjeta);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.experiencia .experiencia__container {
+  gap: calc(var(--hueco-tarjeta) * 2.5);
+}
+
+.experiencia .experience-container {
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+/* El punto sigue a la fecha aunque cambie el padding */
+.experiencia .experience-container::before {
+  top: calc(var(--relleno-tarjeta) + 6px);
+}
+
+/* 1px menos que la tarjeta por su borde */
+.experiencia .experience-header {
+  padding: var(--relleno-tarjeta);
+  border-radius: calc(var(--radio-tarjeta) - 1px) calc(var(--radio-tarjeta) - 1px) 0 0;
+}
+
+.experiencia .core-achievements {
+  gap: var(--hueco-tarjeta);
+  padding: var(--relleno-tarjeta) var(--relleno-tarjeta) 0;
+}
+
+.experiencia .core-metric {
+  border-radius: var(--radio-interno);
+}
+
+.experiencia .highlights-container {
+  padding: var(--relleno-tarjeta);
+}
+
+/* Escritorio: cifras a la izquierda, como en style_exp.css, con el padding fluido */
+@media (min-width: 1024px) {
+  .experiencia .core-achievements {
+    padding: var(--relleno-tarjeta) 0 var(--relleno-tarjeta) var(--relleno-tarjeta);
+  }
+}
+
+/* Portafolio */
+.portfolio .portafolio__bloque {
+  padding: 0;
+  margin-bottom: clamp(32px, 4vw, 72px);
+}
+
+.portfolio .portfolio__project-container {
+  max-width: none;
+  width: 100%;
+  gap: var(--hueco-tarjeta);
+}
+
+/* Tres columnas iguales en pantallas anchas (la destacada ocupa la fila entera); crecen con la tarjeta */
+@container portfolio (min-width: 900px) {
+  .portfolio .portfolio__project-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.portfolio .portfolio__project,
+.portfolio .proyecto-personal {
+  padding: var(--relleno-tarjeta);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+/* El modo claro fija la sombra con !important: solo así se iguala a la del perfil */
+[data-theme="light"] .portfolio .portfolio__project,
+[data-theme="light"] .portfolio .portfolio__project:hover {
+  box-shadow: var(--sombra-tarjeta) !important;
+}
+
+.portfolio .personales__grupo {
+  margin-bottom: clamp(20px, 2.5vw, 48px);
+}
+
+.portfolio .personales__lista {
+  gap: var(--hueco-tarjeta);
+}
+
+.portfolio .proyecto-personal {
+  gap: clamp(10px, .8vw, 16px);
+}
+
+/* Gráficos y cajas dentro de una tarjeta: radio menor, derivado del de la tarjeta */
+.portfolio :is(.grafico, .architecture-flow, .impact-box, .caso__decisiones, .workflow-diagram, .achievement, .analysis-type, .skill, .benefit) {
+  border-radius: var(--radio-interno);
+}
+
+/* Contenido alineado entre tarjetas de una misma fila */
+/* Personales: tecnologías y rol al pie de la tarjeta, aunque unas tengan gráfico y otras no */
+.portfolio .proyecto-personal .proyecto-personal__stack {
+  margin-top: auto;
+}
+
+.portfolio .proyecto-personal .project-roles {
+  margin: 0;
+}
+
+/* Profesionales en columnas: las tarjetas comparten filas (subgrid), así título, rol, etiquetas,
+   descripción y cuerpo empiezan a la misma altura en cada fila, sea cual sea el ancho */
+@container portfolio (min-width: 900px) {
+  .portfolio .portfolio__project:not(:first-child) {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 0;
+  }
+
+  .portfolio .portfolio__project:not(:first-child) .content {
+    display: contents;
+  }
+}
+
+/* Personales en mosaico de dos columnas: cada tarjeta mide lo que su contenido y la siguiente se coloca debajo,
+   así no quedan tarjetas estiradas con espacio vacío ni celdas sin proyecto */
+@container portfolio (min-width: 768px) {
+  .portfolio .personales__lista {
+    display: block;
+    columns: 2;
+    column-gap: var(--hueco-tarjeta);
+  }
+
+  .portfolio .personales__lista > .proyecto-personal {
+    break-inside: avoid;
+    margin-bottom: var(--hueco-tarjeta);
+  }
+
+  /* Un grupo con un solo proyecto ocupa todo el ancho */
+  .portfolio .personales__lista:has(> .proyecto-personal:only-child) {
+    columns: 1;
+  }
 }
