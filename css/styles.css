@@ -18,9 +18,9 @@
   --capa-plata: #6b7c93;
   --capa-oro: #9b7c19;
   /* Gráficos (contraste validado sobre #ffffff; el gris es solo contexto) */
-  --g-azul: #2266ee;
-  --g-naranja: #c2410c;
-  --g-gris: #7b8496;
+  --g-azul: #1d4ed8;
+  --g-naranja: #ea6a1a;
+  --g-gris: #b4bccb;
 }
 
 [data-theme="dark"] {
@@ -36,10 +36,10 @@
   --capa-bronce: #b97340;
   --capa-plata: #8494ab;
   --capa-oro: #a7882a;
-  /* Gráficos (validados sobre #121a2e) */
-  --g-azul: #5b8def;
-  --g-naranja: #e0662a;
-  --g-gris: #7d8799;
+  /* Gráficos (validados sobre la superficie #18233f; brillos separados para leerse en gris y con daltonismo) */
+  --g-azul: #8ab4ff;
+  --g-naranja: #c75a26;
+  --g-gris: #4f5a70;
 }
 
 body {

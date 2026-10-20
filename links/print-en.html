@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisco Javier Garcia Moreno - Data Engineer</title>
     <link rel="stylesheet" href="../css/fonts.css?v=f4969f559b">
-    <link rel="stylesheet" href="../css/style_print.css?v=c395c5027f">
-    <link rel="stylesheet" href="../css/graficos.css?v=5836c36ee4">
-    <script src="../js/graficos.js?v=981a4211c2" defer></script>
+    <link rel="stylesheet" href="../css/style_print.css?v=44c4d734d1">
+    <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
+    <script src="../js/graficos.js?v=53939fbe59" defer></script>
 </head>
 
 <body>
@@ -111,8 +111,8 @@
                 <article class="proyecto">
                     <h3 class="proyecto__titulo">Cloud migration: Onboarding Analytics</h3>
                     <p class="proyecto__desc">Migration from Metabase to Google Cloud (Dataflow, Kubernetes, BigQuery).</p>
-                    <figure class="grafico" data-tipo="barras">
-                        <figcaption>Processing time</figcaption>
+                    <figure class="grafico" data-tipo="pendiente">
+                        <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
                         <table class="grafico__tabla">
                             <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
                             <tbody>
@@ -120,13 +120,14 @@
                                 <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
                             </tbody>
                         </table>
+                        <p class="grafico__nota">Over 180 times faster.</p>
                     </figure>
                 </article>
                 <article class="proyecto">
                     <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company">Absenteeism at a manufacturer</a></h3>
                     <p class="proyecto__desc">Dimensional model and a single analysis table (Python, Pandas, Tableau).</p>
-                    <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17">
-                        <figcaption>Hours lost to absences and sick leave, as % of contracted hours</figcaption>
+                    <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17" data-anotacion="14|COVID-19">
+                        <figcaption>Hours lost to absences and sick leave more than doubled</figcaption>
                         <table class="grafico__tabla">
                             <thead><tr><th scope="col">Month</th><th scope="col">Hours lost</th></tr></thead>
                             <tbody>
@@ -150,14 +151,14 @@
                                 <tr data-color="azul"><th scope="row">Jun 2020</th><td data-valor="5.2321">5.2%</td></tr>
                             </tbody>
                         </table>
-                        <p class="grafico__nota">They rose from 2.3% to 5.2% in 17 months.</p>
+                        <p class="grafico__nota">As % of contracted hours: from 2.3% to 5.2% in 17 months.</p>
                     </figure>
                 </article>
                 <article class="proyecto">
                     <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas">Product recommendations</a></h3>
                     <p class="proyecto__desc">Probabilistic analysis of recommendations based on purchase patterns (Python, Pandas).</p>
                     <figure class="grafico" data-tipo="apilada">
-                        <figcaption>Recommendations approved by users (60,430 records)</figcaption>
+                        <figcaption>9 in 10 recommendations were approved by users (60,430 records)</figcaption>
                         <table class="grafico__tabla">
                             <thead><tr><th scope="col">Response</th><th scope="col">Share</th></tr></thead>
                             <tbody>

@@ -168,3 +168,72 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+
+/* Marca elegida con el teclado */
+.grafico__marca--activa {
+  stroke: var(--color-texto);
+  stroke-width: 2;
+}
+
+.grafico__svg:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Instrucciones de teclado solo para lectores de pantalla */
+.grafico__pista {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.grafico__anotacion {
+  stroke: var(--color-tenue);
+  stroke-width: 1;
+}
+
+.grafico--trayectoria {
+  margin: 0 auto 24px;
+  max-width: 900px;
+}
+
+/* La leyenda es un cuadro de color: sin esto no se imprime si el navegador omite los fondos */
+.grafico__muestra {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Alto contraste de Windows: colores del sistema en lugar de los del tema */
+@media (forced-colors: active) {
+  .grafico__texto,
+  .grafico__eje {
+    fill: CanvasText;
+  }
+
+  .grafico__marca--azul,
+  .grafico__punto {
+    fill: Highlight;
+  }
+
+  .grafico__marca--naranja {
+    fill: CanvasText;
+  }
+
+  .grafico__marca--gris {
+    fill: GrayText;
+  }
+
+  .grafico__linea,
+  .grafico__anotacion,
+  .grafico__cruz {
+    stroke: Highlight;
+  }
+
+  .grafico__muestra {
+    forced-color-adjust: none;
+  }
+}

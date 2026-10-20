@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/tema.js?v=d8aec39086"></script>
     <title>Curriculum_Portafolio_EN</title>
-    <link rel="stylesheet" href="../css/styles.css?v=9905529738">
+    <link rel="stylesheet" href="../css/styles.css?v=445dded744">
     <link rel="stylesheet" href="../css/style_exp.css?v=c9a1febb59">
-    <link rel="stylesheet" href="../css/graficos.css?v=5836c36ee4">
+    <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
     <link rel="icon" href="../img/javier.jpg" type="image/jpeg">
     <link rel="stylesheet" href="../css/fonts.css?v=f4969f559b">
     <script type="text/javascript" src="../js/menuclose.js?v=1a2ba15407" defer></script>
     <script src="../js/filtro.js?v=7bd3227d17" defer></script>
-    <script src="../js/graficos.js?v=981a4211c2" defer></script>
+    <script src="../js/graficos.js?v=53939fbe59" defer></script>
 </head>
 
 <body>
@@ -348,6 +348,19 @@
     </section>
     <section class="experiencia" id="experiencia">
         <h2 class="h2_experiencia">Professional experience</h2>
+        <figure class="grafico grafico--trayectoria" data-tipo="gantt">
+            <figcaption>Career: five companies since 2020, the current one since July 2026</figcaption>
+            <table class="grafico__tabla">
+                <thead><tr><th scope="col">Company</th><th scope="col">Period</th></tr></thead>
+                <tbody>
+                    <tr data-color="gris"><th scope="row">Aviomar Grupo Empresarial</th><td data-valor="0" data-inicio="2020-02" data-fin="2021-10">February 2020 – October 2021</td></tr>
+                    <tr data-color="gris"><th scope="row">BBVA</th><td data-valor="0" data-inicio="2021-11" data-fin="2022-04">November 2021 – April 2022</td></tr>
+                    <tr data-color="gris"><th scope="row">Factor IT</th><td data-valor="0" data-inicio="2022-04" data-fin="2023-01">April 2022 – January 2023</td></tr>
+                    <tr data-color="gris"><th scope="row">Banco Falabella</th><td data-valor="0" data-inicio="2023-01" data-fin="2026-03">January 2023 – March 2026</td></tr>
+                    <tr data-color="azul"><th scope="row">Scala Learning</th><td data-valor="0" data-inicio="2026-07" data-fin="">July 2026 – Present</td></tr>
+                </tbody>
+            </table>
+        </figure>
         <ol class="experiencia__container">
             <li class="experience-container experience-container--actual">
                 <div class="experience-header">
@@ -637,8 +650,8 @@
                         <div class="arch-node">BigQuery</div>
                     </div>
 
-                    <figure class="grafico" data-tipo="barras">
-                        <figcaption>Processing time</figcaption>
+                    <figure class="grafico" data-tipo="pendiente">
+                        <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
                         <table class="grafico__tabla">
                             <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
                             <tbody>
@@ -646,6 +659,7 @@
                                 <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
                             </tbody>
                         </table>
+                        <p class="grafico__nota">Over 180 times faster.</p>
                     </figure>
 
                     <div class="impact-box">
@@ -792,7 +806,7 @@
                         </ul>
                         <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/bronze.py" target="_blank" rel="noopener noreferrer">bronze.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/silver.py" target="_blank" rel="noopener noreferrer">silver.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/gold.py" target="_blank" rel="noopener noreferrer">gold.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/databricks.yml" target="_blank" rel="noopener noreferrer">databricks.yml</a></p>
                         <figure class="grafico" data-tipo="apilada">
-                            <figcaption>What happens to the 19 sample rows in the silver layer</figcaption>
+                            <figcaption>16 of the 19 sample rows reach the silver layer; the rest are set aside</figcaption>
                             <table class="grafico__tabla">
                                 <thead><tr><th scope="col">Outcome</th><th scope="col">Rows</th></tr></thead>
                                 <tbody>
@@ -853,7 +867,7 @@
                         </ul>
                         <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno.py" target="_blank" rel="noopener noreferrer">python_javier_moreno.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno_gcp.py" target="_blank" rel="noopener noreferrer">python_javier_moreno_gcp.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/sql_javier_moreno.sql" target="_blank" rel="noopener noreferrer">sql_javier_moreno.sql</a></p>
                         <figure class="grafico" data-tipo="barras">
-                            <figcaption>Status of 1,245,491 health authorizations</figcaption>
+                            <figcaption>1 in 10 health authorizations is canceled (1,245,491 authorizations)</figcaption>
                             <table class="grafico__tabla">
                                 <thead><tr><th scope="col">Status</th><th scope="col">Share</th></tr></thead>
                                 <tbody>
@@ -912,7 +926,7 @@
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
                         <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
                         <figure class="grafico" data-tipo="barras">
-                            <figcaption>Median effective rate by type of institution, October 2022</figcaption>
+                            <figcaption>Financing companies charge 10.7 points more than special public institutions (median effective rate, October 2022)</figcaption>
                             <table class="grafico__tabla">
                                 <thead><tr><th scope="col">Institution type</th><th scope="col">Rate</th></tr></thead>
                                 <tbody>
@@ -934,8 +948,8 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
                         <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
-                        <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17">
-                            <figcaption>Hours lost to absences and sick leave, as % of contracted hours</figcaption>
+                        <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17" data-anotacion="14|COVID-19">
+                            <figcaption>Hours lost to absences and sick leave more than doubled</figcaption>
                             <table class="grafico__tabla">
                                 <thead><tr><th scope="col">Month</th><th scope="col">Hours lost</th></tr></thead>
                                 <tbody>
@@ -959,7 +973,7 @@
                                     <tr data-color="azul"><th scope="row">Jun 2020</th><td data-valor="5.2321">5.2%</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">They rose from 2.3% to 5.2% in 17 months.</p>
+                            <p class="grafico__nota">As % of contracted hours: from 2.3% to 5.2% in 17 months.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
@@ -973,7 +987,7 @@
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
                         <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
                         <figure class="grafico" data-tipo="apilada">
-                            <figcaption>Recommendations approved by users (60,430 records)</figcaption>
+                            <figcaption>9 in 10 recommendations were approved by users (60,430 records)</figcaption>
                             <table class="grafico__tabla">
                                 <thead><tr><th scope="col">Response</th><th scope="col">Share</th></tr></thead>
                                 <tbody>
