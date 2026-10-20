@@ -485,14 +485,11 @@ footer {
   margin: 15px 0 25px
 }
 
-.profile__job-title h2 {
-  color: #48e;
-  margin-bottom: 20px;
-  font-size: 1.6rem
-}
-
-[data-theme="dark"] .profile__job-title h2 {
-  color: #60a5fa
+.profile__cargo {
+  color: var(--color-titulo);
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  font-weight: 700
 }
 
 .profile__indicators {
@@ -529,7 +526,7 @@ footer {
 }
 
 .profile__summary {
-  text-align: justify;
+  text-align: left;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto
@@ -991,9 +988,9 @@ h2::after,
 @container profile (min-width:720px) {
   .profile__wrapper {
     flex-direction: row;
+    align-items: flex-start;
     padding: 20px;
     background-color: transparent;
-    height: 95vh;
     margin: auto
   }
 
@@ -1002,21 +999,11 @@ h2::after,
     display: flex;
     align-items: safe center;
     border-radius: 0 25px 25px 0;
-    box-shadow: 0 0 9px #0005;
-    overflow-y: scroll
+    box-shadow: 0 0 9px #0005
   }
 
   [data-theme="dark"] .profile__data-container {
     background-color: #18233f
-  }
-
-  .profile__data-container::-webkit-scrollbar {
-    width: 0;
-    background: transparent
-  }
-
-  .profile__study-container {
-    grid-template-columns: repeat(2, 1fr)
   }
 
   h1 {
@@ -1028,7 +1015,12 @@ h2::after,
     max-width: 620px
   }
 
+  /* La foto queda fija junto al texto mientras se lee el perfil */
   .profile__img-container {
+    position: sticky;
+    top: 6rem;
+    flex: 0 0 auto;
+    height: min(720px, calc(100vh - 8rem));
     max-height: initial;
     border-radius: 25px 0 0 25px
   }
@@ -1552,11 +1544,45 @@ h2::after,
 /* -----------------Foooter Queryes-------------------- */
 
 footer {
-  padding: 60px;
+  padding: 48px 20px;
   text-align: center;
   background-color: #18233f;
   color: #fff;
-  font-size: 22px;
+  font-size: 1rem;
+}
+
+.pie__cta {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+}
+
+.pie__enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.pie__enlaces a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #a9c4ff;
+  font-weight: 600;
+}
+
+.pie__enlaces a:focus-visible {
+  outline: 3px solid #a9c4ff;
+  outline-offset: 3px;
+}
+
+.pie__autor {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
 }
 
 /* ===============================================
@@ -2164,4 +2190,40 @@ footer {
 .profile__idiomas {
   margin: 12px 0 0;
   text-align: left;
+}
+
+/* Cabecera en móvil: los cuatro controles caben en una fila desde 320 px */
+@media (max-width: 599px) {
+  .header__content-wrapper {
+    padding: 8px 12px;
+  }
+
+  .header__logo {
+    height: 44px;
+  }
+
+  .header__buttons-container {
+    gap: 6px;
+    margin: 5px 44px 5px 6px;
+  }
+
+  .language-toggle {
+    margin-right: 0;
+    padding: 8px 12px;
+  }
+
+  .darkmode_button {
+    width: 44px;
+    height: 44px;
+    margin-left: 0;
+  }
+
+  .download-button {
+    padding: 10px 12px;
+    white-space: nowrap;
+  }
+}
+
+footer p {
+  text-align: center;
 }

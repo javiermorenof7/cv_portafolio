@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/tema.js?v=d8aec39086"></script>
     <title>Curriculum_Portafolio_EN</title>
-    <link rel="stylesheet" href="../css/styles.css?v=445dded744">
+    <link rel="stylesheet" href="../css/styles.css?v=0c58bd8d4b">
     <link rel="stylesheet" href="../css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
     <link rel="icon" href="../img/javier.jpg" type="image/jpeg">
@@ -65,24 +65,10 @@
                         <div class="profile__header">
                             <h1>Francisco Javier Garcia Moreno</h1>
                             <div class="profile__job-title">
-                                <h2>Data Engineer</h2>
+                                <p class="profile__cargo">Data Engineer</p>
                                 <p class="profile__roles">I design data pipelines, analyze data and put models into production.</p>
-                                <div class="profile__indicators">
-                                    <div class="indicator">
-                                        <div class="indicator__number">5+</div>
-                                        <div class="indicator__label">Years of experience</div>
-                                    </div>
-                                    <div class="indicator">
-                                        <div class="indicator__number">8+</div>
-                                        <div class="indicator__label">Technologies mastered</div>
-                                    </div>
-                                    <div class="indicator">
-                                        <div class="indicator__number">3+</div>
-                                        <div class="indicator__label">Cloud platforms</div>
-                                    </div>
-                                </div>
                             </div>
-                            <nav class="pipeline" aria-label="How I work with data">
+                            <div class="pipeline" role="group" aria-label="How I work with data">
                                 <ol class="pipeline__etapas">
                                     <li class="pipeline__etapa pipeline__etapa--fuentes"><span class="pipeline__caja"><span class="pipeline__nombre">Sources</span><span class="pipeline__detalle">APIs, files and databases</span></span></li>
                                     <li class="pipeline__etapa pipeline__etapa--bronce"><a class="pipeline__caja pipeline__enlace" href="#experiencia"><span class="pipeline__nombre">Bronze</span><span class="pipeline__detalle">Raw data ingestion</span></a></li>
@@ -90,21 +76,9 @@
                                     <li class="pipeline__etapa pipeline__etapa--oro"><a class="pipeline__caja pipeline__enlace" href="#portfolio"><span class="pipeline__nombre">Gold</span><span class="pipeline__detalle">Analysis and predictive models</span></a></li>
                                     <li class="pipeline__etapa pipeline__etapa--consumo"><span class="pipeline__caja"><span class="pipeline__nombre">Decisions</span><span class="pipeline__detalle">Dashboards and business decisions</span></span></li>
                                 </ol>
-                            </nav>
+                            </div>
                             <p class="profile__summary">
-                                <strong>Data Engineer</strong> with a <strong>Master's degree in Integrated Management Systems</strong> and
-                                <strong>over 5 years</strong> of experience delivering high-impact data solutions in the
-                                financial, retail, and logistics sectors. Led the <strong>complete migration of
-                                on-premises systems to GCP</strong> (Google Cloud Platform) at Banco Falabella across three
-                                countries, reducing processing times by <strong>45%</strong> and standardizing
-                                critical operations in the <strong>Lakehouse/Datalake</strong>. Designed a data
-                                architecture (Datalake) from scratch for an organization, achieving a
-                                <strong>200%</strong> improvement in operational accuracy. Specialist in <strong>ETL/ELT pipelines</strong>
-                                using <strong>Python, Scala, and PySpark</strong>, dimensional modeling, <strong>multi-layer
-                                architectures</strong>, and cloud platforms such as <strong>GCP, AWS, and Azure</strong>. I combine technical
-                                precision with business acumen, turning complex data into <strong>strategic
-                                decisions</strong> that generate <strong>sustainable competitive advantages</strong> and
-                                quantifiable results.
+                            Data engineer with 5+ years designing ETL/ELT pipelines and medallion architectures on GCP, AWS and Azure for the financial, retail, logistics and education sectors. I take data from ingestion to analysis and models in production, with automated tests and controlled deployment. At Banco Falabella I <strong>cut processing times by 45%</strong>, and at Aviomar I <strong>improved operational accuracy by 200%</strong>.
                             </p>
                         </div>
                     </div>
@@ -625,7 +599,7 @@
             </article>
 
             <article class="portfolio__project" data-roles="ing">
-                <h4 class="portfolio__proyect-name">Cloud Migration: Onboarding Analytics</h4>
+                <h4 class="portfolio__proyect-name">Cloud migration: Onboarding Analytics</h4>
                 <p class="project-roles">Data engineering</p>
                 <div class="content">
                     <div class="project-tags">
@@ -663,7 +637,7 @@
                     </figure>
 
                     <div class="impact-box">
-                        <h5>Business Impact</h5>
+                        <h5>Business impact</h5>
                         <p>Data available in under 1 minute (previously 3 hours), accelerating decision-making and improving response to market changes.
                         </p>
                     </div>
@@ -705,7 +679,7 @@
             </article>
 
             <article class="portfolio__project" data-roles="ana ing">
-                <h4 class="portfolio__proyect-name">Data Visualization and Automation</h4>
+                <h4 class="portfolio__proyect-name">Data visualization and automation</h4>
                 <p class="project-roles">Data analysis and data engineering</p>
                 <div class="content">
                     <div class="project-tags">
@@ -1019,8 +993,17 @@
         </div>
     </section>
     </main>
-    <footer>
-        <strong>Francisco Javier Garcia Moreno</strong> - Copyright
+    <footer class="pie">
+        <p class="pie__cta"><strong>Looking for a Data Engineer?</strong> Message me on LinkedIn or download my resume.</p>
+        <nav aria-label="Footer links">
+            <ul class="pie__enlaces">
+                <li><a href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/javiermorenof7" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="../pdf/Curriculum_EN.pdf" download="Curriculum_EN.pdf">Resume (PDF)</a></li>
+                <li><a href="#contenido">Back to top</a></li>
+            </ul>
+        </nav>
+        <p class="pie__autor">© 2026 Francisco Javier Garcia Moreno</p>
     </footer>
 </body>
 

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js?v=d8aec39086"></script>
     <title>Curriculum_Portafolio_ES</title>
-    <link rel="stylesheet" href="css/styles.css?v=445dded744">
+    <link rel="stylesheet" href="css/styles.css?v=0c58bd8d4b">
     <link rel="stylesheet" href="css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="css/graficos.css?v=819c453989">
     <link rel="icon" href="img/javier.jpg" type="image/jpeg">
@@ -64,24 +64,10 @@
                         <div class="profile__header">
                             <h1>Francisco Javier Garcia Moreno</h1>
                             <div class="profile__job-title">
-                                <h2>Data Engineer | Ingeniero de Datos</h2>
+                                <p class="profile__cargo">Data Engineer | Ingeniero de Datos</p>
                                 <p class="profile__roles">Diseño pipelines de datos, analizo la información y llevo modelos a producción.</p>
-                                <div class="profile__indicators">
-                                    <div class="indicator">
-                                        <div class="indicator__number">5+</div>
-                                        <div class="indicator__label">Años de experiencia</div>
-                                    </div>
-                                    <div class="indicator">
-                                        <div class="indicator__number">8+</div>
-                                        <div class="indicator__label">Tecnologías dominadas</div>
-                                    </div>
-                                    <div class="indicator">
-                                        <div class="indicator__number">3+</div>
-                                        <div class="indicator__label">Plataformas cloud</div>
-                                    </div>
-                                </div>
                             </div>
-                            <nav class="pipeline" aria-label="Cómo trabajo con los datos">
+                            <div class="pipeline" role="group" aria-label="Cómo trabajo con los datos">
                                 <ol class="pipeline__etapas">
                                     <li class="pipeline__etapa pipeline__etapa--fuentes"><span class="pipeline__caja"><span class="pipeline__nombre">Fuentes</span><span class="pipeline__detalle">APIs, archivos y bases de datos</span></span></li>
                                     <li class="pipeline__etapa pipeline__etapa--bronce"><a class="pipeline__caja pipeline__enlace" href="#experiencia"><span class="pipeline__nombre">Bronce</span><span class="pipeline__detalle">Ingesta de datos crudos</span></a></li>
@@ -89,16 +75,9 @@
                                     <li class="pipeline__etapa pipeline__etapa--oro"><a class="pipeline__caja pipeline__enlace" href="#portfolio"><span class="pipeline__nombre">Oro</span><span class="pipeline__detalle">Análisis y modelos predictivos</span></a></li>
                                     <li class="pipeline__etapa pipeline__etapa--consumo"><span class="pipeline__caja"><span class="pipeline__nombre">Decisiones</span><span class="pipeline__detalle">Tableros y decisiones de negocio</span></span></li>
                                 </ol>
-                            </nav>
+                            </div>
                             <p class="profile__summary">
-                            <strong>Ingeniero de Datos</strong> con <strong>más de 5 años de experiencia</strong> diseñando e implementando soluciones de datos de alto impacto en los sectores financiero, 
-                            retail y logístico. Especialista en la construcción de ecosistemas <strong>Data Lakehouse y Data Warehouse</strong> bajo la <strong>Arquitectura Medallón</strong>, 
-                            desplegados en <strong>entornos Multi-Cloud (GCP, AWS, Azure)</strong>. He liderado con éxito <strong>migraciones críticas de sistemas On-Premise a la nube</strong>, 
-                            logrando <strong>reducir tiempos de procesamiento en un 45%</strong> e <strong>incrementando la exactitud operativa en un 200%</strong>. Orquesto 
-                            <strong>pipelines ETL/ELT automatizados</strong> con <strong>Apache Airflow</strong> (Cloud Composer, MWAA). 
-                            Trabajo con almacenamiento y <strong>procesamiento distribuido de datos</strong> (BigQuery, Databricks, Cloud Storage (GCS), 
-                            Amazon S3, AWS Redshift, Azure Data Lake Storage (ADLS) y Azure Synapse). Combino un <strong>stack técnico robusto (Python, Scala, PySpark, Polars, SQL)</strong> 
-                            con una visión de negocio analítica para transformar datos complejos en ventajas competitivas sostenibles.
+                            Ingeniero de datos con más de 5 años diseñando pipelines ETL/ELT y arquitecturas medallón en GCP, AWS y Azure para los sectores financiero, retail, logístico y educativo. Llevo los datos desde la ingesta hasta el análisis y los modelos en producción, con pruebas automáticas y despliegue controlado. En Banco Falabella reduje <strong>un 45 % los tiempos de procesamiento</strong> y en Aviomar mejoré <strong>un 200 % la exactitud operativa</strong>.
                             </p>
                         </div>
                     </div>
@@ -288,7 +267,7 @@
                         </div>
 
                         <div class="profile__study">
-                            <h2>Formación Académica</h2>
+                            <h2>Formación académica</h2>
                             <ul class="profile__study-container">
                                 <li class="profile__study-container-li">
                                     <div class="study-year">2018 - 2020</div>
@@ -620,7 +599,7 @@
             </article>
 
             <article class="portfolio__project" data-roles="ing">
-                <h4 class="portfolio__proyect-name">Migración Cloud: Onboarding Analytics</h4>
+                <h4 class="portfolio__proyect-name">Migración a la nube: Onboarding Analytics</h4>
                 <p class="project-roles">Ingeniería de datos</p>
                 <div class="content">
                     <div class="project-tags">
@@ -700,7 +679,7 @@
             </article>
 
             <article class="portfolio__project" data-roles="ana ing">
-                <h4 class="portfolio__proyect-name">Visualización y Automatización de Datos</h4>
+                <h4 class="portfolio__proyect-name">Visualización y automatización de datos</h4>
                 <p class="project-roles">Análisis de datos y ingeniería de datos</p>
                 <div class="content">
                     <div class="project-tags">
@@ -761,7 +740,7 @@
             </article>
 
             <article class="portfolio__project" data-roles="ana cie">
-                <h4 class="portfolio__proyect-name">Análisis Exploratorio Predictivo</h4>
+                <h4 class="portfolio__proyect-name">Análisis exploratorio predictivo</h4>
                 <p class="project-roles">Análisis de datos y ciencia de datos</p>
                 <div class="content">
                     <div class="project-tags">
@@ -1015,8 +994,17 @@
         </div>
     </section>
     </main>
-    <footer>
-        <strong>Francisco Javier Garcia Moreno</strong> - Copyright
+    <footer class="pie">
+        <p class="pie__cta"><strong>¿Buscas un Data Engineer?</strong> Escríbeme por LinkedIn o descarga el CV.</p>
+        <nav aria-label="Enlaces del pie">
+            <ul class="pie__enlaces">
+                <li><a href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/javiermorenof7" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="pdf/Curriculum_ES.pdf" download="Curriculum_ES.pdf">CV en PDF</a></li>
+                <li><a href="#contenido">Volver arriba</a></li>
+            </ul>
+        </nav>
+        <p class="pie__autor">© 2026 Francisco Javier Garcia Moreno</p>
     </footer>
 </body>
 
