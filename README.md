@@ -51,7 +51,7 @@ El código de los proyectos personales está en [javiermorenof7/javiermorenof7](
 ## Contacto
 
 - GitHub: https://github.com/javiermorenof7
-- LinkedIn: https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/
+- LinkedIn: https://www.linkedin.com/in/francisco-javier-garcia-moreno/
 
 ## Licencia
 
