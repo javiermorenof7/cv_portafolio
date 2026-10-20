@@ -105,6 +105,7 @@ h3 {
     font-size: 17pt;
     font-weight: 700;
     line-height: 1.15;
+    white-space: nowrap;
     color: var(--color-titulo);
 }
 
@@ -178,7 +179,7 @@ h3 {
 .trabajo__periodo {
     flex: none;
     font-weight: 700;
-    color: var(--color-periodo);
+    color: var(--color-tenue);
 }
 
 .trabajo__cifras {
@@ -296,4 +297,9 @@ h3 {
     .hoja {
         margin: 0 auto 8mm;
     }
+}
+
+/* La tabla de cada gráfico es para la web; en papel basta el gráfico */
+.grafico__datos {
+    display: none;
 }
