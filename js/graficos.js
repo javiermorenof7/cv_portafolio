@@ -4,6 +4,9 @@
     const SVG = 'http://www.w3.org/2000/svg';
     const idioma = document.documentElement.lang || 'es';
     const textoVerDatos = idioma === 'en' ? 'View data' : 'Ver datos';
+    const textoPista = idioma === 'en' ? 'Use the left and right arrow keys to move through the months.' : 'Usa las flechas izquierda y derecha para recorrer los meses.';
+    // El español separa el símbolo de porcentaje con un espacio (2,3 %), como en las etiquetas de datos
+    const conUnidad = (v, unidad) => `${v.toLocaleString(idioma, { maximumFractionDigits: 1 })}${unidad === '%' && idioma !== 'en' ? ' ' : ''}${unidad}`;
 
     const crear = (etiqueta, atributos, padre) => {
         const el = document.createElementNS(SVG, etiqueta);
@@ -59,7 +62,8 @@
     tooltip.hidden = true;
 
     const mostrarTooltip = (contenido, evento, marca) => {
-        tooltip.textContent = contenido;
+        // role="status" anuncia cada cambio de texto: solo se reescribe si cambia, no en cada movimiento del ratón
+        if (tooltip.textContent !== contenido) tooltip.textContent = contenido;
         tooltip.hidden = false;
         let x;
         let y;
@@ -157,7 +161,7 @@
 
         for (let v = 0; v <= tope + 1e-9; v += paso) {
             crear('line', { x1: margen.izq, x2: margen.izq + plotAncho, y1: yDe(v), y2: yDe(v), class: 'grafico__rejilla', stroke: '#d6e0fa' }, svg);
-            texto(svg, margen.izq - 6, yDe(v) + 4, `${v.toLocaleString(idioma)}${unidad}`, 'grafico__eje', 'end');
+            texto(svg, margen.izq - 6, yDe(v) + 4, conUnidad(v, unidad), 'grafico__eje', 'end');
         }
         const marcasX = (figura.dataset.marcasX || '').split(',').map(Number).filter((n) => !Number.isNaN(n));
         marcasX.forEach((i) => {
@@ -186,7 +190,7 @@
             marcador.setAttribute('cx', xDe(i));
             marcador.setAttribute('cy', yDe(f.valor));
             marcador.setAttribute('visibility', 'visible');
-            mostrarTooltip(`${f.nombre}: ${f.etiqueta}`, evento, marcador);
+            mostrarTooltip(`${f.nombre}: ${f.etiqueta}${evento ? '' : ' (← →)'}`, evento, marcador);
         };
         const esconder = () => {
             cruz.setAttribute('visibility', 'hidden');
@@ -202,6 +206,7 @@
         });
         zona.addEventListener('pointerleave', esconder);
         svg.setAttribute('tabindex', '0');
+        svg.setAttribute('aria-label', `${svg.getAttribute('aria-label')}. ${textoPista}`);
         svg.addEventListener('focus', () => mostrar(actual));
         svg.addEventListener('blur', esconder);
         svg.addEventListener('keydown', (e) => {

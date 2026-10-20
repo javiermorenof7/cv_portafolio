@@ -8,24 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js?v=d8aec39086"></script>
     <title>Curriculum_Portafolio_ES</title>
-    <link rel="stylesheet" href="css/styles.css?v=c51220ea11">
+    <link rel="stylesheet" href="css/styles.css?v=3ca2fca6c5">
     <link rel="stylesheet" href="css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="css/graficos.css?v=5836c36ee4">
     <link rel="icon" href="img/javier.jpg" type="image/jpeg">
     <link rel="stylesheet" href="css/fonts.css?v=f4969f559b">
     <script type="text/javascript" src="js/menuclose.js?v=1a2ba15407" defer></script>
     <script src="js/filtro.js?v=7bd3227d17" defer></script>
-    <script src="js/graficos.js?v=20427db763" defer></script>
+    <script src="js/graficos.js?v=981a4211c2" defer></script>
 </head>
 
 <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
     <!-- style="background-image: URL('/img/fondo.jpg');" -->
     <header class='header' id="header">
         <div class="header__content-wrapper layout-wrapper">
-            <input type="checkbox" class="header__checkbox" id="open-menu">
-            <label for="open-menu" class="header__open-nav-button" role="button" aria-label="Open Menu">=</label>
+            <input type="checkbox" class="header__checkbox" id="open-menu" aria-label="Abrir menú" aria-controls="header__nav">
+            <label for="open-menu" class="header__open-nav-button" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" focusable="false"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></label>
             <div class="header__logo-container">
-                <img class="header__logo" src="img/data-engineer-logo.svg" alt="Data Engineer Logo">
+                <img class="header__logo" src="img/data-engineer-logo.svg" alt="">
             </div>
             <nav class='header__nav' id="header__nav">
                 <ul class="header__nav-list">
@@ -44,7 +45,8 @@
             </div>
         </div>
     </header>
-    <main class="profile" id="profile">
+    <main id="contenido">
+    <section class="profile" id="profile">
         <div class="profile__wrapper">
             <div class="profile__img-container">
                 <img src="img/javier-m.jpg" class="profile__img" alt="Francisco Javier Garcia Moreno">
@@ -306,18 +308,18 @@
 
                     <div class="profile__contact" id="contact">
                         <div class="github__container">
-                            <img src="img/png-transparent-github-logo.png" class="github_img" alt="GitHub">
+                            <img src="img/png-transparent-github-logo.png" class="github_img" alt="">
                             <a class="github__link" href="https://github.com/javiermorenof7"
                                 target="_blank" rel="noopener noreferrer">github.com/javiermorenof7</a>
                         </div>
                         <div class="github__container">
-                            <img src="img/174857.png" class="likedin_img" alt="LinkedIn">
+                            <img src="img/174857.png" class="likedin_img" alt="">
                             <a class="github__link"
                                 href="https://www.linkedin.com/in/francisco-javier-garcia-moreno-78b184166/"
                                 target="_blank" rel="noopener noreferrer">LinkedIn: Francisco Javier Garcia Moreno</a>
                         </div>
                         <div class="github__container">
-                            <img src="img/ww_logo.png" class="github_img" alt="Portafolio">
+                            <img src="img/ww_logo.png" class="github_img" alt="">
                             <a class="github__link" href="https://javiermorenof7.github.io/cv_portafolio/"
                                 target="_blank" rel="noopener noreferrer">Ver Portafolio Completo</a>
                         </div>
@@ -327,7 +329,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
     <section class="experiencia" id="experiencia">
         <h2 class="h2_experiencia">Experiencia profesional</h2>
         <ol class="experiencia__container">
@@ -419,8 +421,8 @@
                     <ul class="highlights-list">
                         <li><strong>Reduje tiempos de procesamiento un 45%</strong> al migrar críticamente sistemas On-Premise a ecosistemas Multi-Nube bajo la Arquitectura Medallón.</li>
                         <li><strong>Diseñé Datalakes y pipelines ETL/ELT escalables</strong>, centralizando el procesamiento masivo de datos distribuidos mediante Databricks y motores analíticos de vanguardia.</li>
-                        <li><strong>Estandaricé operaciones críticas orquestando flujos</strong> automatizados a través de Cloud Composer, Amazon MWAA y Azure Data Factory.</li>
                         <li><strong>Aseguré la ingesta de datos sensibles</strong> hacia la capa Raw/Bronze del Datalake, implementando estrictos protocolos de encriptación cloud.</li>
+                        <li><strong>Estandaricé operaciones críticas orquestando flujos</strong> automatizados a través de Cloud Composer, Amazon MWAA y Azure Data Factory.</li>
                     </ul>
                 </div>
             </li>
@@ -490,7 +492,7 @@
                     <ul class="highlights-list">
                         <li><strong>Eliminé la dependencia de Excel</strong> automatizando extracciones ETL desde bases transaccionales hacia repositorios Cloud de alto rendimiento.</li>
                         <li><strong>Transformé datos crudos en vistas analíticas</strong> aprovechando capacidades de procesamiento distribuido mediante Databricks.</li>
-                        <li><strong>Habilité análisis de Big Data en tiempo real</strong> implementando flujos y capas semánticas conectadas a tableros dinámicos de visualización (Power BI, IBM Cognos).</li>
+                        <li><strong>Habilité análisis de Big Data</strong> implementando flujos y capas semánticas conectadas a tableros dinámicos de visualización (Power BI, IBM Cognos).</li>
                         <li><strong>Simplifiqué flujos complejos de ingeniería de datos</strong>, garantizando control de versiones y alta disponibilidad en ecosistemas Multi-Nube.</li>
                     </ul>
                 </div>
@@ -583,14 +585,14 @@
                             <thead><tr><th scope="col">Sistema</th><th scope="col">Minutos</th></tr></thead>
                             <tbody>
                                 <tr data-color="gris"><th scope="row">Antes: Metabase</th><td data-valor="180">3 h</td></tr>
-                                <tr data-color="azul"><th scope="row">Después: Google Cloud</th><td data-valor="1">< 1 min</td></tr>
+                                <tr data-color="azul"><th scope="row">Después: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
                             </tbody>
                         </table>
                     </figure>
 
                     <div class="impact-box">
                         <h5>Impacto en el negocio</h5>
-                        <p>Acceso a datos en tiempo real, acelerando la toma de decisiones y mejorando la respuesta a
+                        <p>Datos disponibles en menos de 1 minuto (antes, 3 horas), acelerando la toma de decisiones y mejorando la respuesta a
                             cambios del mercado.</p>
                     </div>
                 </div>
@@ -609,7 +611,7 @@
                     </div>
 
                     <div class="project-description">
-                        <p>Transformación del análisis en Excel hacia un sistema automatizado y en tiempo real con <span
+                        <p>Transformación del análisis en Excel hacia un sistema automatizado con <span
                                 class="highlight">Google Data Studio</span>, eliminando la gestión manual y
                             proporcionando visualizaciones dinámicas.</p>
                     </div>
@@ -889,7 +891,7 @@
                                     <tr data-color="azul"><th scope="row">jun 2020</th><td data-valor="5.2321">5,2 %</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">Pasaron de 2,3 % a 5,2 % en 18 meses.</p>
+                            <p class="grafico__nota">Pasaron de 2,3 % a 5,2 % en 17 meses.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Tecnologías">
                             <li>Python</li>
@@ -934,6 +936,7 @@
             </div>
         </div>
     </section>
+    </main>
     <footer>
         <strong>Francisco Javier Garcia Moreno</strong> - Copyright
     </footer>

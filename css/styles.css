@@ -128,8 +128,46 @@ p {
   right: 10px;
 }
 
+/* Oculta a la vista pero enfocable con el teclado; el foco se dibuja en el icono */
 .header__checkbox {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.header__checkbox:focus-visible~.header__open-nav-button {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+.header__open-nav-button svg {
+  display: block;
+}
+
+/* La cabecera fija no tapa el título de la sección al usar los enlaces */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 1100;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--color-superficie);
+  color: var(--color-titulo);
+  outline: 3px solid var(--color-acento);
+  font-weight: 600;
+}
+
+.saltar-contenido:focus {
+  top: 1rem;
 }
 
 .header__nav {
@@ -341,7 +379,8 @@ p {
     margin-right: 40px;
   }
 
-  .header__open-nav-button {
+  .header__open-nav-button,
+  .header__checkbox {
     display: none;
   }
 }
