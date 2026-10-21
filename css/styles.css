@@ -2095,3 +2095,26 @@ footer {
 .profile .profile__impacto .metric-number {
   font-size: 1.6rem;
 }
+
+/* Palabras clave del perfil: marcador suave detrás del texto, distinto del subrayado de los enlaces */
+.profile__clave {
+  font-weight: 700;
+  color: var(--color-titulo);
+  background: linear-gradient(transparent 55%, var(--marcador-perfil, rgba(37, 99, 235, 0.18)) 55%);
+  padding: 0 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  /* El resumen corta palabras con guion al justificar; una palabra clave no se parte */
+  hyphens: manual;
+}
+
+[data-theme="dark"] .profile__clave {
+  --marcador-perfil: rgba(138, 180, 255, 0.28);
+}
+
+/* En pantallas angostas el texto justificado abre huecos grandes junto a las palabras clave */
+@media (max-width: 600px) {
+  .profile__summary {
+    text-align: left;
+  }
+}
