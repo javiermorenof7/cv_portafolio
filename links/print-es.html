@@ -9,9 +9,7 @@
     <meta name="robots" content="noindex">
     <title>Francisco Javier Garcia Moreno - Data Engineer | Ingeniero de Datos</title>
     <link rel="stylesheet" href="../css/fonts.css?v=f4969f559b">
-    <link rel="stylesheet" href="../css/style_print.css?v=6639cc4b3f">
-    <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
-    <script src="../js/graficos.js?v=53939fbe59" defer></script>
+    <link rel="stylesheet" href="../css/style_print.css?v=16481c4810">
 </head>
 
 <body>
@@ -20,8 +18,8 @@
             <img src="../img/javier-m.jpg" alt="" class="cv-cabecera__foto">
             <div class="cv-cabecera__texto">
                 <h1 class="cv-cabecera__nombre">Francisco Javier Garcia Moreno</h1>
-                <p class="cv-cabecera__cargo">Data Engineer | Ingeniero de Datos</p>
-                <p class="cv-cabecera__roles">Diseño pipelines de datos, analizo la información y llevo modelos a producción.</p>
+                <p class="cv-cabecera__cargo">Data Engineer | Ingeniero de Datos | Databricks, Google Cloud, AWS y Azure</p>
+                <p class="cv-cabecera__roles">Datos que llegan a tiempo, limpios y listos para decidir.</p>
             </div>
             <ul class="contacto" aria-label="Contacto">
                 <li><a href="https://github.com/javiermorenof7">github.com/javiermorenof7</a></li>
@@ -32,7 +30,13 @@
 
         <section class="bloque">
             <h2 class="bloque__titulo">Perfil</h2>
-            <p class="perfil">Ingeniero de datos con más de 5 años diseñando pipelines ETL/ELT y arquitecturas medallón en GCP, AWS y Azure para los sectores financiero, retail, logístico y educativo. Llevo los datos desde la ingesta hasta el análisis y los modelos en producción, con pruebas automáticas y despliegue controlado.</p>
+            <p class="perfil">Detrás de cada buena decisión hay un dato en el que alguien confió: mi trabajo es que ese dato merezca esa confianza. Ingeniero de datos con más de 5 años diseñando pipelines ETL/ELT y arquitecturas medallón en GCP, AWS y Azure (Databricks, BigQuery, PySpark, Airflow, SQL) para banca, retail, logística y educación, con pruebas automáticas y despliegue controlado.</p>
+            <ul class="impacto" aria-label="Impacto en producción">
+                <li><strong class="impacto__cifra">−45%</strong> <span class="impacto__texto">tiempo de procesamiento · Banco Falabella</span></li>
+                <li><strong class="impacto__cifra">&lt; 1 min</strong> <span class="impacto__texto">antes 3 h · migración a Google Cloud</span></li>
+                <li><strong class="impacto__cifra">+35%</strong> <span class="impacto__texto">adopción de datos · Factor IT</span></li>
+                <li><strong class="impacto__cifra">−100%</strong> <span class="impacto__texto">trabajo manual en Excel · BBVA</span></li>
+            </ul>
         </section>
 
         <section class="bloque">
@@ -48,7 +52,6 @@
                     <li><strong>Automaticé los calendarios académicos</strong> consolidando 15 planificaciones Gantt de Google Drive en tablas Gold por universidad aliada, reprocesando solo los archivos que cambian.</li>
                     <li><strong>Modelé las asignaturas inscritas de los estudiantes</strong> con catálogos de cohortes, periodos y asignaturas, validados por 96 pruebas SQL automáticas.</li>
                     <li><strong>Integré la API de SurveyMonkey</strong> y automaticé las audiencias de encuestas, que se generan solas según el calendario académico.</li>
-                    <li><strong>Llevé los jobs a producción con control de calidad</strong>: definidos como código, con una tarea final de pruebas que detiene el job y avisa ante cualquier fallo, y paso a producción por merge request.</li>
                 </ul>
                 <p class="trabajo__tags">Databricks Serverless, Unity Catalog, Delta Lake, Spark, MERGE incremental, Arquitectura Medallón, Python, SQL, AWS S3, Jobs como código, GitLab, Google Drive API</p>
             </article>
@@ -108,38 +111,28 @@
         <div class="hoja__columnas">
             <section class="bloque">
                 <h2 class="bloque__titulo">Proyectos destacados</h2>
-                <p class="bloque__intro">Cifras calculadas con los datos de cada proyecto. El código y más gráficos están en el portafolio web.</p>
+                <p class="bloque__intro">Proyectos con datos públicos reales, de la fuente a las capas bronce, plata y oro. El código y los gráficos están en GitHub y en el portafolio web.</p>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo">Migración a la nube: Onboarding Analytics</h3>
-                    <p class="proyecto__desc">Migración de Metabase a Google Cloud (Dataflow, Argo en Kubernetes, BigQuery).</p>
-                    <figure class="grafico" data-tipo="pendiente">
-                        <figcaption>El procesamiento pasó de 3 horas a menos de 1 minuto</figcaption>
-                        <table class="grafico__tabla">
-                            <thead><tr><th scope="col">Sistema</th><th scope="col">Minutos</th></tr></thead>
-                            <tbody>
-                                <tr data-color="gris"><th scope="row">Antes: Metabase</th><td data-valor="180">3 h</td></tr>
-                                <tr data-color="azul"><th scope="row">Después: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="grafico__nota">Más de 180 veces más rápido.</p>
-                    </figure>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp">Vigilancia en salud pública (SIVIGILA)</a></h3>
+                    <p class="proyecto__desc">780 910 casos semanales reales del Instituto Nacional de Salud cruzados con el DIVIPOLA del DANE: tres esquemas unificados, códigos completados y municipios de 2021 encontrados por su nombre; el 98,5 % pasa a plata y el resto se aparta con su motivo (Python, Pandas, BigQuery, Cloud Composer).</p>
                 </article>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust">Pipeline de datos de FinTrust</a></h3>
-                    <p class="proyecto__desc">Sustituye las descargas manuales de reportes de una fintech por un pipeline en BigQuery: carga raw con MERGE idempotente, tabla única para el tablero y 7 reglas de calidad (Python, SQL, Looker Studio).</p>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito">Tasas de interés en Colombia</a></h3>
+                    <p class="proyecto__desc">Veinte años del informe semanal de la Superintendencia Financiera (732 673 filas): codificación reparada, duplicados por cambio de nombre de una entidad, tasas ponderadas por monto y margen de intermediación (Python, Pandas).</p>
                 </article>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp">Ingesta de datos de salud</a></h3>
-                    <p class="proyecto__desc">Carga CSV, TXT y Excel desde Cloud Storage a las capas bronce y plata de BigQuery, orquestada con Cloud Composer (Airflow) y con cargas idempotentes.</p>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas">Ventas de un minorista en línea</a></h3>
+                    <p class="proyecto__desc">Un millón de líneas de factura reales (Online Retail II, UCI): detecta las ventas repetidas en las dos hojas del libro (22 523 líneas) y aparta duplicados, cargos y precios en cero; 18,9 millones de libras netas (Python, Pandas, BigQuery).</p>
                 </article>
                 <h3 class="otros__titulo">Otros proyectos personales</h3>
                 <ul class="otros">
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws">Calendarios académicos en Databricks</a> <span class="otros__stack">Databricks, Delta Lake, S3</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas">Qué recomendar con canastas reales</a> <span class="otros__stack">Python, estadística</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company">Ausentismo laboral</a> <span class="otros__stack">Python, modelo dimensional</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion">Limpieza de datos: PIB del Banco Mundial</a> <span class="otros__stack">Python, Pandas</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust">Pipeline de datos de FinTrust</a> <span class="otros__stack">BigQuery, SQL, Python</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws">Calendarios académicos en Databricks</a> <span class="otros__stack">Databricks, PySpark, S3</span></li>
                     <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/ecomerce_agent">Agente de banca y e-commerce</a> <span class="otros__stack">LangChain, FAISS</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida">Seguros AltaVida</a> <span class="otros__stack">BigQuery, Vertex AI, PySpark</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito">Riesgo de crédito</a> <span class="otros__stack">Python, Scikit-learn</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company">Ausentismo en una fábrica</a> <span class="otros__stack">Python, Pandas, Tableau</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas">Recomendación de productos</a> <span class="otros__stack">Python, Pandas</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida">Seguros AltaVida</a> <span class="otros__stack">Python, BigQuery</span></li>
                 </ul>
             </section>
 
@@ -158,13 +151,14 @@
                 <section class="bloque">
                     <h2 class="bloque__titulo">Formación</h2>
                     <ul class="formacion">
-                    <li><span class="formacion__titulo">Máster Universitario en Sistemas Integrados de Gestión (enfoque en ingeniería de datos)</span><span class="formacion__lugar">Universidad Internacional de La Rioja (UNIR)</span><span class="formacion__anios">2018 – 2020</span></li>
+                    <li><span class="formacion__titulo">Data Engineer (certificación)</span><span class="formacion__lugar">Platzi</span><span class="formacion__anios">2021</span></li>
+                    <li><span class="formacion__titulo">Máster Universitario en Sistemas Integrados de Gestión (Ingeniería de Datos)</span><span class="formacion__lugar">Universidad Internacional de La Rioja (UNIR)</span><span class="formacion__anios">2018 – 2020</span></li>
                     <li><span class="formacion__titulo">Ingeniero Industrial</span><span class="formacion__lugar">Universidad Jorge Tadeo Lozano</span><span class="formacion__anios">2014 – 2018</span></li>
                     </ul>
                 </section>
                 <section class="bloque">
                     <h2 class="bloque__titulo">Idiomas</h2>
-                    <p class="idiomas">Español (nativo) · Inglés (B1)</p>
+                    <p class="idiomas">Español (nativo) · Inglés (competencia básica profesional)</p>
                 </section>
                 <section class="bloque">
                     <h2 class="bloque__titulo">Portafolio web</h2>

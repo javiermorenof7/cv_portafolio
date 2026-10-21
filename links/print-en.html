@@ -9,9 +9,7 @@
     <meta name="robots" content="noindex">
     <title>Francisco Javier Garcia Moreno - Data Engineer</title>
     <link rel="stylesheet" href="../css/fonts.css?v=f4969f559b">
-    <link rel="stylesheet" href="../css/style_print.css?v=6639cc4b3f">
-    <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
-    <script src="../js/graficos.js?v=53939fbe59" defer></script>
+    <link rel="stylesheet" href="../css/style_print.css?v=16481c4810">
 </head>
 
 <body>
@@ -20,8 +18,8 @@
             <img src="../img/javier-m.jpg" alt="" class="cv-cabecera__foto">
             <div class="cv-cabecera__texto">
                 <h1 class="cv-cabecera__nombre">Francisco Javier Garcia Moreno</h1>
-                <p class="cv-cabecera__cargo">Data Engineer</p>
-                <p class="cv-cabecera__roles">I design data pipelines, analyze data and put models into production.</p>
+                <p class="cv-cabecera__cargo">Data Engineer | Databricks, Google Cloud, AWS and Azure</p>
+                <p class="cv-cabecera__roles">Data that arrives on time, clean and ready for decisions.</p>
             </div>
             <ul class="contacto" aria-label="Contact">
                 <li><a href="https://github.com/javiermorenof7">github.com/javiermorenof7</a></li>
@@ -32,7 +30,13 @@
 
         <section class="bloque">
             <h2 class="bloque__titulo">Profile</h2>
-            <p class="perfil">Data engineer with 5+ years designing ETL/ELT pipelines and medallion architectures on GCP, AWS and Azure for the financial, retail, logistics and education sectors. I take data from ingestion to analysis and models in production, with automated tests and controlled deployment.</p>
+            <p class="perfil">Behind every good decision there is a piece of data someone trusted: my job is to make that data worth the trust. Data engineer with 5+ years designing ETL/ELT pipelines and medallion architectures on GCP, AWS and Azure (Databricks, BigQuery, PySpark, Airflow, SQL) for banking, retail, logistics and education, with automated tests and controlled deployment.</p>
+            <ul class="impacto" aria-label="Impact in production">
+                <li><strong class="impacto__cifra">−45%</strong> <span class="impacto__texto">processing time · Banco Falabella</span></li>
+                <li><strong class="impacto__cifra">&lt; 1 min</strong> <span class="impacto__texto">was 3 h · migration to Google Cloud</span></li>
+                <li><strong class="impacto__cifra">+35%</strong> <span class="impacto__texto">data adoption · Factor IT</span></li>
+                <li><strong class="impacto__cifra">−100%</strong> <span class="impacto__texto">manual work in Excel · BBVA</span></li>
+            </ul>
         </section>
 
         <section class="bloque">
@@ -48,7 +52,6 @@
                     <li><strong>Automated the academic calendars</strong> by consolidating 15 Gantt plans from Google Drive into Gold tables per partner university, reprocessing only the files that change.</li>
                     <li><strong>Modeled student course enrollments</strong> with cohort, term and course catalogs, validated by 96 automated SQL tests.</li>
                     <li><strong>Integrated the SurveyMonkey API</strong> and automated survey audiences, which are now generated from the academic calendar.</li>
-                    <li><strong>Shipped jobs to production behind quality gates</strong>: defined as code, with a final test task that stops the job and alerts on any failure, and promotion to production through merge requests.</li>
                 </ul>
                 <p class="trabajo__tags">Databricks Serverless, Unity Catalog, Delta Lake, Spark, Incremental MERGE, Medallion Architecture, Python, SQL, AWS S3, Jobs as code, GitLab, Google Drive API</p>
             </article>
@@ -108,38 +111,28 @@
         <div class="hoja__columnas">
             <section class="bloque">
                 <h2 class="bloque__titulo">Selected projects</h2>
-                <p class="bloque__intro">Figures computed from each project's data. Code and more charts are in the web portfolio.</p>
+                <p class="bloque__intro">Projects with real public data, from the source to bronze, silver and gold layers. The code and charts are on GitHub and in the web portfolio.</p>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo">Cloud migration: Onboarding Analytics</h3>
-                    <p class="proyecto__desc">Migration from Metabase to Google Cloud (Dataflow, Argo on Kubernetes, BigQuery).</p>
-                    <figure class="grafico" data-tipo="pendiente">
-                        <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
-                        <table class="grafico__tabla">
-                            <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
-                            <tbody>
-                                <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
-                                <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="grafico__nota">Over 180 times faster.</p>
-                    </figure>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp">Public health surveillance (SIVIGILA)</a></h3>
+                    <p class="proyecto__desc">780,910 real weekly cases from Colombia's National Health Institute matched against DANE's DIVIPOLA: three schemas unified, codes completed and 2021 municipalities found by name; 98.5% reach silver and the rest are set aside with their reason (Python, Pandas, BigQuery, Cloud Composer).</p>
                 </article>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust">FinTrust data pipeline</a></h3>
-                    <p class="proyecto__desc">Replaces manual report downloads at a fintech with a BigQuery pipeline: idempotent MERGE raw load, a single table for the dashboard and 7 data-quality rules (Python, SQL, Looker Studio).</p>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito">Interest rates in Colombia</a></h3>
+                    <p class="proyecto__desc">Twenty years of the Financial Superintendence's weekly report (732,673 rows): encoding repaired, duplicates from an institution changing its name, rates weighted by amount and the intermediation margin (Python, Pandas).</p>
                 </article>
                 <article class="proyecto">
-                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp">Health data ingestion</a></h3>
-                    <p class="proyecto__desc">Loads CSV, TXT and Excel files from Cloud Storage into bronze and silver layers in BigQuery, orchestrated with Cloud Composer (Airflow) and with idempotent loads.</p>
+                    <h3 class="proyecto__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas">Sales of an online retailer</a></h3>
+                    <p class="proyecto__desc">A million real invoice lines (Online Retail II, UCI): detects the sales repeated in both sheets of the workbook (22,523 lines) and sets aside duplicates, charges and zero prices; 18.9 million pounds net (Python, Pandas, BigQuery).</p>
                 </article>
                 <h3 class="otros__titulo">Other personal projects</h3>
                 <ul class="otros">
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws">Academic calendars on Databricks</a> <span class="otros__stack">Databricks, Delta Lake, S3</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas">What to recommend from real baskets</a> <span class="otros__stack">Python, statistics</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company">Workplace absenteeism</a> <span class="otros__stack">Python, dimensional model</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion">Data cleaning: World Bank GDP</a> <span class="otros__stack">Python, Pandas</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust">FinTrust data pipeline</a> <span class="otros__stack">BigQuery, SQL, Python</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws">Academic calendars on Databricks</a> <span class="otros__stack">Databricks, PySpark, S3</span></li>
                     <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/ecomerce_agent">Banking and e-commerce agent</a> <span class="otros__stack">LangChain, FAISS</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida">Seguros AltaVida</a> <span class="otros__stack">BigQuery, Vertex AI, PySpark</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito">Credit risk</a> <span class="otros__stack">Python, Scikit-learn</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company">Absenteeism at a manufacturer</a> <span class="otros__stack">Python, Pandas, Tableau</span></li>
-                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas">Product recommendations</a> <span class="otros__stack">Python, Pandas</span></li>
+                    <li><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida">Seguros AltaVida</a> <span class="otros__stack">Python, BigQuery</span></li>
                 </ul>
             </section>
 
@@ -158,13 +151,14 @@
                 <section class="bloque">
                     <h2 class="bloque__titulo">Education</h2>
                     <ul class="formacion">
-                    <li><span class="formacion__titulo">Master's Degree in Integrated Management Systems (data engineering focus)</span><span class="formacion__lugar">Universidad Internacional de La Rioja (UNIR)</span><span class="formacion__anios">2018 – 2020</span></li>
+                    <li><span class="formacion__titulo">Data Engineer (certification)</span><span class="formacion__lugar">Platzi</span><span class="formacion__anios">2021</span></li>
+                    <li><span class="formacion__titulo">Master's Degree in Integrated Management Systems (Data Engineering)</span><span class="formacion__lugar">Universidad Internacional de La Rioja (UNIR)</span><span class="formacion__anios">2018 – 2020</span></li>
                     <li><span class="formacion__titulo">Industrial Engineer</span><span class="formacion__lugar">Universidad Jorge Tadeo Lozano</span><span class="formacion__anios">2014 – 2018</span></li>
                     </ul>
                 </section>
                 <section class="bloque">
                     <h2 class="bloque__titulo">Languages</h2>
-                    <p class="idiomas">Spanish (native) · English (B1)</p>
+                    <p class="idiomas">Spanish (native) · English (limited working proficiency)</p>
                 </section>
                 <section class="bloque">
                     <h2 class="bloque__titulo">Web portfolio</h2>

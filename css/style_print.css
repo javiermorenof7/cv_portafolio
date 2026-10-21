@@ -87,8 +87,9 @@ h3 {
 /* Cabecera */
 .cv-cabecera {
     display: grid;
-    grid-template-columns: 22mm 1fr auto;
-    gap: 6mm;
+    /* El contacto va en su propia fila: a la derecha del nombre ya no cabe con el titular largo */
+    grid-template-columns: 22mm 1fr;
+    gap: 2.5mm 6mm;
     align-items: center;
     padding-bottom: 3mm;
     border-bottom: 2px solid var(--color-titulo);
@@ -121,11 +122,16 @@ h3 {
 }
 
 .contacto {
+    grid-column: 1 / -1;
     display: flex;
-    flex-direction: column;
-    gap: 1mm;
-    text-align: right;
+    flex-wrap: wrap;
+    gap: 1mm 5mm;
     font-size: 8pt;
+}
+
+/* Cada dato en una sola línea (la URL de LinkedIn se partía en dos) */
+.contacto li {
+    white-space: nowrap;
 }
 
 /* Bloques */
@@ -149,6 +155,32 @@ h3 {
 
 .perfil {
     max-width: 175mm;
+}
+
+/* Impacto en producción: cuatro cifras en una fila, texto real para los filtros ATS */
+.impacto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+    margin-top: 2mm;
+    list-style: none;
+}
+
+.impacto li {
+    padding: 1mm 2mm;
+    border-left: 2px solid var(--color-titulo);
+    background: var(--color-fondo);
+}
+
+.impacto__cifra {
+    display: block;
+    font-size: 12pt;
+    color: var(--color-titulo);
+}
+
+.impacto__texto {
+    font-size: 7.6pt;
+    color: var(--color-tenue);
 }
 
 /* Experiencia */
