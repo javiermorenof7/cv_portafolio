@@ -694,16 +694,16 @@
                         </div>
 
                         <figure class="grafico" data-tipo="pendiente">
-                            <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
-                            <table class="grafico__tabla">
-                                <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
-                                <tbody>
-                                    <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
-                                    <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
-                                </tbody>
-                            </table>
-                            <p class="grafico__nota">Over 180 times faster.</p>
-                        </figure>
+                        <figcaption>Processing went from 3 hours to under 1 minute</figcaption>
+                        <table class="grafico__tabla">
+                            <thead><tr><th scope="col">System</th><th scope="col">Minutes</th></tr></thead>
+                            <tbody>
+                                <tr data-color="gris"><th scope="row">Before: Metabase</th><td data-valor="180">3 h</td></tr>
+                                <tr data-color="azul"><th scope="row">After: Google Cloud</th><td data-valor="1">&lt; 1 min</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="grafico__nota">Over 180 times faster.</p>
+                    </figure>
 
                         <div class="impact-box">
                             <h5>Business impact</h5>
@@ -865,7 +865,7 @@
                                     <tr data-color="gris"><th scope="row">Duplicate</th><td data-valor="1">1</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">The gold layer ends with 9 terms.</p>
+                            <p class="grafico__nota">Demonstration data. The gold layer ends with 9 terms.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Databricks</li>
@@ -900,6 +900,20 @@
                     <li class="proyecto-personal" data-roles="ing">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp" target="_blank" rel="noopener noreferrer">Health data ingestion</a></h5>
                         <p class="proyecto-personal__descripcion">Loads CSV, TXT and Excel files from Cloud Storage into bronze and silver layers in BigQuery. Cloud Composer (Airflow) runs it, and every load is idempotent.</p>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Of 780,910 real rows, 98.5% reach silver and the rest are set aside with their reason</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Reason</th><th scope="col">Rows</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="naranja"><th scope="row">Case from abroad</th><td data-valor="5918">5,918</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Unknown municipality</th><td data-valor="5691">5,691</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Unknown origin</th><td data-valor="256">256</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Non-existent municipality code</th><td data-valor="119">119</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Municipality without a DIVIPOLA code</th><td data-valor="8">8</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Real data: weekly SIVIGILA cases (Colombia's National Health Institute), 2017-2019 and 2021, matched against DANE's DIVIPOLA.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Cloud Storage</li>
                             <li>BigQuery</li>
@@ -911,6 +925,39 @@
                     <li class="proyecto-personal" data-roles="ing ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales architecture</a></h5>
                         <p class="proyecto-personal__descripcion">Takes a sales workbook from a local Excel file to a scalable architecture on Google Cloud, with a star schema and the top 10 products per category.</p>
+                        <figure class="grafico" data-tipo="linea" data-paso-eje="0.5" data-marcas-x="0,11,23">
+                            <figcaption>Net sales jump every autumn: November 2011 was the best month</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Month</th><th scope="col">Million pounds</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">Dec 2009</th><td data-valor="0.778">0.78 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jan 2010</th><td data-valor="0.605">0.60 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Feb 2010</th><td data-valor="0.525">0.53 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Mar 2010</th><td data-valor="0.752">0.75 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Apr 2010</th><td data-valor="0.636">0.64 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">May 2010</th><td data-valor="0.606">0.61 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jun 2010</th><td data-valor="0.67">0.67 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jul 2010</th><td data-valor="0.616">0.62 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Aug 2010</th><td data-valor="0.662">0.66 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Sep 2010</th><td data-valor="0.842">0.84 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Oct 2010</th><td data-valor="1.069">1.07 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Nov 2010</th><td data-valor="1.394">1.39 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Dec 2010</th><td data-valor="0.758">0.76 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jan 2011</th><td data-valor="0.579">0.58 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Feb 2011</th><td data-valor="0.499">0.50 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Mar 2011</th><td data-valor="0.679">0.68 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Apr 2011</th><td data-valor="0.482">0.48 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">May 2011</th><td data-valor="0.731">0.73 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jun 2011</th><td data-valor="0.724">0.72 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Jul 2011</th><td data-valor="0.677">0.68 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Aug 2011</th><td data-valor="0.701">0.70 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Sep 2011</th><td data-valor="1.011">1.01 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Oct 2011</th><td data-valor="1.062">1.06 M£</td></tr>
+                                    <tr data-color="azul"><th scope="row">Nov 2011</th><td data-valor="1.427">1.43 M£</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Real data: 1,021,127 invoice lines from Online Retail II (UCI), a UK online retailer.</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>BigQuery</li>
@@ -940,7 +987,7 @@
                                     <tr data-color="gris"><th scope="row">Agreement paid</th><td data-valor="6.0078">6.0%</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">Canceled ones are what the proposed model aims to anticipate.</p>
+                            <p class="grafico__nota">Demonstration data. Canceled ones are what the proposed model aims to anticipate.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
@@ -975,32 +1022,19 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
                         <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
-                        <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="2" data-marcas-x="0,6,12,17" data-anotacion="14|COVID-19">
-                            <figcaption>Hours lost to absences and sick leave more than doubled</figcaption>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Mondays lose almost three times as many hours to absences as Thursdays</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Month</th><th scope="col">Hours lost</th></tr></thead>
+                                <thead><tr><th scope="col">Day</th><th scope="col">Hours lost</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="azul"><th scope="row">Jan 2019</th><td data-valor="2.2567">2.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Feb 2019</th><td data-valor="2.2996">2.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Mar 2019</th><td data-valor="1.9342">1.9%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Apr 2019</th><td data-valor="2.0975">2.1%</td></tr>
-                                    <tr data-color="azul"><th scope="row">May 2019</th><td data-valor="2.6607">2.7%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Jun 2019</th><td data-valor="2.7013">2.7%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Jul 2019</th><td data-valor="3.2886">3.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Aug 2019</th><td data-valor="3.313">3.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Sep 2019</th><td data-valor="3.1534">3.2%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Oct 2019</th><td data-valor="3.2636">3.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Nov 2019</th><td data-valor="3.1967">3.2%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Dec 2019</th><td data-valor="2.8871">2.9%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Jan 2020</th><td data-valor="2.9541">3.0%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Feb 2020</th><td data-valor="3.7293">3.7%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Mar 2020</th><td data-valor="3.6671">3.7%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Apr 2020</th><td data-valor="4.0562">4.1%</td></tr>
-                                    <tr data-color="azul"><th scope="row">May 2020</th><td data-valor="4.146">4.1%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Jun 2020</th><td data-valor="5.2321">5.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Monday</th><td data-valor="1489">1,489</td></tr>
+                                    <tr data-color="gris"><th scope="row">Tuesday</th><td data-valor="1229">1,229</td></tr>
+                                    <tr data-color="gris"><th scope="row">Wednesday</th><td data-valor="1115">1,115</td></tr>
+                                    <tr data-color="gris"><th scope="row">Thursday</th><td data-valor="553">553</td></tr>
+                                    <tr data-color="gris"><th scope="row">Friday</th><td data-valor="738">738</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">As % of contracted hours: from 2.3% to 5.2% in 17 months.</p>
+                            <p class="grafico__nota">Real data: 5,124 hours of absence at a courier company in Brazil, 2007-2010 (UCI).</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
@@ -1013,6 +1047,81 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Cleaning and transformation</a></h5>
                         <p class="proyecto-personal__descripcion">A notebook that turns a messy Excel file into a clean dataset.</p>
+                        <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="20" data-marcas-x="0,20,40,65">
+                            <figcaption>Colombia's GDP per capita rose from 57% to 77% of Latin America's between 2000 and 2025</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Year</th><th scope="col">% of Latin America</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">1960</th><td data-valor="71.29">71.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1961</th><td data-valor="72.3">72.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1962</th><td data-valor="74.85">74.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1963</th><td data-valor="67.01">67.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1964</th><td data-valor="74.27">74.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1965</th><td data-valor="66.48">66.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1966</th><td data-valor="56.76">56.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1967</th><td data-valor="59.59">59.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1968</th><td data-valor="56.72">56.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1969</th><td data-valor="54.9">54.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1970</th><td data-valor="56.12">56.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1971</th><td data-valor="54.68">54.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1972</th><td data-valor="53.95">54.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1973</th><td data-valor="48.3">48.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1974</th><td data-valor="44.76">44.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1975</th><td data-valor="45.27">45.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1976</th><td data-valor="48.4">48.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1977</th><td data-valor="55.97">56.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1978</th><td data-valor="55.87">55.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1979</th><td data-valor="59.81">59.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1980</th><td data-valor="58.75">58.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1981</th><td data-valor="55.96">56.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1982</th><td data-valor="65.03">65.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1983</th><td data-valor="73.09">73.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1984</th><td data-valor="68.48">68.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1985</th><td data-valor="63.12">63.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1986</th><td data-valor="62.39">62.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1987</th><td data-valor="60.47">60.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1988</th><td data-valor="59.38">59.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1989</th><td data-valor="54.14">54.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1990</th><td data-valor="59.03">59.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1991</th><td data-valor="56.11">56.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1992</th><td data-valor="60.91">60.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1993</th><td data-valor="58.4">58.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1994</th><td data-valor="61.31">61.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1995</th><td data-valor="64.02">64.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1996</th><td data-valor="62.05">62.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1997</th><td data-valor="62.0">62.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1998</th><td data-valor="56.4">56.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">1999</th><td data-valor="54.52">54.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2000</th><td data-valor="57.13">57.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2001</th><td data-valor="57.16">57.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2002</th><td data-valor="63.27">63.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2003</th><td data-valor="59.86">59.9%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2004</th><td data-valor="64.26">64.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2005</th><td data-valor="66.08">66.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2006</th><td data-valor="62.67">62.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2007</th><td data-valor="67.8">67.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2008</th><td data-valor="68.6">68.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2009</th><td data-valor="70.06">70.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2010</th><td data-valor="69.67">69.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2011</th><td data-valor="71.62">71.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2012</th><td data-valor="78.51">78.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2013</th><td data-valor="80.34">80.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2014</th><td data-valor="80.69">80.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2015</th><td data-valor="73.11">73.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2016</th><td data-valor="72.31">72.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2017</th><td data-valor="71.47">71.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2018</th><td data-valor="77.65">77.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2019</th><td data-valor="75.79">75.8%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2020</th><td data-valor="74.48">74.5%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2021</th><td data-valor="75.04">75.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2022</th><td data-valor="70.98">71.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2023</th><td data-valor="66.74">66.7%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2024</th><td data-valor="74.27">74.3%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2025</th><td data-valor="77.16">77.2%</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Real data: World Bank World Development Indicators (GDP per capita, current US$).</p>
+                        </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
@@ -1023,17 +1132,25 @@
                     <li class="proyecto-personal" data-roles="ana">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
                         <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
-                        <figure class="grafico" data-tipo="barras">
-                            <figcaption>Financing companies charge 10.7 points more than special public institutions (median effective rate, October 2022)</figcaption>
+                        <figure class="grafico" data-tipo="linea" data-paso-eje="4" data-marcas-x="0,5,10">
+                            <figcaption>The intermediation margin ranged from 11 to 16 points between 2002 and 2012</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Institution type</th><th scope="col">Rate</th></tr></thead>
+                                <thead><tr><th scope="col">Year</th><th scope="col">Points</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="azul"><th scope="row">Financing companies</th><td data-valor="26.82">26.8%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Financial cooperatives</th><td data-valor="26.32">26.3%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Banks</th><td data-valor="22.99">23.0%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Special public institutions</th><td data-valor="16.1">16.1%</td></tr>
+                                    <tr data-color="azul"><th scope="row">2002</th><td data-valor="16.16">16.2</td></tr>
+                                    <tr data-color="azul"><th scope="row">2003</th><td data-valor="15.5">15.5</td></tr>
+                                    <tr data-color="azul"><th scope="row">2004</th><td data-valor="14.64">14.6</td></tr>
+                                    <tr data-color="azul"><th scope="row">2005</th><td data-valor="13.73">13.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2006</th><td data-valor="11.89">11.9</td></tr>
+                                    <tr data-color="azul"><th scope="row">2007</th><td data-valor="13.69">13.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2008</th><td data-valor="15.71">15.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2009</th><td data-valor="13.3">13.3</td></tr>
+                                    <tr data-color="azul"><th scope="row">2010</th><td data-valor="10.81">10.8</td></tr>
+                                    <tr data-color="azul"><th scope="row">2011</th><td data-valor="14.81">14.8</td></tr>
+                                    <tr data-color="azul"><th scope="row">2012</th><td data-valor="14.79">14.8</td></tr>
                                 </tbody>
                             </table>
+                            <p class="grafico__nota">Lending rate minus savings rate, weighted by amount. Real data: weekly report of Colombia's Financial Superintendence.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
@@ -1046,16 +1163,19 @@
                     <li class="proyecto-personal" data-roles="ana cie">
                         <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
                         <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
-                        <figure class="grafico" data-tipo="apilada">
-                            <figcaption>9 in 10 recommendations were approved by users (60,430 records)</figcaption>
+                        <figure class="grafico" data-tipo="barras">
+                            <figcaption>Buyers of one item in a collection take the other in 2 of every 3 invoices or more</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Response</th><th scope="col">Share</th></tr></thead>
+                                <thead><tr><th scope="col">Recommendation</th><th scope="col">Confidence P(B|A)</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="azul"><th scope="row">Approved</th><td data-valor="89.6475">89.6% (54,174)</td></tr>
-                                    <tr data-color="gris"><th scope="row">Not approved</th><td data-valor="10.3525">10.4% (6,256)</td></tr>
+                                    <tr data-color="azul"><th scope="row">Playhouse: bathroom → living room</th><td data-valor="87.56">87.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Pears mug → apples mug</th><td data-valor="75.25">75.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Wooden star → wooden heart</th><td data-valor="70.62">70.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Gingham tree → gingham star</th><td data-valor="70.39">70.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Yellow notebook → red notebook</th><td data-valor="65.84">65.8%</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">36,067 distinct products in the training set.</p>
+                            <p class="grafico__nota">Real data: 39,516 invoices from Online Retail II (UCI). All these pairs have a lift above 50.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
