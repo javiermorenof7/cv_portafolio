@@ -2072,3 +2072,26 @@ footer {
     columns: 1;
   }
 }
+
+/* Impacto en producción en el perfil: mismas tarjetas de cifras que la experiencia */
+.profile .profile__impacto {
+  --exp-acento: #c2410c;
+  --exp-tenue: #5b6779;
+  --exp-metrica-fondo: #f8fafc;
+  /* 2 × 2 en todos los tamaños; .profile sube la especificidad sobre style_exp.css, que carga después y en escritorio apila las cifras */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 800px;
+  margin: 16px auto 0;
+  padding: 0;
+}
+
+[data-theme="dark"] .profile .profile__impacto {
+  --exp-acento: #f97316;
+  --exp-tenue: #a3b1c6;
+  --exp-metrica-fondo: #172554;
+}
+
+.profile .profile__impacto .metric-number {
+  font-size: 1.6rem;
+}

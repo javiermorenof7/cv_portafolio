@@ -61,7 +61,7 @@
     }
     </script>
     <link rel="stylesheet" href="../css/fonts.css?v=f4969f559b">
-    <link rel="stylesheet" href="../css/styles.css?v=e526dbc60d">
+    <link rel="stylesheet" href="../css/styles.css?v=dad72b4881">
     <link rel="stylesheet" href="../css/style_exp.css?v=c9a1febb59">
     <link rel="stylesheet" href="../css/graficos.css?v=819c453989">
     <link rel="icon" href="../img/data-engineer-logo.svg" type="image/svg+xml">
@@ -136,6 +136,24 @@
                             <p class="profile__summary">Behind every good decision there is a piece of data someone trusted. My job is to make that data worth the trust.</p>
                             <p class="profile__summary">Data doesn't fail for lack of tools; it fails because no one designed the path. I design that path. I take scattered information, organize it, validate it and make it ready for the business to decide with confidence, in pipelines that run themselves, test themselves and hide no errors.</p>
                             <p class="profile__summary">I'm an industrial engineer by training, and I see data as a process: no wasted steps, quality at every stage, and always built for the people who use it.</p>
+                            <ul class="core-achievements profile__impacto" aria-label="Impact in production">
+                                <li class="core-metric">
+                                    <span class="metric-number">−45%</span>
+                                    <span class="metric-description">Processing time · Banco Falabella</span>
+                                </li>
+                                <li class="core-metric">
+                                    <span class="metric-number">&lt; 1 min</span>
+                                    <span class="metric-description">Was 3 h · migration to Google Cloud</span>
+                                </li>
+                                <li class="core-metric">
+                                    <span class="metric-number">+35%</span>
+                                    <span class="metric-description">Data adoption · Factor IT</span>
+                                </li>
+                                <li class="core-metric">
+                                    <span class="metric-number">−100%</span>
+                                    <span class="metric-description">Manual work in Excel · BBVA</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -843,63 +861,18 @@
 
         <div class="portafolio__bloque portafolio__bloque--personal">
             <h3 class="portafolio__titulo-bloque">Personal projects</h3>
-            <p class="portafolio__intro">End-to-end case studies built on synthetic data. The code for each one is on GitHub.</p>
+            <p class="portafolio__intro">End-to-end case studies. Six process real public data, with the source and license in their README; the rest use fictional data. The code for each one is on GitHub.</p>
             <div class="personales__grupo">
-                <h4 class="personales__titulo-grupo">Pipelines on AWS</h4>
+                <h4 class="personales__titulo-grupo">With real public data</h4>
                 <ul class="personales__lista">
-                    <li class="proyecto-personal" id="proyecto-calendarios" data-roles="ing">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws" target="_blank" rel="noopener noreferrer">Academic calendars on Databricks</a></h5>
-                        <p class="proyecto-personal__descripcion">Takes the calendars that a fictional company's partner universities drop in S3 through bronze, silver and gold Delta tables on Databricks. Files that have not changed are skipped, and rows that cannot be used are set aside with the reason.</p>
-                        <ul class="proyecto-personal__decisiones">
-                            <li><strong>Decision:</strong> Bronze stores a SHA-256 fingerprint of each file and only appends what changed: running the job ten times leaves the tables the same. It runs on serverless, with one catalog per environment.</li>
-                            <li><strong>Quality:</strong> unusable rows go to a rejects table with their reason, without stopping the load; Gold fails if two periods of a cohort overlap and leaves the previous table intact.</li>
-                        </ul>
-                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/bronze.py" target="_blank" rel="noopener noreferrer">bronze.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/silver.py" target="_blank" rel="noopener noreferrer">silver.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/gold.py" target="_blank" rel="noopener noreferrer">gold.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/databricks.yml" target="_blank" rel="noopener noreferrer">databricks.yml</a></p>
-                        <figure class="grafico" data-tipo="apilada">
-                            <figcaption>16 of the 19 sample rows reach the silver layer; the rest are set aside</figcaption>
-                            <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Outcome</th><th scope="col">Rows</th></tr></thead>
-                                <tbody>
-                                    <tr data-color="azul"><th scope="row">Valid</th><td data-valor="16">16</td></tr>
-                                    <tr data-color="naranja"><th scope="row">Rejected with their reason</th><td data-valor="2">2</td></tr>
-                                    <tr data-color="gris"><th scope="row">Duplicate</th><td data-valor="1">1</td></tr>
-                                </tbody>
-                            </table>
-                            <p class="grafico__nota">Demonstration data. The gold layer ends with 9 terms.</p>
-                        </figure>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Databricks</li>
-                            <li>PySpark</li>
-                            <li>Delta Lake</li>
-                            <li>Unity Catalog</li>
-                            <li>AWS S3</li>
-                        </ul>
-                        <p class="project-roles">Data engineering</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="personales__grupo">
-                <h4 class="personales__titulo-grupo">Pipelines on Google Cloud</h4>
-                <ul class="personales__lista">
-                    <li class="proyecto-personal" data-roles="ing ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust" target="_blank" rel="noopener noreferrer">FinTrust data pipeline</a></h5>
-                        <p class="proyecto-personal__descripcion">Replaces manual report downloads at a consumer-credit fintech with an automated pipeline in BigQuery, with documented technical decisions and data-quality evidence.</p>
-                        <ul class="proyecto-personal__decisiones">
-                            <li><strong>Decision:</strong> the raw layer loads with an idempotent MERGE, so rerunning a load never duplicates data; staging and analytics are rebuilt on every run and end in a single wide table (OBT) for the dashboard.</li>
-                            <li><strong>Quality:</strong> 7 rules in BigQuery: nulls in critical fields, unique IDs, amounts above zero, and consistent delinquency and payment data.</li>
-                        </ul>
-                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/python/validations.py" target="_blank" rel="noopener noreferrer">validations.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/sql/01-raw/create_raw_tables.sql" target="_blank" rel="noopener noreferrer">create_raw_tables.sql</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/python/pipeline.py" target="_blank" rel="noopener noreferrer">pipeline.py</a></p>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>BigQuery</li>
-                            <li>SQL</li>
-                            <li>Looker Studio</li>
-                        </ul>
-                        <p class="project-roles">Data engineering and data analysis</p>
-                    </li>
                     <li class="proyecto-personal" data-roles="ing">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp" target="_blank" rel="noopener noreferrer">Health data ingestion</a></h5>
-                        <p class="proyecto-personal__descripcion">Loads CSV, TXT and Excel files from Cloud Storage into bronze and silver layers in BigQuery. Cloud Composer (Airflow) runs it, and every load is idempotent.</p>
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_gcp" target="_blank" rel="noopener noreferrer">Public health surveillance (SIVIGILA)</a></h5>
+                        <p class="proyecto-personal__descripcion">Real weekly cases from Colombia's National Health Institute (2017-2021), matched against DANE's master list of municipalities and taken from bronze to silver and gold. It also includes a Cloud Composer DAG that loads files from Cloud Storage into BigQuery idempotently.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> Every download stores a SHA-256 fingerprint and the portal's last-update date: if the source has not changed, it is not downloaded again.</li>
+                            <li><strong>Quality:</strong> It unifies three different schemas, completes the DIVIPOLA codes and, in 2021, finds each municipality by its name; whatever cannot be placed is set aside with its reason, and case counts reconcile across layers.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_gcp/procesamiento/ingesta_sivigila.py" target="_blank" rel="noopener noreferrer">ingesta_sivigila.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_gcp/procesamiento/capas_sivigila.py" target="_blank" rel="noopener noreferrer">capas_sivigila.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_gcp/dag/dag_salud_ingestion.py" target="_blank" rel="noopener noreferrer">dag_salud_ingestion.py</a></p>
                         <figure class="grafico" data-tipo="barras">
                             <figcaption>Of 780,910 real rows, 98.5% reach silver and the rest are set aside with their reason</figcaption>
                             <table class="grafico__tabla">
@@ -915,16 +888,59 @@
                             <p class="grafico__nota">Real data: weekly SIVIGILA cases (Colombia's National Health Institute), 2017-2019 and 2021, matched against DANE's DIVIPOLA.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Cloud Storage</li>
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Open data API</li>
                             <li>BigQuery</li>
                             <li>Cloud Composer</li>
                             <li>SQL</li>
                         </ul>
                         <p class="project-roles">Data engineering</p>
                     </li>
+                    <li class="proyecto-personal" data-roles="ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Interest rates in Colombia</a></h5>
+                        <p class="proyecto-personal__descripcion">Twenty years of the Financial Superintendence's weekly rates report (732,673 real rows): rates weighted by amount and the intermediation margin between lending and savings.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> One row per week, institution, credit type and term; the margin weights each rate by the amount disbursed.</li>
+                            <li><strong>Quality:</strong> It repairs broken encoding, removes the duplicates that appear when an institution changes its name, and marks as missing the number of loans the source left at zero before 2011.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/riesgo_credito/procesamiento/ingesta_tasas.py" target="_blank" rel="noopener noreferrer">ingesta_tasas.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/riesgo_credito/procesamiento/capas_tasas.py" target="_blank" rel="noopener noreferrer">capas_tasas.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/riesgo_credito/data.ipynb" target="_blank" rel="noopener noreferrer">data.ipynb</a></p>
+                        <figure class="grafico" data-tipo="linea" data-paso-eje="4" data-marcas-x="0,5,10">
+                            <figcaption>The intermediation margin ranged from 11 to 16 points between 2002 and 2012</figcaption>
+                            <table class="grafico__tabla">
+                                <thead><tr><th scope="col">Year</th><th scope="col">Points</th></tr></thead>
+                                <tbody>
+                                    <tr data-color="azul"><th scope="row">2002</th><td data-valor="16.16">16.2</td></tr>
+                                    <tr data-color="azul"><th scope="row">2003</th><td data-valor="15.5">15.5</td></tr>
+                                    <tr data-color="azul"><th scope="row">2004</th><td data-valor="14.64">14.6</td></tr>
+                                    <tr data-color="azul"><th scope="row">2005</th><td data-valor="13.73">13.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2006</th><td data-valor="11.89">11.9</td></tr>
+                                    <tr data-color="azul"><th scope="row">2007</th><td data-valor="13.69">13.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2008</th><td data-valor="15.71">15.7</td></tr>
+                                    <tr data-color="azul"><th scope="row">2009</th><td data-valor="13.3">13.3</td></tr>
+                                    <tr data-color="azul"><th scope="row">2010</th><td data-valor="10.81">10.8</td></tr>
+                                    <tr data-color="azul"><th scope="row">2011</th><td data-valor="14.81">14.8</td></tr>
+                                    <tr data-color="azul"><th scope="row">2012</th><td data-valor="14.79">14.8</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="grafico__nota">Lending rate minus savings rate, weighted by amount. Real data: weekly report of Colombia's Financial Superintendence.</p>
+                        </figure>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Open data API</li>
+                            <li>Scikit-learn</li>
+                        </ul>
+                        <p class="project-roles">Data analysis</p>
+                    </li>
                     <li class="proyecto-personal" data-roles="ing ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales architecture</a></h5>
-                        <p class="proyecto-personal__descripcion">Takes a sales workbook from a local Excel file to a scalable architecture on Google Cloud, with a star schema and the top 10 products per category.</p>
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/area_ventas" target="_blank" rel="noopener noreferrer">Sales of an online retailer</a></h5>
+                        <p class="proyecto-personal__descripcion">A million real invoice lines (Online Retail II, UCI) from bronze to silver and gold, plus the Google Cloud architecture for the AdventureWorks sales workbook.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> Returns are kept with a negative amount, and the product master keeps the most used description of each code.</li>
+                            <li><strong>Quality:</strong> It detects that the workbook repeats the sales of 1 to 9 December 2010 in both sheets (22,523 lines) and sets aside duplicates, charges that are not products and zero prices.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/area_ventas/procesamiento/ingesta_ventas.py" target="_blank" rel="noopener noreferrer">ingesta_ventas.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/area_ventas/procesamiento/capas_ventas.py" target="_blank" rel="noopener noreferrer">capas_ventas.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/area_ventas/arquitectura/arquitecturagcp.py" target="_blank" rel="noopener noreferrer">arquitecturagcp.py</a></p>
                         <figure class="grafico" data-tipo="linea" data-paso-eje="0.5" data-marcas-x="0,11,23">
                             <figcaption>Net sales jump every autumn: November 2011 was the best month</figcaption>
                             <table class="grafico__tabla">
@@ -960,68 +976,49 @@
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
+                            <li>Pandas</li>
                             <li>BigQuery</li>
-                            <li>Excel</li>
+                            <li>Star schema</li>
                         </ul>
                         <p class="project-roles">Data engineering and data analysis</p>
                     </li>
-                    <li class="proyecto-personal" data-roles="ing cie">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
-                        <p class="proyecto-personal__descripcion">Data processing, machine learning and a cloud architecture to take a health insurer's analytics from one-off solutions to production.</p>
+                    <li class="proyecto-personal" data-roles="ana cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">What to recommend from real baskets</a></h5>
+                        <p class="proyecto-personal__descripcion">Decides whether one product is a good recommendation for another using 39,516 real invoices: support, confidence, lift and a 95% Wilson interval.</p>
                         <ul class="proyecto-personal__decisiones">
-                            <li><strong>Quality:</strong> drops empty or future dates and values of zero or less, caps outliers at the 99th percentile and normalizes statuses before grouping them.</li>
-                            <li><strong>Decision:</strong> two versions of the same process: one local and one that loads the tables into BigQuery.</li>
+                            <li><strong>Decision:</strong> A pair is a good recommendation if, with 95% confidence, at least 1 in 5 buyers of A also buy B and the lift is 2 or more: 5,762 of 495,638 pairs qualify.</li>
                         </ul>
-                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno.py" target="_blank" rel="noopener noreferrer">python_javier_moreno.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno_gcp.py" target="_blank" rel="noopener noreferrer">python_javier_moreno_gcp.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/sql_javier_moreno.sql" target="_blank" rel="noopener noreferrer">sql_javier_moreno.sql</a></p>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/reglas_asociacion.py" target="_blank" rel="noopener noreferrer">reglas_asociacion.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_probabilistico_tiendas/modelo_cpg_rappi.ipynb" target="_blank" rel="noopener noreferrer">modelo_cpg_rappi.ipynb</a></p>
                         <figure class="grafico" data-tipo="barras">
-                            <figcaption>1 in 10 health authorizations is canceled (1,245,491 authorizations)</figcaption>
+                            <figcaption>Buyers of one item in a collection take the other in 2 of every 3 invoices or more</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Status</th><th scope="col">Share</th></tr></thead>
+                                <thead><tr><th scope="col">Recommendation</th><th scope="col">Confidence P(B|A)</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="gris"><th scope="row">Paid</th><td data-valor="34.0412">34.0%</td></tr>
-                                    <tr data-color="gris"><th scope="row">Delivered</th><td data-valor="23.373">23.4%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Canceled</th><td data-valor="10.571">10.6%</td></tr>
-                                    <tr data-color="gris"><th scope="row">Under agreement</th><td data-valor="10.4018">10.4%</td></tr>
-                                    <tr data-color="gris"><th scope="row">Issued</th><td data-valor="9.259">9.3%</td></tr>
-                                    <tr data-color="gris"><th scope="row">Under audit</th><td data-valor="6.3454">6.3%</td></tr>
-                                    <tr data-color="gris"><th scope="row">Agreement paid</th><td data-valor="6.0078">6.0%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Playhouse: bathroom → living room</th><td data-valor="87.56">87.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Pears mug → apples mug</th><td data-valor="75.25">75.2%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Wooden star → wooden heart</th><td data-valor="70.62">70.6%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Gingham tree → gingham star</th><td data-valor="70.39">70.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Yellow notebook → red notebook</th><td data-valor="65.84">65.8%</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">Demonstration data. Canceled ones are what the proposed model aims to anticipate.</p>
+                            <p class="grafico__nota">Real data: 39,516 invoices from Online Retail II (UCI). All these pairs have a lift above 50.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
-                            <li>SQL</li>
-                            <li>BigQuery</li>
-                            <li>Vertex AI</li>
-                            <li>PySpark</li>
+                            <li>Pandas</li>
+                            <li>Statistics</li>
+                            <li>Scikit-learn</li>
                         </ul>
-                        <p class="project-roles">Data engineering and data science</p>
+                        <p class="project-roles">Data analysis and data science</p>
                     </li>
-                </ul>
-            </div>
-            <div class="personales__grupo">
-                <h4 class="personales__titulo-grupo">AI</h4>
-                <ul class="personales__lista">
-                    <li class="proyecto-personal" data-roles="cie">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/ecomerce_agent" target="_blank" rel="noopener noreferrer">Banking and e-commerce agent</a></h5>
-                        <p class="proyecto-personal__descripcion">An assistant that checks a product's price against the customer's balance before recommending it. It combines semantic search over the catalog (FAISS) with the customer's own data.</p>
-                        <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>LangChain</li>
-                            <li>FAISS</li>
-                            <li>OpenAI</li>
-                        </ul>
-                        <p class="project-roles">Data science</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="personales__grupo">
-                <h4 class="personales__titulo-grupo">Analysis</h4>
-                <ul class="personales__lista">
                     <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Absenteeism at a manufacturer</a></h5>
-                        <p class="proyecto-personal__descripcion">A dimensional model and a single analysis table to explain how absences affect productivity.</p>
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_company" target="_blank" rel="noopener noreferrer">Workplace absenteeism</a></h5>
+                        <p class="proyecto-personal__descripcion">A dimensional model (employee, reason and absence) with 740 real absences at a courier company in Brazil (UCI), plus the original case of a factory.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> Reasons are grouped by ICD-10 chapter, so hours lost can be read by type of illness.</li>
+                            <li><strong>Quality:</strong> It sets aside records that are not absences and keeps identical rows: without an exact date there is no proof they are repeated.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_company/procesamiento/ingesta_ausentismo.py" target="_blank" rel="noopener noreferrer">ingesta_ausentismo.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_company/procesamiento/capas_ausentismo.py" target="_blank" rel="noopener noreferrer">capas_ausentismo.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/analisis_company/company.ipynb" target="_blank" rel="noopener noreferrer">company.ipynb</a></p>
                         <figure class="grafico" data-tipo="barras">
                             <figcaption>Mondays lose almost three times as many hours to absences as Thursdays</figcaption>
                             <table class="grafico__tabla">
@@ -1039,14 +1036,19 @@
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
-                            <li>Scikit-learn</li>
+                            <li>Dimensional model</li>
                             <li>Tableau</li>
                         </ul>
                         <p class="project-roles">Data analysis</p>
                     </li>
                     <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Cleaning and transformation</a></h5>
-                        <p class="proyecto-personal__descripcion">A notebook that turns a messy Excel file into a clean dataset.</p>
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/limpieza_trasformacion" target="_blank" rel="noopener noreferrer">Data cleaning: World Bank GDP</a></h5>
+                        <p class="proyecto-personal__descripcion">Takes GDP per capita for every country from a wide, messy CSV to a long table, plus the notebook that cleans an Excel file with dates in columns.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> Aggregates (World, regions, income groups) are separated from countries using the source's own metadata.</li>
+                            <li><strong>Quality:</strong> It skips the header rows, drops the empty column and checks that all 17,556 cells of the wide file are accounted for.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/limpieza_trasformacion/procesamiento/ingesta_banco_mundial.py" target="_blank" rel="noopener noreferrer">ingesta_banco_mundial.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/limpieza_trasformacion/procesamiento/capas_banco_mundial.py" target="_blank" rel="noopener noreferrer">capas_banco_mundial.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/limpieza_trasformacion/transformacion.ipynb" target="_blank" rel="noopener noreferrer">transformacion.ipynb</a></p>
                         <figure class="grafico" data-tipo="linea" data-unidad="%" data-paso-eje="20" data-marcas-x="0,20,40,65">
                             <figcaption>Colombia's GDP per capita rose from 57% to 77% of Latin America's between 2000 and 2025</figcaption>
                             <table class="grafico__tabla">
@@ -1125,64 +1127,104 @@
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
                             <li>Pandas</li>
-                            <li>Seaborn</li>
+                            <li>Open data API</li>
                         </ul>
                         <p class="project-roles">Data analysis</p>
                     </li>
-                    <li class="proyecto-personal" data-roles="ana">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/riesgo_credito" target="_blank" rel="noopener noreferrer">Credit risk</a></h5>
-                        <p class="proyecto-personal__descripcion">Intermediation rates across banks, by entity type, credit type and term, to support a funding strategy.</p>
-                        <figure class="grafico" data-tipo="linea" data-paso-eje="4" data-marcas-x="0,5,10">
-                            <figcaption>The intermediation margin ranged from 11 to 16 points between 2002 and 2012</figcaption>
+                </ul>
+            </div>
+
+            <div class="personales__grupo">
+                <h4 class="personales__titulo-grupo">Demonstration (fictional data)</h4>
+                <ul class="personales__lista">
+                    <li class="proyecto-personal" id="proyecto-calendarios" data-roles="ing">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/calendarios_databricks_aws" target="_blank" rel="noopener noreferrer">Academic calendars on Databricks</a></h5>
+                        <p class="proyecto-personal__descripcion">Takes the calendars that a fictional company's partner universities drop in S3 through bronze, silver and gold Delta tables on Databricks. Files that have not changed are skipped, and rows that cannot be used are set aside with the reason.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> Bronze stores a SHA-256 fingerprint of each file and only appends what changed: running the job ten times leaves the tables the same. It runs on serverless, with one catalog per environment.</li>
+                            <li><strong>Quality:</strong> unusable rows go to a rejects table with their reason, without stopping the load; Gold fails if two periods of a cohort overlap and leaves the previous table intact.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/bronze.py" target="_blank" rel="noopener noreferrer">bronze.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/silver.py" target="_blank" rel="noopener noreferrer">silver.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/notebooks/gold.py" target="_blank" rel="noopener noreferrer">gold.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/calendarios_databricks_aws/databricks.yml" target="_blank" rel="noopener noreferrer">databricks.yml</a></p>
+                        <figure class="grafico" data-tipo="apilada">
+                            <figcaption>16 of the 19 sample rows reach the silver layer; the rest are set aside</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Year</th><th scope="col">Points</th></tr></thead>
+                                <thead><tr><th scope="col">Outcome</th><th scope="col">Rows</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="azul"><th scope="row">2002</th><td data-valor="16.16">16.2</td></tr>
-                                    <tr data-color="azul"><th scope="row">2003</th><td data-valor="15.5">15.5</td></tr>
-                                    <tr data-color="azul"><th scope="row">2004</th><td data-valor="14.64">14.6</td></tr>
-                                    <tr data-color="azul"><th scope="row">2005</th><td data-valor="13.73">13.7</td></tr>
-                                    <tr data-color="azul"><th scope="row">2006</th><td data-valor="11.89">11.9</td></tr>
-                                    <tr data-color="azul"><th scope="row">2007</th><td data-valor="13.69">13.7</td></tr>
-                                    <tr data-color="azul"><th scope="row">2008</th><td data-valor="15.71">15.7</td></tr>
-                                    <tr data-color="azul"><th scope="row">2009</th><td data-valor="13.3">13.3</td></tr>
-                                    <tr data-color="azul"><th scope="row">2010</th><td data-valor="10.81">10.8</td></tr>
-                                    <tr data-color="azul"><th scope="row">2011</th><td data-valor="14.81">14.8</td></tr>
-                                    <tr data-color="azul"><th scope="row">2012</th><td data-valor="14.79">14.8</td></tr>
+                                    <tr data-color="azul"><th scope="row">Valid</th><td data-valor="16">16</td></tr>
+                                    <tr data-color="naranja"><th scope="row">Rejected with their reason</th><td data-valor="2">2</td></tr>
+                                    <tr data-color="gris"><th scope="row">Duplicate</th><td data-valor="1">1</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">Lending rate minus savings rate, weighted by amount. Real data: weekly report of Colombia's Financial Superintendence.</p>
+                            <p class="grafico__nota">Demonstration data. The gold layer ends with 9 terms.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Scikit-learn</li>
-                            <li>Seaborn</li>
+                            <li>Databricks</li>
+                            <li>PySpark</li>
+                            <li>Delta Lake</li>
+                            <li>Unity Catalog</li>
+                            <li>AWS S3</li>
                         </ul>
-                        <p class="project-roles">Data analysis</p>
+                        <p class="project-roles">Data engineering</p>
                     </li>
-                    <li class="proyecto-personal" data-roles="ana cie">
-                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/analisis_probabilistico_tiendas" target="_blank" rel="noopener noreferrer">Product recommendations</a></h5>
-                        <p class="proyecto-personal__descripcion">A probabilistic analysis of whether one product is a good recommendation for another, based on purchase patterns.</p>
+                    <li class="proyecto-personal" data-roles="ing ana">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/caso_gcp_fintrust" target="_blank" rel="noopener noreferrer">FinTrust data pipeline</a></h5>
+                        <p class="proyecto-personal__descripcion">Replaces manual report downloads at a consumer-credit fintech with an automated pipeline in BigQuery, with documented technical decisions and data-quality evidence.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Decision:</strong> the raw layer loads with an idempotent MERGE, so rerunning a load never duplicates data; staging and analytics are rebuilt on every run and end in a single wide table (OBT) for the dashboard.</li>
+                            <li><strong>Quality:</strong> 7 rules in BigQuery: nulls in critical fields, unique IDs, amounts above zero, and consistent delinquency and payment data.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/python/validations.py" target="_blank" rel="noopener noreferrer">validations.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/sql/01-raw/create_raw_tables.sql" target="_blank" rel="noopener noreferrer">create_raw_tables.sql</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/caso_gcp_fintrust/python/pipeline.py" target="_blank" rel="noopener noreferrer">pipeline.py</a></p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>BigQuery</li>
+                            <li>SQL</li>
+                            <li>Looker Studio</li>
+                        </ul>
+                        <p class="project-roles">Data engineering and data analysis</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="ing cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/seguros_altavida" target="_blank" rel="noopener noreferrer">Seguros AltaVida</a></h5>
+                        <p class="proyecto-personal__descripcion">Data processing, machine learning and a cloud architecture to take a health insurer's analytics from one-off solutions to production.</p>
+                        <ul class="proyecto-personal__decisiones">
+                            <li><strong>Quality:</strong> drops empty or future dates and values of zero or less, caps outliers at the 99th percentile and normalizes statuses before grouping them.</li>
+                            <li><strong>Decision:</strong> two versions of the same process: one local and one that loads the tables into BigQuery.</li>
+                        </ul>
+                        <p class="proyecto-personal__codigo">Code: <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno.py" target="_blank" rel="noopener noreferrer">python_javier_moreno.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/python_javier_moreno_gcp.py" target="_blank" rel="noopener noreferrer">python_javier_moreno_gcp.py</a> · <a href="https://github.com/javiermorenof7/javiermorenof7/blob/main/seguros_altavida/sql_javier_moreno.sql" target="_blank" rel="noopener noreferrer">sql_javier_moreno.sql</a></p>
                         <figure class="grafico" data-tipo="barras">
-                            <figcaption>Buyers of one item in a collection take the other in 2 of every 3 invoices or more</figcaption>
+                            <figcaption>1 in 10 health authorizations is canceled (1,245,491 authorizations)</figcaption>
                             <table class="grafico__tabla">
-                                <thead><tr><th scope="col">Recommendation</th><th scope="col">Confidence P(B|A)</th></tr></thead>
+                                <thead><tr><th scope="col">Status</th><th scope="col">Share</th></tr></thead>
                                 <tbody>
-                                    <tr data-color="azul"><th scope="row">Playhouse: bathroom → living room</th><td data-valor="87.56">87.6%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Pears mug → apples mug</th><td data-valor="75.25">75.2%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Wooden star → wooden heart</th><td data-valor="70.62">70.6%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Gingham tree → gingham star</th><td data-valor="70.39">70.4%</td></tr>
-                                    <tr data-color="azul"><th scope="row">Yellow notebook → red notebook</th><td data-valor="65.84">65.8%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Paid</th><td data-valor="34.0412">34.0%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Delivered</th><td data-valor="23.373">23.4%</td></tr>
+                                    <tr data-color="azul"><th scope="row">Canceled</th><td data-valor="10.571">10.6%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Under agreement</th><td data-valor="10.4018">10.4%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Issued</th><td data-valor="9.259">9.3%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Under audit</th><td data-valor="6.3454">6.3%</td></tr>
+                                    <tr data-color="gris"><th scope="row">Agreement paid</th><td data-valor="6.0078">6.0%</td></tr>
                                 </tbody>
                             </table>
-                            <p class="grafico__nota">Real data: 39,516 invoices from Online Retail II (UCI). All these pairs have a lift above 50.</p>
+                            <p class="grafico__nota">Demonstration data. Canceled ones are what the proposed model aims to anticipate.</p>
                         </figure>
                         <ul class="proyecto-personal__stack" aria-label="Technologies">
                             <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Seaborn</li>
+                            <li>SQL</li>
+                            <li>BigQuery</li>
+                            <li>Vertex AI</li>
+                            <li>PySpark</li>
                         </ul>
-                        <p class="project-roles">Data analysis and data science</p>
+                        <p class="project-roles">Data engineering and data science</p>
+                    </li>
+                    <li class="proyecto-personal" data-roles="cie">
+                        <h5 class="proyecto-personal__titulo"><a href="https://github.com/javiermorenof7/javiermorenof7/tree/main/ecomerce_agent" target="_blank" rel="noopener noreferrer">Banking and e-commerce agent</a></h5>
+                        <p class="proyecto-personal__descripcion">An assistant that checks a product's price against the customer's balance before recommending it. It combines semantic search over the catalog (FAISS) with the customer's own data.</p>
+                        <ul class="proyecto-personal__stack" aria-label="Technologies">
+                            <li>Python</li>
+                            <li>LangChain</li>
+                            <li>FAISS</li>
+                            <li>OpenAI</li>
+                        </ul>
+                        <p class="project-roles">Data science</p>
                     </li>
                 </ul>
             </div>
