@@ -519,6 +519,10 @@ footer {
   margin: 0 auto
 }
 
+.profile__summary + .profile__summary {
+  margin-top: 12px
+}
+
 /* Secciones */
 .profile__sections {
   display: flex;
